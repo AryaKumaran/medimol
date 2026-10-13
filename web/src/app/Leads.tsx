@@ -8,6 +8,7 @@ import { download, shortlistCsv } from "../../../lib/export/csv";
 import { canSpeak, stopSpeaking } from "../../../lib/voice/voice";
 import type { Data } from "../data";
 import { Fill, Pressable, Segmented, useFlip, useGrow, useMotion, type Motion } from "../motion/react";
+import { PoseViewer } from "./PoseViewer";
 import { ApprovalChip, Icon, pct, signed, SignalChip } from "./ui";
 
 export type Filter = "all" | "affordable";
@@ -137,6 +138,7 @@ export function DrugPanel({ data, rows, stability, id, lang, setLang, read }: {
         <div className="fact"><b className="num">{st ? `${st.rankP5}–${st.rankP95}` : "–"}</b><span>Score rank, 90% of reruns</span></div>
         <div className="fact"><b className="num">{st ? pct(st.pTopN) : "–"}</b><span>Reruns in the top {stability.opts.topN}</span></div>
       </div>
+      <PoseViewer bundle={bundle} drugId={id} targetId={row.bestTargetId} />
       <div className="sheet-actions">
         <Segmented label="Brief language" value={lang} options={LANGS} onChange={setLang} />
         <Pressable className="btn" disabled={!canSpeak()} onClick={() => read(id, lang)}><Icon.speaker />Read aloud</Pressable>

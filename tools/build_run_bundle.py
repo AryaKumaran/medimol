@@ -12,6 +12,8 @@ Inputs (data/curation/):
   drugs.csv     id,name,drugbank_id,smiles,fda_status,approved_for,positive_control,
                 safety_flags,storage,generic,who_eml,cost_tier,source_ids
   trials.json   ClinicalTrials.gov cache {drug_id: {count, query, fetchedAt}} (written by --fetch-trials)
+Receptors (optional): data/raw/pdb/<PDB_ID>.pdb, the same files given to DiffDock. Copied into the
+  bundle so the 3D viewer works offline.
 DiffDock dir: one folder per pair named <drug_id>__<target_id>, containing DiffDock's
   rank<N>_confidence<X>.sdf files.
 Output: public/bundles/<id>.json and public/bundles/<id>/poses/*.sdf
@@ -96,6 +98,18 @@ def build(bundle_id: str, diffdock: Path, refresh_trials: bool) -> Path:
         trials_path.write_text(json.dumps(fetch_trials(drugs), indent=2) + "\n")
     trials = json.loads(trials_path.read_text()) if trials_path.exists() else {}
 
+    rec_dir = OUT / bundle_id / "receptors"
+    rec_dir.mkdir(parents=True, exist_ok=True)
+    pdb_files = {}
+    for t in targets:
+        pdb = t["pdb_id"].strip().upper()
+        src = ROOT / "data" / "raw" / "pdb" / f"{pdb}.pdb"
+        if src.exists():
+            shutil.copy(src, rec_dir / src.name)
+            pdb_files[t["id"]] = f"{bundle_id}/receptors/{src.name}"
+        else:
+            print(f"  note: no receptor file for {pdb}; viewer will show the ligand alone", file=sys.stderr)
+
     pose_dir = OUT / bundle_id / "poses"
     if pose_dir.exists():
         shutil.rmtree(pose_dir)
@@ -108,13 +122,18 @@ def build(bundle_id: str, diffdock: Path, refresh_trials: bool) -> Path:
         drug_id, target_id = pair.name.split("__", 1)
         if drug_id not in drug_ids or target_id not in target_ids:
             sys.exit(f"{pair.name}: drug or target not in curation CSVs")
+        found = {}
         for f in sorted(pair.glob("rank*_confidence*.sdf")):
             parsed = parse_pose_name(f.name)
-            if not parsed:
-                continue
-            rank, conf = parsed
+            if parsed:
+                found[parsed[0]] = (parsed[1], f)
+        # Optional confidences.json: scores for poses whose SDF was not kept (e.g. ranks 2-10).
+        side = pair / "confidences.json"
+        for p in json.loads(side.read_text()) if side.exists() else []:
+            found.setdefault(int(p["rank"]), (float(p["confidence"]), None))
+        for rank, (conf, f) in sorted(found.items()):
             rel = None
-            if rank == 1:  # ponytail: ship only top poses; bundle size stays small
+            if rank == 1 and f:  # ponytail: ship only top poses; bundle size stays small
                 rel = f"{bundle_id}/poses/{pair.name}.sdf"
                 shutil.copy(f, OUT / rel)
             poses.append({"drugId": drug_id, "targetId": target_id, "rank": rank, "confidence": conf, "sdf": rel})
@@ -134,7 +153,7 @@ def build(bundle_id: str, diffdock: Path, refresh_trials: bool) -> Path:
         "sources": [{"id": s["id"], "label": s["label"], "url": s["url"], "accessed": s["accessed"]} for s in sources],
         "targets": [
             {"id": t["id"], "gene": t["gene"], "name": t["name"], "pdbId": t["pdb_id"].strip().upper(),
-             "role": t["role"], "sourceIds": split(t["source_ids"])}
+             "role": t["role"], "sourceIds": split(t["source_ids"]), "pdbFile": pdb_files.get(t["id"])}
             for t in targets
         ],
         "drugs": [
@@ -159,6 +178,8 @@ def build(bundle_id: str, diffdock: Path, refresh_trials: bool) -> Path:
         "poses": poses,
         # Optional activity models from tools/train_activity_model.py
         "models": json.loads((CUR / "ml.json").read_text()) if (CUR / "ml.json").exists() else [],
+        # Optional approved-drug screen from tools/screen_approved.py
+        "screen": json.loads((CUR / "screen.json").read_text()) if (CUR / "screen.json").exists() else None,
     }
     out = OUT / f"{bundle_id}.json"
     out.write_text(json.dumps(bundle, indent=1) + "\n")

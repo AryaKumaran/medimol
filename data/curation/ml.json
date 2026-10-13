@@ -1,0 +1,503 @@
+[
+ {
+  "targetId": "kras",
+  "chemblId": "CHEMBL2189121",
+  "fetchedAt": "2026-10-13",
+  "model": "RandomForest(500), Morgan r2 2048-bit",
+  "activeCutoffPchembl": 6.0,
+  "nCompounds": 2738,
+  "metrics": {
+   "split": "scaffold (~80/20, whole scaffolds kept together)",
+   "nTrain": 2190,
+   "nTest": 548,
+   "positiveRate": 0.622,
+   "rocAuc": 0.865,
+   "prAuc": 0.869
+  },
+  "predictions": {
+   "cid11707110": {
+    "p": 0.467,
+    "maxSim": 0.21,
+    "inDomain": false,
+    "inTraining": false,
+    "measuredPchembl": null
+   },
+   "cid134182831": {
+    "p": 0.529,
+    "maxSim": 0.207,
+    "inDomain": false,
+    "inTraining": false,
+    "measuredPchembl": null
+   },
+   "cid137003167": {
+    "p": 0.906,
+    "maxSim": 1.0,
+    "inDomain": true,
+    "inTraining": true,
+    "measuredPchembl": 6.5
+   },
+   "cid137278711": {
+    "p": 0.994,
+    "maxSim": 1.0,
+    "inDomain": true,
+    "inTraining": true,
+    "measuredPchembl": 7.17
+   },
+   "cid137297923": {
+    "p": 0.008,
+    "maxSim": 1.0,
+    "inDomain": true,
+    "inTraining": true,
+    "measuredPchembl": 5.0649999999999995
+   },
+   "cid138611145": {
+    "p": 0.982,
+    "maxSim": 1.0,
+    "inDomain": true,
+    "inTraining": true,
+    "measuredPchembl": 8.0
+   },
+   "cid138911318": {
+    "p": 0.723,
+    "maxSim": 0.408,
+    "inDomain": true,
+    "inTraining": false,
+    "measuredPchembl": null
+   },
+   "cid146624881": {
+    "p": 0.952,
+    "maxSim": 1.0,
+    "inDomain": true,
+    "inTraining": true,
+    "measuredPchembl": 6.22
+   },
+   "cid151912677": {
+    "p": 0.349,
+    "maxSim": 0.321,
+    "inDomain": true,
+    "inTraining": false,
+    "measuredPchembl": null
+   },
+   "cid156124857": {
+    "p": 1.0,
+    "maxSim": 1.0,
+    "inDomain": true,
+    "inTraining": true,
+    "measuredPchembl": 9.25
+   },
+   "cid156336128": {
+    "p": 0.022,
+    "maxSim": 1.0,
+    "inDomain": true,
+    "inTraining": true,
+    "measuredPchembl": 5.26
+   },
+   "cid156336140": {
+    "p": 0.03,
+    "maxSim": 1.0,
+    "inDomain": true,
+    "inTraining": true,
+    "measuredPchembl": 5.76
+   },
+   "cid156336141": {
+    "p": 0.058,
+    "maxSim": 1.0,
+    "inDomain": true,
+    "inTraining": true,
+    "measuredPchembl": 5.26
+   },
+   "cid156336144": {
+    "p": 0.01,
+    "maxSim": 1.0,
+    "inDomain": true,
+    "inTraining": true,
+    "measuredPchembl": 5.26
+   },
+   "cid156336150": {
+    "p": 0.624,
+    "maxSim": 1.0,
+    "inDomain": true,
+    "inTraining": true,
+    "measuredPchembl": 6.26
+   },
+   "cid156336167": {
+    "p": 0.051,
+    "maxSim": 1.0,
+    "inDomain": true,
+    "inTraining": true,
+    "measuredPchembl": 5.26
+   },
+   "cid156336173": {
+    "p": 0.63,
+    "maxSim": 1.0,
+    "inDomain": true,
+    "inTraining": true,
+    "measuredPchembl": 6.26
+   },
+   "cid156336177": {
+    "p": 0.124,
+    "maxSim": 1.0,
+    "inDomain": true,
+    "inTraining": true,
+    "measuredPchembl": 5.26
+   },
+   "cid156336182": {
+    "p": 0.879,
+    "maxSim": 1.0,
+    "inDomain": true,
+    "inTraining": true,
+    "measuredPchembl": 6.76
+   },
+   "cid156336191": {
+    "p": 0.05,
+    "maxSim": 1.0,
+    "inDomain": true,
+    "inTraining": true,
+    "measuredPchembl": 5.26
+   },
+   "cid156336193": {
+    "p": 0.756,
+    "maxSim": 1.0,
+    "inDomain": true,
+    "inTraining": true,
+    "measuredPchembl": 6.26
+   },
+   "cid156336209": {
+    "p": 0.086,
+    "maxSim": 1.0,
+    "inDomain": true,
+    "inTraining": true,
+    "measuredPchembl": 5.76
+   },
+   "cid156336211": {
+    "p": 0.377,
+    "maxSim": 1.0,
+    "inDomain": true,
+    "inTraining": true,
+    "measuredPchembl": 6.26
+   },
+   "cid156336213": {
+    "p": 0.034,
+    "maxSim": 1.0,
+    "inDomain": true,
+    "inTraining": true,
+    "measuredPchembl": 5.26
+   },
+   "cid156336215": {
+    "p": 0.221,
+    "maxSim": 1.0,
+    "inDomain": true,
+    "inTraining": true,
+    "measuredPchembl": 5.26
+   },
+   "cid156336217": {
+    "p": 0.752,
+    "maxSim": 1.0,
+    "inDomain": true,
+    "inTraining": true,
+    "measuredPchembl": 6.26
+   },
+   "cid156336219": {
+    "p": 0.719,
+    "maxSim": 0.836,
+    "inDomain": true,
+    "inTraining": false,
+    "measuredPchembl": null
+   },
+   "cid156336221": {
+    "p": 0.79,
+    "maxSim": 1.0,
+    "inDomain": true,
+    "inTraining": true,
+    "measuredPchembl": 6.26
+   },
+   "cid156336229": {
+    "p": 0.076,
+    "maxSim": 1.0,
+    "inDomain": true,
+    "inTraining": true,
+    "measuredPchembl": 5.26
+   },
+   "cid156336232": {
+    "p": 0.042,
+    "maxSim": 1.0,
+    "inDomain": true,
+    "inTraining": true,
+    "measuredPchembl": 5.26
+   },
+   "cid156336255": {
+    "p": 0.398,
+    "maxSim": 1.0,
+    "inDomain": true,
+    "inTraining": true,
+    "measuredPchembl": 5.26
+   },
+   "cid156336260": {
+    "p": 0.008,
+    "maxSim": 1.0,
+    "inDomain": true,
+    "inTraining": true,
+    "measuredPchembl": 5.26
+   },
+   "cid156336270": {
+    "p": 0.994,
+    "maxSim": 1.0,
+    "inDomain": true,
+    "inTraining": true,
+    "measuredPchembl": 6.26
+   },
+   "cid156336271": {
+    "p": 0.056,
+    "maxSim": 1.0,
+    "inDomain": true,
+    "inTraining": true,
+    "measuredPchembl": 5.76
+   },
+   "cid156336288": {
+    "p": 0.712,
+    "maxSim": 1.0,
+    "inDomain": true,
+    "inTraining": true,
+    "measuredPchembl": 6.26
+   },
+   "cid156336347": {
+    "p": 0.045,
+    "maxSim": 1.0,
+    "inDomain": true,
+    "inTraining": true,
+    "measuredPchembl": 5.26
+   },
+   "cid156336348": {
+    "p": 0.03,
+    "maxSim": 1.0,
+    "inDomain": true,
+    "inTraining": true,
+    "measuredPchembl": 5.76
+   },
+   "cid156336370": {
+    "p": 0.833,
+    "maxSim": 1.0,
+    "inDomain": true,
+    "inTraining": true,
+    "measuredPchembl": 6.26
+   },
+   "cid156336383": {
+    "p": 0.994,
+    "maxSim": 1.0,
+    "inDomain": true,
+    "inTraining": true,
+    "measuredPchembl": 6.26
+   },
+   "cid156336398": {
+    "p": 0.454,
+    "maxSim": 1.0,
+    "inDomain": true,
+    "inTraining": true,
+    "measuredPchembl": 5.26
+   },
+   "cid156336399": {
+    "p": 0.346,
+    "maxSim": 1.0,
+    "inDomain": true,
+    "inTraining": true,
+    "measuredPchembl": 5.26
+   },
+   "cid156336410": {
+    "p": 0.415,
+    "maxSim": 1.0,
+    "inDomain": true,
+    "inTraining": true,
+    "measuredPchembl": 5.26
+   },
+   "cid156336413": {
+    "p": 0.425,
+    "maxSim": 1.0,
+    "inDomain": true,
+    "inTraining": true,
+    "measuredPchembl": 6.26
+   },
+   "cid156336418": {
+    "p": 0.019,
+    "maxSim": 1.0,
+    "inDomain": true,
+    "inTraining": true,
+    "measuredPchembl": 5.26
+   },
+   "cid156336421": {
+    "p": 0.917,
+    "maxSim": 1.0,
+    "inDomain": true,
+    "inTraining": true,
+    "measuredPchembl": 6.26
+   },
+   "cid156336422": {
+    "p": 0.986,
+    "maxSim": 1.0,
+    "inDomain": true,
+    "inTraining": true,
+    "measuredPchembl": 6.26
+   },
+   "cid156336429": {
+    "p": 0.75,
+    "maxSim": 1.0,
+    "inDomain": true,
+    "inTraining": true,
+    "measuredPchembl": 7.26
+   },
+   "cid156336431": {
+    "p": 0.022,
+    "maxSim": 1.0,
+    "inDomain": true,
+    "inTraining": true,
+    "measuredPchembl": 5.26
+   },
+   "cid157155620": {
+    "p": 0.989,
+    "maxSim": 1.0,
+    "inDomain": true,
+    "inTraining": true,
+    "measuredPchembl": 6.26
+   },
+   "cid160923886": {
+    "p": 0.039,
+    "maxSim": 1.0,
+    "inDomain": true,
+    "inTraining": true,
+    "measuredPchembl": 5.26
+   },
+   "cid161022070": {
+    "p": 0.092,
+    "maxSim": 1.0,
+    "inDomain": true,
+    "inTraining": true,
+    "measuredPchembl": 5.26
+   },
+   "cid163360077": {
+    "p": 0.627,
+    "maxSim": 0.64,
+    "inDomain": true,
+    "inTraining": false,
+    "measuredPchembl": null
+   },
+   "cid163643580": {
+    "p": 0.772,
+    "maxSim": 0.625,
+    "inDomain": true,
+    "inTraining": false,
+    "measuredPchembl": null
+   },
+   "cid164626535": {
+    "p": 0.76,
+    "maxSim": 1.0,
+    "inDomain": true,
+    "inTraining": true,
+    "measuredPchembl": 6.16
+   },
+   "cid164726578": {
+    "p": 0.714,
+    "maxSim": 1.0,
+    "inDomain": true,
+    "inTraining": true,
+    "measuredPchembl": 6.66
+   },
+   "cid164726623": {
+    "p": 0.6,
+    "maxSim": 0.8,
+    "inDomain": true,
+    "inTraining": false,
+    "measuredPchembl": null
+   },
+   "cid165085337": {
+    "p": 0.776,
+    "maxSim": 0.647,
+    "inDomain": true,
+    "inTraining": false,
+    "measuredPchembl": null
+   },
+   "cid166625303": {
+    "p": 0.99,
+    "maxSim": 1.0,
+    "inDomain": true,
+    "inTraining": true,
+    "measuredPchembl": 7.01
+   },
+   "cid168201327": {
+    "p": 0.454,
+    "maxSim": 0.58,
+    "inDomain": true,
+    "inTraining": false,
+    "measuredPchembl": null
+   },
+   "cid168982960": {
+    "p": 0.323,
+    "maxSim": 0.214,
+    "inDomain": false,
+    "inTraining": false,
+    "measuredPchembl": null
+   },
+   "cid169705696": {
+    "p": 0.853,
+    "maxSim": 0.826,
+    "inDomain": true,
+    "inTraining": false,
+    "measuredPchembl": null
+   },
+   "cid169706505": {
+    "p": 0.631,
+    "maxSim": 0.566,
+    "inDomain": true,
+    "inTraining": false,
+    "measuredPchembl": null
+   },
+   "cid2244": {
+    "p": 0.129,
+    "maxSim": 0.216,
+    "inDomain": false,
+    "inTraining": false,
+    "measuredPchembl": null
+   },
+   "cid2756": {
+    "p": 0.336,
+    "maxSim": 0.138,
+    "inDomain": false,
+    "inTraining": false,
+    "measuredPchembl": null
+   },
+   "cid3117": {
+    "p": 0.187,
+    "maxSim": 0.133,
+    "inDomain": false,
+    "inTraining": false,
+    "measuredPchembl": null
+   },
+   "cid4091": {
+    "p": 0.162,
+    "maxSim": 0.08,
+    "inDomain": false,
+    "inTraining": false,
+    "measuredPchembl": null
+   },
+   "cid54454": {
+    "p": 0.299,
+    "maxSim": 0.153,
+    "inDomain": false,
+    "inTraining": false,
+    "measuredPchembl": null
+   },
+   "cid54671203": {
+    "p": 0.338,
+    "maxSim": 0.196,
+    "inDomain": false,
+    "inTraining": false,
+    "measuredPchembl": null
+   },
+   "cid55283": {
+    "p": 0.451,
+    "maxSim": 0.197,
+    "inDomain": false,
+    "inTraining": false,
+    "measuredPchembl": null
+   }
+  }
+ }
+]

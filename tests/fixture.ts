@@ -8,7 +8,7 @@ export const fixture = (): RunBundle => ({
   title: "synthetic",
   provenance: { runDate: "2026-01-01", model: "DiffDock", modelVersion: "x", compute: "none", builtAt: "x", builder: "test", notes: "" },
   sources: [{ id: "s1", label: "src", url: "https://example.org", accessed: "2026-01-01" }],
-  targets: [{ id: "t1", gene: "G1", name: "Target 1", pdbId: "1ABC", role: "", sourceIds: ["s1"] }],
+  targets: [{ id: "t1", gene: "G1", name: "Target 1", pdbId: "1ABC", role: "", pdbFile: null, sourceIds: ["s1"] }],
   drugs: [
     drug("a", { approval: "approved", generic: "yes", whoEml: "yes", trials: 3 }),
     drug("b", { approval: "approved", generic: "no", whoEml: "no", trials: 0 }),
@@ -21,6 +21,7 @@ export const fixture = (): RunBundle => ({
     pose("c", 1, -3.0),
     pose("ctrl", 1, 1.0),
   ],
+  screen: null,
   models: [
     {
       targetId: "t1", chemblId: "CHEMBL0", fetchedAt: "2026-01-01", model: "synthetic", activeCutoffPchembl: 6, nCompounds: 100,
@@ -54,7 +55,7 @@ export function demoFixture(): RunBundle {
   const round = (x: number) => Math.round(x * 100) / 100;
   const targets = [1, 2, 3].map((n) => ({
     id: `t${n}`, gene: `SYN${n}`, name: `Synthetic target ${n}`, pdbId: `0SY${n}`, // PDB never assigns IDs starting with 0
-    role: "Placeholder protein. Not a real target.", sourceIds: ["demo"],
+    role: "Placeholder protein. Not a real target.", pdbFile: null, sourceIds: ["demo"],
   }));
   type Tri = "yes" | "no" | "unknown";
   type Spec = [string, RunBundle["drugs"][0]["approval"], Tri, Tri, number | null, RunBundle["drugs"][0]["access"]["costTier"], string | null, string[]];
@@ -122,6 +123,6 @@ export function demoFixture(): RunBundle {
       builder: "tests/fixture.ts", notes: "Synthetic demo. Not real drugs, not real docking results.",
     },
     sources: [{ id: "demo", label: "Synthetic demo data (tests/fixture.ts)", url: "https://example.org/synthetic", accessed: "2026-01-01" }],
-    targets, drugs, poses, models,
+    targets, drugs, poses, models, screen: null,
   };
 }

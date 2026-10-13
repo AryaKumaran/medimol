@@ -11,20 +11,17 @@ MediMol: computational hypotheses for lab testing. **Not medical advice.**
 - `lib/export/csv.ts`: shortlist and test-log CSV
 - `tools/build_run_bundle.py`: DiffDock outputs + `data/curation/*.csv` → `public/bundles/<id>.json`
 
-## Build a bundle
-1. Fill in `data/curation/{run.json,sources.csv,targets.csv,drugs.csv}`. Check every row against its source, and write `unknown` when you can't confirm something.
-2. `python3 tools/build_run_bundle.py --id pdac-v1 --diffdock data/raw/diffdock --fetch-trials`
-3. `pnpm test` (validates every bundle in `public/bundles/`)
+## Data pipeline (real data, no API keys)
+All network access happens in these offline tools. Responses are cached in `data/raw/http/`, and the app itself never goes online.
 
-## Web app
-- `web/`: React + Vite app (landing page plus Leads, Replay, Stability, Validation, Bench, About). It only reads `lib/`.
-- `web/src/motion/`: the spring engine. All motion goes through it; CSS transitions and keyframes fail `pnpm test`.
-- `tools/capture.ts`: records the app into the MP4 loops in `public/loops/` (Playwright frame by frame, ffmpeg stitch).
-
-```
-pnpm dev      # run the app locally
-pnpm build    # production build into dist/
-pnpm loops    # build, then re-record every loop (needs ffmpeg and Playwright's Chromium 1234: npx playwright-core@1.62.1 install chromium)
+```sh
+python3 -m venv .venv && .venv/bin/pip install -r tools/requirements.txt
+python3 tools/fetch_public_data.py                     # tree26 DiffDock run + PubChem/ChEMBL/FDA/WHO/CT.gov → data/curation/
+.venv/bin/python tools/train_activity_model.py --target-map data/curation/chembl_targets.csv   # KRAS model on ChEMBL
+.venv/bin/python tools/screen_approved.py              # every approved drug vs 5 KRAS-pathway targets
+python3 tools/build_run_bundle.py --id pdac-kras-v1 --diffdock data/raw/diffdock
+pnpm test                                              # validates public/bundles/*.json
 ```
 
-With no bundle in `public/bundles/` the app runs on a synthetic demo and says so on every screen. Add a real bundle, rebuild, and re-run `pnpm loops` so the landing-page videos show it too.
+- `reference/`: full copy of [tree26](https://github.com/ezou1/tree26) (MIT), the TreeHacks project whose DiffDock run we build on. See `reference/MEDIMOL_IMPORT.md` for the corrections we apply.
+- `data/curation/provenance.json`: the source URL and retrieval date for every fact.

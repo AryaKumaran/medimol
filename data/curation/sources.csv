@@ -1,1 +1,10 @@
 id,label,url,accessed
+tree26,"tree26 DiffDock run on RunPod (TreeHacks 2026, MIT)",https://github.com/ezou1/tree26,2026-10-13
+rcsb_9iay,RCSB PDB 9IAY: KRAS-GDP with pan-KRAS inhibitor,https://www.rcsb.org/structure/9IAY,2026-10-13
+tcga_pdac,"TCGA Research Network, Integrated Genomic Characterization of PDAC, Cancer Cell 2017",https://pubmed.ncbi.nlm.nih.gov/28810144/,2026-10-13
+pubchem,PubChem (NCBI),https://pubchem.ncbi.nlm.nih.gov/,2026-10-13
+chembl,ChEMBL (EMBL-EBI),https://www.ebi.ac.uk/chembl/,2026-10-13
+orangebook,FDA Orange Book data files,https://www.fda.gov/drugs/drug-approvals-and-databases/orange-book-data-files,2026-10-13
+who_eml,WHO Electronic Essential Medicines List,https://list.essentialmeds.org/,2026-10-13
+ctgov,ClinicalTrials.gov API v2,https://clinicaltrials.gov/data-api/api,2026-10-13
+openfda,openFDA drug labels,https://open.fda.gov/apis/drug/label/,2026-10-13

@@ -6,9 +6,10 @@ import type { DeviceMsg, HostMsg, TestedEvent } from "../../../lib/device/protoc
 import { download, shortlistCsv, testLogCsv } from "../../../lib/export/csv";
 import type { Data } from "../data";
 import { Pressable } from "../motion/react";
+import { storageBand } from "../../../lib/device/storage";
 import { Icon } from "./ui";
 
-const RANGE = { min: 2, max: 8 }; // fridge band in °C, sent to the device
+const FRIDGE = { min: 2, max: 8 }; // fallback in °C when no shortlisted drug has a label storage range
 type Virtual = ReturnType<typeof connectVirtual>;
 type Key = "next" | "prev" | "tested";
 type State = { kind: Device["kind"] | null; fw: string; temp: number | null; alert: "high" | "low" | "sensor" | null; idx: number; bad: number; error: string };
@@ -27,6 +28,10 @@ export function useBench(bundle: RunBundle, leads: Row[]) {
   const [log, setLog] = useState<TestedEvent[]>([]);
   const dev = useRef<Device | Virtual | null>(null);
   const items = shortlistOf(leads);
+  // Safe band from the shortlisted drugs' FDA label storage temperatures (see lib/device/storage.ts).
+  const band = storageBand(leads.slice(0, 10).map((r) => r.drug.storage));
+  const RANGE = band && band !== "conflict" ? band : FRIDGE;
+  const rangeSource = band === "conflict" ? "labels disagree, so the fridge default is used" : band ? "from the FDA labels of the shortlist" : "fridge default: no label storage data";
 
   const onMsg = (source: TestedEvent["source"]) => (m: DeviceMsg) => {
     if (m.t === "hello") setState((s) => ({ ...s, fw: `${m.board} · ${m.fw}` }));
@@ -49,7 +54,8 @@ export function useBench(bundle: RunBundle, leads: Row[]) {
     disconnect();
     try {
       const h = { onMsg: onMsg(kind), onBad: () => setState((s) => ({ ...s, bad: s.bad + 1 })), onClose: () => dev.current && disconnect() };
-      const d = kind === "virtual" ? connectVirtual(h) : await connectSerial(h);
+      const mid = (RANGE.min + RANGE.max) / 2, swing = (RANGE.max - RANGE.min) / 4;
+      const d = kind === "virtual" ? connectVirtual(h, { tempC: () => mid + Math.sin(Date.now() / 20_000) * swing }) : await connectSerial(h);
       dev.current = d;
       setState((s) => ({ ...s, kind }));
       await d.send({ t: "shortlist", items });
@@ -61,7 +67,7 @@ export function useBench(bundle: RunBundle, leads: Row[]) {
   useEffect(() => () => void dev.current?.close(), []);
 
   return {
-    state, log, items, connect, disconnect, bundleId: bundle.id,
+    state, log, items, connect, disconnect, bundleId: bundle.id, range: RANGE, rangeSource,
     // Only the virtual device has on-screen keys; a real one has its own.
     press(k: Key): boolean {
       const d = dev.current;
@@ -71,7 +77,7 @@ export function useBench(bundle: RunBundle, leads: Row[]) {
     },
     warm(on: boolean) {
       const d = dev.current;
-      if (d && "setTemp" in d) d.setTemp(on ? 9.4 : null);
+      if (d && "setTemp" in d) d.setTemp(on ? RANGE.max + 1.4 : null);
     },
   };
 }
@@ -118,12 +124,12 @@ export function Bench({ data, leads, bench }: { data: Data; leads: Row[]; bench:
               <Pressable className="btn" onClick={() => bench.press("prev")}>Previous</Pressable>
               <Pressable className="btn" onClick={() => bench.press("next")}>Next</Pressable>
               <Pressable className="btn btn-primary" onClick={() => bench.press("tested")}>Mark tested</Pressable>
-              <label className="switch"><input type="checkbox" checked={warm} onChange={(e) => (setWarm(e.target.checked), bench.warm(e.target.checked))} />Simulate a warm fridge</label>
+              <label className="switch"><input type="checkbox" checked={warm} onChange={(e) => (setWarm(e.target.checked), bench.warm(e.target.checked))} />Simulate a too-warm storage spot</label>
             </div>
           )}
           <p className="footnote" role="status">
             {s.error || (s.kind
-              ? `${virtual ? "Virtual device" : "USB device"}${s.fw ? ` (${s.fw})` : ""}. Safe range ${RANGE.min}–${RANGE.max} °C.${s.bad ? ` ${s.bad} unreadable lines ignored.` : ""}`
+              ? `${virtual ? "Virtual device" : "USB device"}${s.fw ? ` (${s.fw})` : ""}. Safe range ${bench.range.min}–${bench.range.max} °C (${bench.rangeSource}).${s.bad ? ` ${s.bad} unreadable lines ignored.` : ""}`
               : hasWebSerial() ? "Nothing connected. The virtual device behaves exactly like the real one." : "USB needs Chrome or Edge on a desktop. The virtual device works everywhere.")}
           </p>
         </section>

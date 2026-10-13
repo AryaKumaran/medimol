@@ -70,3 +70,44 @@ Drafted with AI assistance. The team should rewrite these in their own words.
 - **Why it exists:** the UI and its recorded loops need something to show before the real run is curated and docked.
 - **Why it cannot be mistaken for a finding:** names are "Compound A" to "Compound N" and "Control X/Y", targets are "SYN1" to "SYN3" with PDB IDs starting with 0 (the PDB never assigns those), and every number comes from a seeded generator. Real drug names with made-up scores were ruled out: that would read as a result.
 - **It lives with the test fixture** because that is the one place synthetic data is allowed.
+
+## 3D pose viewer (`web/src/app/PoseViewer.tsx`, `lib/bundle/pose.ts`)
+- **3Dmol.js, saved in `public/vendor/`:** an open-source (BSD-3) WebGL molecule viewer that is standard in research tools. Keeping a copy in the repo, instead of loading it from a CDN, keeps the demo working offline. It's only downloaded when someone opens a drug.
+- **Receptor files ship with the bundle:** `build_run_bundle.py` copies `data/raw/pdb/<PDB>.pdb` (the same file given to DiffDock) into the bundle. Fetching from RCSB at demo time would break the offline promise.
+- **Pocket computed in our code, not 3Dmol's `within`:** any residue with an atom within 5 Å of the ligand is drawn as sticks. The rule is easy to explain, and 3Dmol's cross-model selection didn't filter correctly in testing.
+- **Hetero atoms in the receptor are hidden:** receptor files often keep crystal waters and the original ligand, which would be confused with the predicted pose.
+- **Labelled on screen as a prediction, not an experimental structure**, with the PDB ID and DiffDock confidence. When the receptor file is missing, the drug is shown alone and the app says so.
+- Checked visually with PDB 1HSG (HIV-1 protease and indinavir) from RCSB as a known-good structure, which was then removed from the repo.
+
+## Real data pipeline (`tools/fetch_public_data.py`, `reference/`)
+- **Docking data** comes from the tree26 DiffDock run (TreeHacks 2026, MIT), copied in full to `reference/`. The originals are left untouched, and our corrections are applied on import, so anyone can diff them.
+- **Corrections, each with its evidence:**
+  - The 2FMA results are dropped: 2FMA is APP's copper-binding domain, not ERK2.
+  - The 9IAY target is not a G12D mutant: residue 12 is glycine.
+  - The tree26 `fda_status` strings are thrown away and every fact is re-fetched.
+- **Each access fact has exactly one authoritative source, and its URL and retrieval date are logged** (`data/curation/provenance.json`):
+  - approval: ChEMBL max_phase
+  - generic: FDA Orange Book ANDA, falling back to the openFDA NDC directory for OTC monograph drugs like aspirin, which the Orange Book mostly omits
+  - WHO list: an exact name or official-synonym match in the WHO eEML
+  - trials: ClinicalTrials.gov v2
+  - safety and storage: the openFDA label (boxed warning; storage temperature)
+- **"Unknown" is never turned into "no"**, except where it's true by definition: a compound with no approval can't have a generic or be on the WHO list.
+- **Identity matching:** first by exact InChIKey, then by the InChIKey connectivity block (salts, stereo forms), then by name. The name match is only accepted when PubChem independently maps that name to the same CID; that last step is what catches doxycycline, which was drawn as a tautomer.
+- **Positive controls** are compounds with a *measured* ChEMBL pChEMBL ≥ 6 against KRAS. That makes them independent of docking, which is what a validation set needs.
+- **HTTP responses are cached** in `data/raw/http/`, so reruns are reproducible and offline.
+
+## What the real data says (keep this honest in the video)
+- **Docking:** DiffDock confidence did not separate the 38 measured KRAS binders from the other 31 compounds. ROC-AUC is 0.39 (95% CI 0.25–0.52), which is no better than chance. One DiffDock run on one structure is weak evidence, and the Validation screen should say so plainly.
+- **ML:** the KRAS model scores ROC-AUC 0.865 on a scaffold split (5,082 measurements, 2,738 compounds). But all seven affordable leads are outside its applicability domain (nearest-neighbour Tanimoto similarity 0.08–0.22), so the model can't vouch for them, and the app shows "too different" instead of a score.
+- **Takeaway:** the docking leaderboard is a list of hypotheses that need lab tests, and the approved-drug screen (`tools/screen_approved.py`) adds evidence that doesn't depend on docking at all.
+
+## Model comparison (`train_activity_model.py --cv`)
+- Every target compares a random forest, a logistic regression and a Tanimoto nearest-neighbour baseline, using 5-fold GroupKFold where each Murcko scaffold stays in one fold. That way the chosen model is backed by a number, and "is ML better than nearest-neighbour lookup?" has an answer.
+
+## Approved-drug screen (`tools/screen_approved.py`)
+- Every ChEMBL max_phase-4 small-molecule parent (about 3,500) is scored against KRAS, ERK2, MEK1, SOS1 and SHP2.
+- **A measured value always beats a prediction.** Predictions are only reported inside the applicability domain, and out-of-domain drugs are counted but never ranked.
+- Top hits get the same access lookups as the docked set, so the screen answers "what is promising *and* obtainable?" too.
+
+## Storage band for the Bench Companion (`lib/device/storage.ts`)
+- The device's alert range is the overlap of the shortlisted drugs' FDA label storage temperatures (today's shortlist gives 20–25 °C). It is no longer a hard-coded fridge range. If the labels disagree, the UI says so and falls back to 2–8 °C. The virtual device simulates temperatures around the real band, so a room-temperature shortlist doesn't trigger false "too cold" alarms.

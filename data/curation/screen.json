@@ -1,0 +1,1539 @@
+{
+ "generatedAt": "2026-10-13",
+ "approvedDrugs": 2197,
+ "activeCutoffPchembl": 6.0,
+ "adMinSim": 0.3,
+ "targets": [
+  {
+   "targetId": "kras",
+   "gene": "KRAS",
+   "uniprot": "P01116",
+   "chemblId": "CHEMBL2189121",
+   "role": "Small GTPase mutated in most pancreatic cancers; the pathway's on-switch.",
+   "nCompounds": 2738,
+   "metrics": {
+    "split": "scaffold (~80/20, whole scaffolds kept together)",
+    "nTrain": 2190,
+    "nTest": 548,
+    "positiveRate": 0.622,
+    "rocAuc": 0.865,
+    "prAuc": 0.869,
+    "cv": {
+     "randomForest": {
+      "rocAucMean": 0.835,
+      "rocAucSd": 0.027,
+      "folds": 5
+     },
+     "logisticRegression": {
+      "rocAucMean": 0.816,
+      "rocAucSd": 0.019,
+      "folds": 5
+     },
+     "nearestNeighbors": {
+      "rocAucMean": 0.795,
+      "rocAucSd": 0.022,
+      "folds": 5
+     }
+    }
+   },
+   "hits": [
+    {
+     "chemblId": "CHEMBL4594350",
+     "name": "ADAGRASIB",
+     "withdrawn": false,
+     "kind": "measured",
+     "pchembl": 8.3,
+     "access": {
+      "generic": "no",
+      "whoEml": "no",
+      "trials": {
+       "count": 7,
+       "query": "https://clinicaltrials.gov/api/v2/studies?query.cond=pancreatic+cancer&query.intr=ADAGRASIB&countTotal=true&pageSize=1",
+       "fetchedAt": "2026-10-13"
+      },
+      "boxedWarning": null
+     }
+    },
+    {
+     "chemblId": "CHEMBL4535757",
+     "name": "SOTORASIB",
+     "withdrawn": false,
+     "kind": "measured",
+     "pchembl": 8.02,
+     "access": {
+      "generic": "no",
+      "whoEml": "no",
+      "trials": {
+       "count": 2,
+       "query": "https://clinicaltrials.gov/api/v2/studies?query.cond=pancreatic+cancer&query.intr=SOTORASIB&countTotal=true&pageSize=1",
+       "fetchedAt": "2026-10-13"
+      },
+      "boxedWarning": null
+     }
+    },
+    {
+     "chemblId": "CHEMBL298734",
+     "name": "LONAFARNIB",
+     "withdrawn": false,
+     "kind": "measured",
+     "pchembl": 7.4,
+     "access": {
+      "generic": "no",
+      "whoEml": "no",
+      "trials": {
+       "count": 0,
+       "query": "https://clinicaltrials.gov/api/v2/studies?query.cond=pancreatic+cancer&query.intr=LONAFARNIB&countTotal=true&pageSize=1",
+       "fetchedAt": "2026-10-13"
+      },
+      "boxedWarning": null
+     }
+    },
+    {
+     "chemblId": "CHEMBL4216467",
+     "name": "RIPRETINIB",
+     "withdrawn": false,
+     "kind": "predicted",
+     "p": 0.707,
+     "maxSim": 0.613,
+     "access": {
+      "generic": "no",
+      "whoEml": "no",
+      "trials": {
+       "count": 0,
+       "query": "https://clinicaltrials.gov/api/v2/studies?query.cond=pancreatic+cancer&query.intr=RIPRETINIB&countTotal=true&pageSize=1",
+       "fetchedAt": "2026-10-13"
+      },
+      "boxedWarning": null
+     }
+    },
+    {
+     "chemblId": "CHEMBL611",
+     "name": "TERAZOSIN",
+     "withdrawn": false,
+     "kind": "predicted",
+     "p": 0.58,
+     "maxSim": 0.326,
+     "access": {
+      "generic": "yes",
+      "whoEml": "no",
+      "trials": {
+       "count": 0,
+       "query": "https://clinicaltrials.gov/api/v2/studies?query.cond=pancreatic+cancer&query.intr=TERAZOSIN&countTotal=true&pageSize=1",
+       "fetchedAt": "2026-10-13"
+      },
+      "boxedWarning": null
+     }
+    },
+    {
+     "chemblId": "CHEMBL2",
+     "name": "PRAZOSIN",
+     "withdrawn": false,
+     "kind": "predicted",
+     "p": 0.568,
+     "maxSim": 0.318,
+     "access": {
+      "generic": "yes",
+      "whoEml": "no",
+      "trials": {
+       "count": 0,
+       "query": "https://clinicaltrials.gov/api/v2/studies?query.cond=pancreatic+cancer&query.intr=PRAZOSIN&countTotal=true&pageSize=1",
+       "fetchedAt": "2026-10-13"
+      },
+      "boxedWarning": null
+     }
+    },
+    {
+     "chemblId": "CHEMBL707",
+     "name": "DOXAZOSIN",
+     "withdrawn": false,
+     "kind": "predicted",
+     "p": 0.567,
+     "maxSim": 0.308,
+     "access": {
+      "generic": "yes",
+      "whoEml": "no",
+      "trials": {
+       "count": 0,
+       "query": "https://clinicaltrials.gov/api/v2/studies?query.cond=pancreatic+cancer&query.intr=DOXAZOSIN&countTotal=true&pageSize=1",
+       "fetchedAt": "2026-10-13"
+      },
+      "boxedWarning": null
+     }
+    },
+    {
+     "chemblId": "CHEMBL334966",
+     "name": "CANGRELOR",
+     "withdrawn": false,
+     "kind": "predicted",
+     "p": 0.528,
+     "maxSim": 0.423,
+     "access": {
+      "generic": "yes",
+      "whoEml": "no",
+      "trials": {
+       "count": 0,
+       "query": "https://clinicaltrials.gov/api/v2/studies?query.cond=pancreatic+cancer&query.intr=CANGRELOR&countTotal=true&pageSize=1",
+       "fetchedAt": "2026-10-13"
+      },
+      "boxedWarning": null
+     }
+    },
+    {
+     "chemblId": "CHEMBL1873475",
+     "name": "IBRUTINIB",
+     "withdrawn": false,
+     "kind": "predicted",
+     "p": 0.474,
+     "maxSim": 0.333,
+     "access": {
+      "generic": "yes",
+      "whoEml": "yes",
+      "trials": {
+       "count": 3,
+       "query": "https://clinicaltrials.gov/api/v2/studies?query.cond=pancreatic+cancer&query.intr=IBRUTINIB&countTotal=true&pageSize=1",
+       "fetchedAt": "2026-10-13"
+      },
+      "boxedWarning": null
+     }
+    },
+    {
+     "chemblId": "CHEMBL3989859",
+     "name": "TOCOPHEROL ACETATE",
+     "withdrawn": false,
+     "kind": "predicted",
+     "p": 0.456,
+     "maxSim": 0.333,
+     "access": {
+      "generic": "unknown",
+      "whoEml": "no",
+      "trials": {
+       "count": 1,
+       "query": "https://clinicaltrials.gov/api/v2/studies?query.cond=pancreatic+cancer&query.intr=TOCOPHEROL+ACETATE&countTotal=true&pageSize=1",
+       "fetchedAt": "2026-10-13"
+      },
+      "boxedWarning": null
+     }
+    },
+    {
+     "chemblId": "CHEMBL1201284",
+     "name": "CINACALCET",
+     "withdrawn": false,
+     "kind": "predicted",
+     "p": 0.45,
+     "maxSim": 0.323,
+     "access": {
+      "generic": "yes",
+      "whoEml": "no",
+      "trials": {
+       "count": 1,
+       "query": "https://clinicaltrials.gov/api/v2/studies?query.cond=pancreatic+cancer&query.intr=CINACALCET&countTotal=true&pageSize=1",
+       "fetchedAt": "2026-10-13"
+      },
+      "boxedWarning": null
+     }
+    },
+    {
+     "chemblId": "CHEMBL91397",
+     "name": "RUPATADINE",
+     "withdrawn": false,
+     "kind": "predicted",
+     "p": 0.432,
+     "maxSim": 0.317,
+     "access": {
+      "generic": "unknown",
+      "whoEml": "no",
+      "trials": {
+       "count": 0,
+       "query": "https://clinicaltrials.gov/api/v2/studies?query.cond=pancreatic+cancer&query.intr=RUPATADINE&countTotal=true&pageSize=1",
+       "fetchedAt": "2026-10-13"
+      },
+      "boxedWarning": null
+     }
+    },
+    {
+     "chemblId": "CHEMBL451930",
+     "name": "PLITIDEPSIN",
+     "withdrawn": false,
+     "kind": "predicted",
+     "p": 0.42,
+     "maxSim": 0.308,
+     "access": {
+      "generic": "unknown",
+      "whoEml": "no",
+      "trials": {
+       "count": 0,
+       "query": "https://clinicaltrials.gov/api/v2/studies?query.cond=pancreatic+cancer&query.intr=PLITIDEPSIN&countTotal=true&pageSize=1",
+       "fetchedAt": "2026-10-13"
+      },
+      "boxedWarning": null
+     }
+    },
+    {
+     "chemblId": "CHEMBL998",
+     "name": "LORATADINE",
+     "withdrawn": false,
+     "kind": "predicted",
+     "p": 0.418,
+     "maxSim": 0.364,
+     "access": {
+      "generic": "yes",
+      "whoEml": "yes",
+      "trials": {
+       "count": 0,
+       "query": "https://clinicaltrials.gov/api/v2/studies?query.cond=pancreatic+cancer&query.intr=LORATADINE&countTotal=true&pageSize=1",
+       "fetchedAt": "2026-10-13"
+      },
+      "boxedWarning": null
+     }
+    },
+    {
+     "chemblId": "CHEMBL3701238",
+     "name": "FUTIBATINIB",
+     "withdrawn": false,
+     "kind": "predicted",
+     "p": 0.398,
+     "maxSim": 0.309,
+     "access": {
+      "generic": "no",
+      "whoEml": "no",
+      "trials": {
+       "count": 3,
+       "query": "https://clinicaltrials.gov/api/v2/studies?query.cond=pancreatic+cancer&query.intr=FUTIBATINIB&countTotal=true&pageSize=1",
+       "fetchedAt": "2026-10-13"
+      },
+      "boxedWarning": null
+     }
+    }
+   ],
+   "counts": {
+    "measured": 5,
+    "predicted": 54,
+    "out-of-domain": 2138,
+    "measuredActive": 3
+   }
+  },
+  {
+   "targetId": "mapk1",
+   "gene": "MAPK1 (ERK2)",
+   "uniprot": "P28482",
+   "chemblId": "CHEMBL4040",
+   "role": "Kinase at the end of the KRAS\u2192RAF\u2192MEK\u2192ERK signaling chain.",
+   "nCompounds": 5246,
+   "metrics": {
+    "split": "scaffold (~80/20, whole scaffolds kept together)",
+    "nTrain": 4196,
+    "nTest": 1050,
+    "positiveRate": 0.912,
+    "rocAuc": 0.921,
+    "prAuc": 0.98,
+    "cv": {
+     "randomForest": {
+      "rocAucMean": 0.933,
+      "rocAucSd": 0.019,
+      "folds": 5
+     },
+     "logisticRegression": {
+      "rocAucMean": 0.935,
+      "rocAucSd": 0.021,
+      "folds": 5
+     },
+     "nearestNeighbors": {
+      "rocAucMean": 0.829,
+      "rocAucSd": 0.031,
+      "folds": 5
+     }
+    }
+   },
+   "hits": [
+    {
+     "chemblId": "CHEMBL1289494",
+     "name": "TIVOZANIB",
+     "withdrawn": false,
+     "kind": "measured",
+     "pchembl": 9.74,
+     "access": {
+      "generic": "no",
+      "whoEml": "no",
+      "trials": {
+       "count": 1,
+       "query": "https://clinicaltrials.gov/api/v2/studies?query.cond=pancreatic+cancer&query.intr=TIVOZANIB&countTotal=true&pageSize=1",
+       "fetchedAt": "2026-10-13"
+      },
+      "boxedWarning": null
+     }
+    },
+    {
+     "chemblId": "CHEMBL267495",
+     "name": "NALFURAFINE",
+     "withdrawn": false,
+     "kind": "measured",
+     "pchembl": 9.26,
+     "access": {
+      "generic": "unknown",
+      "whoEml": "no",
+      "trials": {
+       "count": 0,
+       "query": "https://clinicaltrials.gov/api/v2/studies?query.cond=pancreatic+cancer&query.intr=NALFURAFINE&countTotal=true&pageSize=1",
+       "fetchedAt": "2026-10-13"
+      },
+      "boxedWarning": null
+     }
+    },
+    {
+     "chemblId": "CHEMBL1336",
+     "name": "SORAFENIB",
+     "withdrawn": false,
+     "kind": "measured",
+     "pchembl": 6.96,
+     "access": {
+      "generic": "yes",
+      "whoEml": "no",
+      "trials": {
+       "count": 19,
+       "query": "https://clinicaltrials.gov/api/v2/studies?query.cond=pancreatic+cancer&query.intr=SORAFENIB&countTotal=true&pageSize=1",
+       "fetchedAt": "2026-10-13"
+      },
+      "boxedWarning": null
+     }
+    },
+    {
+     "chemblId": "CHEMBL496",
+     "name": "HEXACHLOROPHENE",
+     "withdrawn": true,
+     "kind": "measured",
+     "pchembl": 6.71,
+     "access": {
+      "generic": "no",
+      "whoEml": "no",
+      "trials": {
+       "count": 0,
+       "query": "https://clinicaltrials.gov/api/v2/studies?query.cond=pancreatic+cancer&query.intr=HEXACHLOROPHENE&countTotal=true&pageSize=1",
+       "fetchedAt": "2026-10-13"
+      },
+      "boxedWarning": null
+     }
+    },
+    {
+     "chemblId": "CHEMBL290106",
+     "name": "BITHIONOL",
+     "withdrawn": true,
+     "kind": "measured",
+     "pchembl": 6.42,
+     "access": {
+      "generic": "unknown",
+      "whoEml": "no",
+      "trials": {
+       "count": 0,
+       "query": "https://clinicaltrials.gov/api/v2/studies?query.cond=pancreatic+cancer&query.intr=BITHIONOL&countTotal=true&pageSize=1",
+       "fetchedAt": "2026-10-13"
+      },
+      "boxedWarning": null
+     }
+    },
+    {
+     "chemblId": "CHEMBL547",
+     "name": "ISOTRETINOIN",
+     "withdrawn": false,
+     "kind": "measured",
+     "pchembl": 6.33,
+     "access": {
+      "generic": "yes",
+      "whoEml": "no",
+      "trials": {
+       "count": 0,
+       "query": "https://clinicaltrials.gov/api/v2/studies?query.cond=pancreatic+cancer&query.intr=ISOTRETINOIN&countTotal=true&pageSize=1",
+       "fetchedAt": "2026-10-13"
+      },
+      "boxedWarning": "FDA boxed warning: contraindications and warnings"
+     }
+    },
+    {
+     "chemblId": "CHEMBL705",
+     "name": "ALITRETINOIN",
+     "withdrawn": false,
+     "kind": "measured",
+     "pchembl": 6.33,
+     "access": {
+      "generic": "no",
+      "whoEml": "no",
+      "trials": {
+       "count": 0,
+       "query": "https://clinicaltrials.gov/api/v2/studies?query.cond=pancreatic+cancer&query.intr=ALITRETINOIN&countTotal=true&pageSize=1",
+       "fetchedAt": "2026-10-13"
+      },
+      "boxedWarning": null
+     }
+    },
+    {
+     "chemblId": "CHEMBL603",
+     "name": "ZAFIRLUKAST",
+     "withdrawn": false,
+     "kind": "measured",
+     "pchembl": 6.27,
+     "access": {
+      "generic": "yes",
+      "whoEml": "no",
+      "trials": {
+       "count": 0,
+       "query": "https://clinicaltrials.gov/api/v2/studies?query.cond=pancreatic+cancer&query.intr=ZAFIRLUKAST&countTotal=true&pageSize=1",
+       "fetchedAt": "2026-10-13"
+      },
+      "boxedWarning": null
+     }
+    },
+    {
+     "chemblId": "CHEMBL38",
+     "name": "TRETINOIN",
+     "withdrawn": false,
+     "kind": "measured",
+     "pchembl": 6.24,
+     "access": {
+      "generic": "yes",
+      "whoEml": "no",
+      "trials": {
+       "count": 6,
+       "query": "https://clinicaltrials.gov/api/v2/studies?query.cond=pancreatic+cancer&query.intr=TRETINOIN&countTotal=true&pageSize=1",
+       "fetchedAt": "2026-10-13"
+      },
+      "boxedWarning": "FDA boxed warning: embryo-fetal toxicity and differentiation syndrome"
+     }
+    },
+    {
+     "chemblId": "CHEMBL24944",
+     "name": "TRIBROMSALAN",
+     "withdrawn": true,
+     "kind": "measured",
+     "pchembl": 6.21,
+     "access": {
+      "generic": "unknown",
+      "whoEml": "no",
+      "trials": {
+       "count": 0,
+       "query": "https://clinicaltrials.gov/api/v2/studies?query.cond=pancreatic+cancer&query.intr=TRIBROMSALAN&countTotal=true&pageSize=1",
+       "fetchedAt": "2026-10-13"
+      },
+      "boxedWarning": null
+     }
+    },
+    {
+     "chemblId": "CHEMBL291338",
+     "name": "3,3',4',5-TETRACHLOROSALICYLANILIDE",
+     "withdrawn": true,
+     "kind": "measured",
+     "pchembl": 6.05,
+     "access": {
+      "generic": "unknown",
+      "whoEml": "no",
+      "trials": {
+       "count": 0,
+       "query": "https://clinicaltrials.gov/api/v2/studies?query.cond=pancreatic+cancer&query.intr=3%2C3%27%2C4%27%2C5-TETRACHLOROSALICYLANILIDE&countTotal=true&pageSize=1",
+       "fetchedAt": "2026-10-13"
+      },
+      "boxedWarning": null
+     }
+    },
+    {
+     "chemblId": "CHEMBL4582651",
+     "name": "PRALSETINIB",
+     "withdrawn": false,
+     "kind": "predicted",
+     "p": 0.822,
+     "maxSim": 0.323,
+     "access": {
+      "generic": "no",
+      "whoEml": "no",
+      "trials": {
+       "count": 0,
+       "query": "https://clinicaltrials.gov/api/v2/studies?query.cond=pancreatic+cancer&query.intr=PRALSETINIB&countTotal=true&pageSize=1",
+       "fetchedAt": "2026-10-13"
+      },
+      "boxedWarning": "FDA boxed warning: serious infections, including opportunistic infections gavreto"
+     }
+    },
+    {
+     "chemblId": "CHEMBL2364638",
+     "name": "UBROGEPANT",
+     "withdrawn": false,
+     "kind": "predicted",
+     "p": 0.688,
+     "maxSim": 0.309,
+     "access": {
+      "generic": "no",
+      "whoEml": "no",
+      "trials": {
+       "count": 0,
+       "query": "https://clinicaltrials.gov/api/v2/studies?query.cond=pancreatic+cancer&query.intr=UBROGEPANT&countTotal=true&pageSize=1",
+       "fetchedAt": "2026-10-13"
+      },
+      "boxedWarning": null
+     }
+    },
+    {
+     "chemblId": "CHEMBL256907",
+     "name": "MARAVIROC",
+     "withdrawn": false,
+     "kind": "predicted",
+     "p": 0.661,
+     "maxSim": 0.341,
+     "access": {
+      "generic": "yes",
+      "whoEml": "no",
+      "trials": {
+       "count": 1,
+       "query": "https://clinicaltrials.gov/api/v2/studies?query.cond=pancreatic+cancer&query.intr=MARAVIROC&countTotal=true&pageSize=1",
+       "fetchedAt": "2026-10-13"
+      },
+      "boxedWarning": "FDA boxed warning: hepatotoxicity"
+     }
+    },
+    {
+     "chemblId": "CHEMBL3301612",
+     "name": "ENCORAFENIB",
+     "withdrawn": false,
+     "kind": "predicted",
+     "p": 0.659,
+     "maxSim": 0.311,
+     "access": {
+      "generic": "no",
+      "whoEml": "no",
+      "trials": {
+       "count": 2,
+       "query": "https://clinicaltrials.gov/api/v2/studies?query.cond=pancreatic+cancer&query.intr=ENCORAFENIB&countTotal=true&pageSize=1",
+       "fetchedAt": "2026-10-13"
+      },
+      "boxedWarning": null
+     }
+    }
+   ],
+   "counts": {
+    "measured": 16,
+    "predicted": 294,
+    "out-of-domain": 1887,
+    "measuredActive": 11
+   }
+  },
+  {
+   "targetId": "map2k1",
+   "gene": "MAP2K1 (MEK1)",
+   "uniprot": "Q02750",
+   "chemblId": "CHEMBL3587",
+   "role": "Kinase that activates ERK; target of approved MEK inhibitors.",
+   "nCompounds": 1086,
+   "metrics": {
+    "split": "scaffold (~80/20, whole scaffolds kept together)",
+    "nTrain": 868,
+    "nTest": 218,
+    "positiveRate": 0.773,
+    "rocAuc": 0.815,
+    "prAuc": 0.843,
+    "cv": {
+     "randomForest": {
+      "rocAucMean": 0.875,
+      "rocAucSd": 0.03,
+      "folds": 5
+     },
+     "logisticRegression": {
+      "rocAucMean": 0.872,
+      "rocAucSd": 0.038,
+      "folds": 5
+     },
+     "nearestNeighbors": {
+      "rocAucMean": 0.826,
+      "rocAucSd": 0.037,
+      "folds": 5
+     }
+    }
+   },
+   "hits": [
+    {
+     "chemblId": "CHEMBL2146883",
+     "name": "COBIMETINIB",
+     "withdrawn": false,
+     "kind": "measured",
+     "pchembl": 9.7,
+     "access": {
+      "generic": "no",
+      "whoEml": "no",
+      "trials": {
+       "count": 8,
+       "query": "https://clinicaltrials.gov/api/v2/studies?query.cond=pancreatic+cancer&query.intr=COBIMETINIB&countTotal=true&pageSize=1",
+       "fetchedAt": "2026-10-13"
+      },
+      "boxedWarning": null
+     }
+    },
+    {
+     "chemblId": "CHEMBL2103875",
+     "name": "TRAMETINIB",
+     "withdrawn": false,
+     "kind": "measured",
+     "pchembl": 9.32,
+     "access": {
+      "generic": "no",
+      "whoEml": "no",
+      "trials": {
+       "count": 17,
+       "query": "https://clinicaltrials.gov/api/v2/studies?query.cond=pancreatic+cancer&query.intr=TRAMETINIB&countTotal=true&pageSize=1",
+       "fetchedAt": "2026-10-13"
+      },
+      "boxedWarning": null
+     }
+    },
+    {
+     "chemblId": "CHEMBL288441",
+     "name": "BOSUTINIB",
+     "withdrawn": false,
+     "kind": "measured",
+     "pchembl": 9.0,
+     "access": {
+      "generic": "yes",
+      "whoEml": "no",
+      "trials": {
+       "count": 2,
+       "query": "https://clinicaltrials.gov/api/v2/studies?query.cond=pancreatic+cancer&query.intr=BOSUTINIB&countTotal=true&pageSize=1",
+       "fetchedAt": "2026-10-13"
+      },
+      "boxedWarning": null
+     }
+    },
+    {
+     "chemblId": "CHEMBL1614701",
+     "name": "SELUMETINIB",
+     "withdrawn": false,
+     "kind": "measured",
+     "pchembl": 8.05,
+     "access": {
+      "generic": "no",
+      "whoEml": "no",
+      "trials": {
+       "count": 7,
+       "query": "https://clinicaltrials.gov/api/v2/studies?query.cond=pancreatic+cancer&query.intr=SELUMETINIB&countTotal=true&pageSize=1",
+       "fetchedAt": "2026-10-13"
+      },
+      "boxedWarning": null
+     }
+    },
+    {
+     "chemblId": "CHEMBL502835",
+     "name": "NINTEDANIB",
+     "withdrawn": false,
+     "kind": "measured",
+     "pchembl": 8.0,
+     "access": {
+      "generic": "yes",
+      "whoEml": "no",
+      "trials": {
+       "count": 1,
+       "query": "https://clinicaltrials.gov/api/v2/studies?query.cond=pancreatic+cancer&query.intr=NINTEDANIB&countTotal=true&pageSize=1",
+       "fetchedAt": "2026-10-13"
+      },
+      "boxedWarning": null
+     }
+    },
+    {
+     "chemblId": "CHEMBL3187723",
+     "name": "BINIMETINIB",
+     "withdrawn": false,
+     "kind": "measured",
+     "pchembl": 7.92,
+     "access": {
+      "generic": "no",
+      "whoEml": "no",
+      "trials": {
+       "count": 11,
+       "query": "https://clinicaltrials.gov/api/v2/studies?query.cond=pancreatic+cancer&query.intr=BINIMETINIB&countTotal=true&pageSize=1",
+       "fetchedAt": "2026-10-13"
+      },
+      "boxedWarning": null
+     }
+    },
+    {
+     "chemblId": "CHEMBL180022",
+     "name": "NERATINIB",
+     "withdrawn": false,
+     "kind": "measured",
+     "pchembl": 7.85,
+     "access": {
+      "generic": "no",
+      "whoEml": "no",
+      "trials": {
+       "count": 4,
+       "query": "https://clinicaltrials.gov/api/v2/studies?query.cond=pancreatic+cancer&query.intr=NERATINIB&countTotal=true&pageSize=1",
+       "fetchedAt": "2026-10-13"
+      },
+      "boxedWarning": null
+     }
+    },
+    {
+     "chemblId": "CHEMBL535",
+     "name": "SUNITINIB",
+     "withdrawn": false,
+     "kind": "measured",
+     "pchembl": 6.89,
+     "access": {
+      "generic": "yes",
+      "whoEml": "no",
+      "trials": {
+       "count": 25,
+       "query": "https://clinicaltrials.gov/api/v2/studies?query.cond=pancreatic+cancer&query.intr=SUNITINIB&countTotal=true&pageSize=1",
+       "fetchedAt": "2026-10-13"
+      },
+      "boxedWarning": "FDA boxed warning: hepatotoxicity"
+     }
+    },
+    {
+     "chemblId": "CHEMBL221959",
+     "name": "TOFACITINIB",
+     "withdrawn": false,
+     "kind": "measured",
+     "pchembl": 6.37,
+     "access": {
+      "generic": "yes",
+      "whoEml": "no",
+      "trials": {
+       "count": 1,
+       "query": "https://clinicaltrials.gov/api/v2/studies?query.cond=pancreatic+cancer&query.intr=TOFACITINIB&countTotal=true&pageSize=1",
+       "fetchedAt": "2026-10-13"
+      },
+      "boxedWarning": "FDA boxed warning: serious infections, mortality, malignancy, major adverse cardiovascular events, and thrombosis"
+     }
+    },
+    {
+     "chemblId": "CHEMBL24828",
+     "name": "VANDETANIB",
+     "withdrawn": false,
+     "kind": "measured",
+     "pchembl": 6.0,
+     "access": {
+      "generic": "no",
+      "whoEml": "no",
+      "trials": {
+       "count": 3,
+       "query": "https://clinicaltrials.gov/api/v2/studies?query.cond=pancreatic+cancer&query.intr=VANDETANIB&countTotal=true&pageSize=1",
+       "fetchedAt": "2026-10-13"
+      },
+      "boxedWarning": "FDA boxed warning: qt prolongation, torsades de pointes, and sudden death caprelsa"
+     }
+    },
+    {
+     "chemblId": "CHEMBL1421",
+     "name": "DASATINIB ANHYDROUS",
+     "withdrawn": false,
+     "kind": "predicted",
+     "p": 0.78,
+     "maxSim": 0.985,
+     "access": {
+      "generic": "unknown",
+      "whoEml": "no",
+      "trials": {
+       "count": 1,
+       "query": "https://clinicaltrials.gov/api/v2/studies?query.cond=pancreatic+cancer&query.intr=DASATINIB+ANHYDROUS&countTotal=true&pageSize=1",
+       "fetchedAt": "2026-10-13"
+      },
+      "boxedWarning": null
+     }
+    },
+    {
+     "chemblId": "CHEMBL3545311",
+     "name": "BRIGATINIB",
+     "withdrawn": false,
+     "kind": "predicted",
+     "p": 0.751,
+     "maxSim": 0.731,
+     "access": {
+      "generic": "no",
+      "whoEml": "no",
+      "trials": {
+       "count": 1,
+       "query": "https://clinicaltrials.gov/api/v2/studies?query.cond=pancreatic+cancer&query.intr=BRIGATINIB&countTotal=true&pageSize=1",
+       "fetchedAt": "2026-10-13"
+      },
+      "boxedWarning": null
+     }
+    },
+    {
+     "chemblId": "CHEMBL2403108",
+     "name": "CERITINIB",
+     "withdrawn": false,
+     "kind": "predicted",
+     "p": 0.71,
+     "maxSim": 0.517,
+     "access": {
+      "generic": "no",
+      "whoEml": "no",
+      "trials": {
+       "count": 3,
+       "query": "https://clinicaltrials.gov/api/v2/studies?query.cond=pancreatic+cancer&query.intr=CERITINIB&countTotal=true&pageSize=1",
+       "fetchedAt": "2026-10-13"
+      },
+      "boxedWarning": null
+     }
+    },
+    {
+     "chemblId": "CHEMBL1873475",
+     "name": "IBRUTINIB",
+     "withdrawn": false,
+     "kind": "predicted",
+     "p": 0.683,
+     "maxSim": 0.646,
+     "access": {
+      "generic": "yes",
+      "whoEml": "yes",
+      "trials": {
+       "count": 3,
+       "query": "https://clinicaltrials.gov/api/v2/studies?query.cond=pancreatic+cancer&query.intr=IBRUTINIB&countTotal=true&pageSize=1",
+       "fetchedAt": "2026-10-13"
+      },
+      "boxedWarning": null
+     }
+    },
+    {
+     "chemblId": "CHEMBL1229517",
+     "name": "VEMURAFENIB",
+     "withdrawn": false,
+     "kind": "predicted",
+     "p": 0.668,
+     "maxSim": 0.823,
+     "access": {
+      "generic": "no",
+      "whoEml": "no",
+      "trials": {
+       "count": 3,
+       "query": "https://clinicaltrials.gov/api/v2/studies?query.cond=pancreatic+cancer&query.intr=VEMURAFENIB&countTotal=true&pageSize=1",
+       "fetchedAt": "2026-10-13"
+      },
+      "boxedWarning": null
+     }
+    }
+   ],
+   "counts": {
+    "measured": 14,
+    "predicted": 179,
+    "out-of-domain": 2004,
+    "measuredActive": 10
+   }
+  },
+  {
+   "targetId": "sos1",
+   "gene": "SOS1",
+   "uniprot": "Q07889",
+   "chemblId": "CHEMBL2079846",
+   "role": "Exchange factor that switches KRAS on.",
+   "nCompounds": 1004,
+   "metrics": {
+    "split": "scaffold (~80/20, whole scaffolds kept together)",
+    "nTrain": 803,
+    "nTest": 201,
+    "positiveRate": 0.831,
+    "rocAuc": 0.944,
+    "prAuc": 0.968,
+    "cv": {
+     "randomForest": {
+      "rocAucMean": 0.978,
+      "rocAucSd": 0.008,
+      "folds": 5
+     },
+     "logisticRegression": {
+      "rocAucMean": 0.969,
+      "rocAucSd": 0.008,
+      "folds": 5
+     },
+     "nearestNeighbors": {
+      "rocAucMean": 0.946,
+      "rocAucSd": 0.02,
+      "folds": 5
+     }
+    }
+   },
+   "hits": [
+    {
+     "chemblId": "CHEMBL1201284",
+     "name": "CINACALCET",
+     "withdrawn": false,
+     "kind": "predicted",
+     "p": 0.575,
+     "maxSim": 0.328,
+     "access": {
+      "generic": "yes",
+      "whoEml": "no",
+      "trials": {
+       "count": 1,
+       "query": "https://clinicaltrials.gov/api/v2/studies?query.cond=pancreatic+cancer&query.intr=CINACALCET&countTotal=true&pageSize=1",
+       "fetchedAt": "2026-10-13"
+      },
+      "boxedWarning": null
+     }
+    },
+    {
+     "chemblId": "CHEMBL298470",
+     "name": "TAFENOQUINE",
+     "withdrawn": false,
+     "kind": "predicted",
+     "p": 0.496,
+     "maxSim": 0.329,
+     "access": {
+      "generic": "no",
+      "whoEml": "no",
+      "trials": {
+       "count": 0,
+       "query": "https://clinicaltrials.gov/api/v2/studies?query.cond=pancreatic+cancer&query.intr=TAFENOQUINE&countTotal=true&pageSize=1",
+       "fetchedAt": "2026-10-13"
+      },
+      "boxedWarning": null
+     }
+    },
+    {
+     "chemblId": "CHEMBL416956",
+     "name": "MEFLOQUINE",
+     "withdrawn": false,
+     "kind": "predicted",
+     "p": 0.433,
+     "maxSim": 0.321,
+     "access": {
+      "generic": "yes",
+      "whoEml": "yes",
+      "trials": {
+       "count": 0,
+       "query": "https://clinicaltrials.gov/api/v2/studies?query.cond=pancreatic+cancer&query.intr=MEFLOQUINE&countTotal=true&pageSize=1",
+       "fetchedAt": "2026-10-13"
+      },
+      "boxedWarning": "FDA boxed warning: mefloquine"
+     }
+    },
+    {
+     "chemblId": "CHEMBL4297517",
+     "name": "MAVACAMTEN",
+     "withdrawn": false,
+     "kind": "predicted",
+     "p": 0.401,
+     "maxSim": 0.327,
+     "access": {
+      "generic": "no",
+      "whoEml": "no",
+      "trials": {
+       "count": 0,
+       "query": "https://clinicaltrials.gov/api/v2/studies?query.cond=pancreatic+cancer&query.intr=MAVACAMTEN&countTotal=true&pageSize=1",
+       "fetchedAt": "2026-10-13"
+      },
+      "boxedWarning": null
+     }
+    },
+    {
+     "chemblId": "CHEMBL400599",
+     "name": "BENFLUOREX",
+     "withdrawn": true,
+     "kind": "predicted",
+     "p": 0.339,
+     "maxSim": 0.3,
+     "access": {
+      "generic": "unknown",
+      "whoEml": "no",
+      "trials": {
+       "count": 0,
+       "query": "https://clinicaltrials.gov/api/v2/studies?query.cond=pancreatic+cancer&query.intr=BENFLUOREX&countTotal=true&pageSize=1",
+       "fetchedAt": "2026-10-13"
+      },
+      "boxedWarning": null
+     }
+    },
+    {
+     "chemblId": "CHEMBL206253",
+     "name": "NETUPITANT",
+     "withdrawn": false,
+     "kind": "predicted",
+     "p": 0.338,
+     "maxSim": 0.314,
+     "access": {
+      "generic": "unknown",
+      "whoEml": "no",
+      "trials": {
+       "count": 0,
+       "query": "https://clinicaltrials.gov/api/v2/studies?query.cond=pancreatic+cancer&query.intr=NETUPITANT&countTotal=true&pageSize=1",
+       "fetchedAt": "2026-10-13"
+      },
+      "boxedWarning": null
+     }
+    },
+    {
+     "chemblId": "CHEMBL87493",
+     "name": "FENFLURAMINE",
+     "withdrawn": true,
+     "kind": "predicted",
+     "p": 0.323,
+     "maxSim": 0.3,
+     "access": {
+      "generic": "no",
+      "whoEml": "no",
+      "trials": {
+       "count": 0,
+       "query": "https://clinicaltrials.gov/api/v2/studies?query.cond=pancreatic+cancer&query.intr=FENFLURAMINE&countTotal=true&pageSize=1",
+       "fetchedAt": "2026-10-13"
+      },
+      "boxedWarning": "FDA boxed warning: valvular heart disease and pulmonary arterial hypertension fintepla"
+     }
+    },
+    {
+     "chemblId": "CHEMBL248702",
+     "name": "DEXFENFLURAMINE",
+     "withdrawn": true,
+     "kind": "predicted",
+     "p": 0.323,
+     "maxSim": 0.3,
+     "access": {
+      "generic": "unknown",
+      "whoEml": "no",
+      "trials": {
+       "count": 0,
+       "query": "https://clinicaltrials.gov/api/v2/studies?query.cond=pancreatic+cancer&query.intr=DEXFENFLURAMINE&countTotal=true&pageSize=1",
+       "fetchedAt": "2026-10-13"
+      },
+      "boxedWarning": null
+     }
+    },
+    {
+     "chemblId": "CHEMBL2105737",
+     "name": "SONIDEGIB",
+     "withdrawn": false,
+     "kind": "predicted",
+     "p": 0.314,
+     "maxSim": 0.333,
+     "access": {
+      "generic": "no",
+      "whoEml": "no",
+      "trials": {
+       "count": 7,
+       "query": "https://clinicaltrials.gov/api/v2/studies?query.cond=pancreatic+cancer&query.intr=SONIDEGIB&countTotal=true&pageSize=1",
+       "fetchedAt": "2026-10-13"
+      },
+      "boxedWarning": "FDA boxed warning: embryo-fetal toxicity odomzo"
+     }
+    },
+    {
+     "chemblId": "CHEMBL1909283",
+     "name": "MEBANAZINE",
+     "withdrawn": true,
+     "kind": "predicted",
+     "p": 0.3,
+     "maxSim": 0.326,
+     "access": {
+      "generic": "unknown",
+      "whoEml": "no",
+      "trials": {
+       "count": 0,
+       "query": "https://clinicaltrials.gov/api/v2/studies?query.cond=pancreatic+cancer&query.intr=MEBANAZINE&countTotal=true&pageSize=1",
+       "fetchedAt": "2026-10-13"
+      },
+      "boxedWarning": null
+     }
+    },
+    {
+     "chemblId": "CHEMBL553",
+     "name": "ERLOTINIB",
+     "withdrawn": false,
+     "kind": "predicted",
+     "p": 0.293,
+     "maxSim": 0.371,
+     "access": {
+      "generic": "yes",
+      "whoEml": "yes",
+      "trials": {
+       "count": 91,
+       "query": "https://clinicaltrials.gov/api/v2/studies?query.cond=pancreatic+cancer&query.intr=ERLOTINIB&countTotal=true&pageSize=1",
+       "fetchedAt": "2026-10-13"
+      },
+      "boxedWarning": null
+     }
+    },
+    {
+     "chemblId": "CHEMBL2403108",
+     "name": "CERITINIB",
+     "withdrawn": false,
+     "kind": "predicted",
+     "p": 0.281,
+     "maxSim": 0.315,
+     "access": {
+      "generic": "no",
+      "whoEml": "no",
+      "trials": {
+       "count": 3,
+       "query": "https://clinicaltrials.gov/api/v2/studies?query.cond=pancreatic+cancer&query.intr=CERITINIB&countTotal=true&pageSize=1",
+       "fetchedAt": "2026-10-13"
+      },
+      "boxedWarning": null
+     }
+    },
+    {
+     "chemblId": "CHEMBL1173655",
+     "name": "AFATINIB",
+     "withdrawn": false,
+     "kind": "predicted",
+     "p": 0.254,
+     "maxSim": 0.351,
+     "access": {
+      "generic": "yes",
+      "whoEml": "yes",
+      "trials": {
+       "count": 7,
+       "query": "https://clinicaltrials.gov/api/v2/studies?query.cond=pancreatic+cancer&query.intr=AFATINIB&countTotal=true&pageSize=1",
+       "fetchedAt": "2026-10-13"
+      },
+      "boxedWarning": null
+     }
+    },
+    {
+     "chemblId": "CHEMBL939",
+     "name": "GEFITINIB",
+     "withdrawn": false,
+     "kind": "predicted",
+     "p": 0.222,
+     "maxSim": 0.393,
+     "access": {
+      "generic": "yes",
+      "whoEml": "yes",
+      "trials": {
+       "count": 5,
+       "query": "https://clinicaltrials.gov/api/v2/studies?query.cond=pancreatic+cancer&query.intr=GEFITINIB&countTotal=true&pageSize=1",
+       "fetchedAt": "2026-10-13"
+      },
+      "boxedWarning": null
+     }
+    },
+    {
+     "chemblId": "CHEMBL2110732",
+     "name": "DACOMITINIB ANHYDROUS",
+     "withdrawn": false,
+     "kind": "predicted",
+     "p": 0.217,
+     "maxSim": 0.308,
+     "access": {
+      "generic": "unknown",
+      "whoEml": "no",
+      "trials": {
+       "count": 1,
+       "query": "https://clinicaltrials.gov/api/v2/studies?query.cond=pancreatic+cancer&query.intr=DACOMITINIB+ANHYDROUS&countTotal=true&pageSize=1",
+       "fetchedAt": "2026-10-13"
+      },
+      "boxedWarning": null
+     }
+    }
+   ],
+   "counts": {
+    "measured": 3,
+    "predicted": 74,
+    "out-of-domain": 2120,
+    "measuredActive": 0
+   }
+  },
+  {
+   "targetId": "ptpn11",
+   "gene": "PTPN11 (SHP2)",
+   "uniprot": "Q06124",
+   "chemblId": "CHEMBL3864",
+   "role": "Phosphatase that relays growth-factor signals to KRAS.",
+   "nCompounds": 2422,
+   "metrics": {
+    "split": "scaffold (~80/20, whole scaffolds kept together)",
+    "nTrain": 1937,
+    "nTest": 485,
+    "positiveRate": 0.595,
+    "rocAuc": 0.911,
+    "prAuc": 0.937,
+    "cv": {
+     "randomForest": {
+      "rocAucMean": 0.931,
+      "rocAucSd": 0.004,
+      "folds": 5
+     },
+     "logisticRegression": {
+      "rocAucMean": 0.933,
+      "rocAucSd": 0.004,
+      "folds": 5
+     },
+     "nearestNeighbors": {
+      "rocAucMean": 0.906,
+      "rocAucSd": 0.013,
+      "folds": 5
+     }
+    }
+   },
+   "hits": [
+    {
+     "chemblId": "CHEMBL1201073",
+     "name": "SUCCIMER",
+     "withdrawn": false,
+     "kind": "measured",
+     "pchembl": 6.29,
+     "access": {
+      "generic": "no",
+      "whoEml": "yes",
+      "trials": {
+       "count": 0,
+       "query": "https://clinicaltrials.gov/api/v2/studies?query.cond=pancreatic+cancer&query.intr=SUCCIMER&countTotal=true&pageSize=1",
+       "fetchedAt": "2026-10-13"
+      },
+      "boxedWarning": null
+     }
+    },
+    {
+     "chemblId": "CHEMBL2325741",
+     "name": "CAPIVASERTIB",
+     "withdrawn": false,
+     "kind": "predicted",
+     "p": 0.46,
+     "maxSim": 0.302,
+     "access": {
+      "generic": "no",
+      "whoEml": "no",
+      "trials": {
+       "count": 1,
+       "query": "https://clinicaltrials.gov/api/v2/studies?query.cond=pancreatic+cancer&query.intr=CAPIVASERTIB&countTotal=true&pageSize=1",
+       "fetchedAt": "2026-10-13"
+      },
+      "boxedWarning": null
+     }
+    },
+    {
+     "chemblId": "CHEMBL387675",
+     "name": "DAPTOMYCIN",
+     "withdrawn": false,
+     "kind": "predicted",
+     "p": 0.432,
+     "maxSim": 0.3,
+     "access": {
+      "generic": "yes",
+      "whoEml": "no",
+      "trials": {
+       "count": 0,
+       "query": "https://clinicaltrials.gov/api/v2/studies?query.cond=pancreatic+cancer&query.intr=DAPTOMYCIN&countTotal=true&pageSize=1",
+       "fetchedAt": "2026-10-13"
+      },
+      "boxedWarning": null
+     }
+    },
+    {
+     "chemblId": "CHEMBL161",
+     "name": "CEFTRIAXONE",
+     "withdrawn": false,
+     "kind": "predicted",
+     "p": 0.314,
+     "maxSim": 0.312,
+     "access": {
+      "generic": "yes",
+      "whoEml": "yes",
+      "trials": {
+       "count": 0,
+       "query": "https://clinicaltrials.gov/api/v2/studies?query.cond=pancreatic+cancer&query.intr=CEFTRIAXONE&countTotal=true&pageSize=1",
+       "fetchedAt": "2026-10-13"
+      },
+      "boxedWarning": null
+     }
+    },
+    {
+     "chemblId": "CHEMBL1328",
+     "name": "PENTAGASTRIN",
+     "withdrawn": false,
+     "kind": "predicted",
+     "p": 0.312,
+     "maxSim": 0.464,
+     "access": {
+      "generic": "unknown",
+      "whoEml": "no",
+      "trials": {
+       "count": 0,
+       "query": "https://clinicaltrials.gov/api/v2/studies?query.cond=pancreatic+cancer&query.intr=PENTAGASTRIN&countTotal=true&pageSize=1",
+       "fetchedAt": "2026-10-13"
+      },
+      "boxedWarning": null
+     }
+    },
+    {
+     "chemblId": "CHEMBL461101",
+     "name": "ELTROMBOPAG",
+     "withdrawn": false,
+     "kind": "predicted",
+     "p": 0.31,
+     "maxSim": 0.329,
+     "access": {
+      "generic": "yes",
+      "whoEml": "no",
+      "trials": {
+       "count": 0,
+       "query": "https://clinicaltrials.gov/api/v2/studies?query.cond=pancreatic+cancer&query.intr=ELTROMBOPAG&countTotal=true&pageSize=1",
+       "fetchedAt": "2026-10-13"
+      },
+      "boxedWarning": "FDA boxed warning: risk for hepatic decompensation in patients with chronic hepatitis c and"
+     }
+    },
+    {
+     "chemblId": "CHEMBL2048028",
+     "name": "LIFITEGRAST",
+     "withdrawn": false,
+     "kind": "predicted",
+     "p": 0.299,
+     "maxSim": 0.32,
+     "access": {
+      "generic": "yes",
+      "whoEml": "no",
+      "trials": {
+       "count": 0,
+       "query": "https://clinicaltrials.gov/api/v2/studies?query.cond=pancreatic+cancer&query.intr=LIFITEGRAST&countTotal=true&pageSize=1",
+       "fetchedAt": "2026-10-13"
+      },
+      "boxedWarning": null
+     }
+    },
+    {
+     "chemblId": "CHEMBL3301610",
+     "name": "ABEMACICLIB",
+     "withdrawn": false,
+     "kind": "predicted",
+     "p": 0.298,
+     "maxSim": 0.48,
+     "access": {
+      "generic": "no",
+      "whoEml": "no",
+      "trials": {
+       "count": 6,
+       "query": "https://clinicaltrials.gov/api/v2/studies?query.cond=pancreatic+cancer&query.intr=ABEMACICLIB&countTotal=true&pageSize=1",
+       "fetchedAt": "2026-10-13"
+      },
+      "boxedWarning": null
+     }
+    },
+    {
+     "chemblId": "CHEMBL2103883",
+     "name": "AVATROMBOPAG",
+     "withdrawn": false,
+     "kind": "predicted",
+     "p": 0.297,
+     "maxSim": 0.326,
+     "access": {
+      "generic": "no",
+      "whoEml": "no",
+      "trials": {
+       "count": 0,
+       "query": "https://clinicaltrials.gov/api/v2/studies?query.cond=pancreatic+cancer&query.intr=AVATROMBOPAG&countTotal=true&pageSize=1",
+       "fetchedAt": "2026-10-13"
+      },
+      "boxedWarning": null
+     }
+    },
+    {
+     "chemblId": "CHEMBL3545110",
+     "name": "RIBOCICLIB",
+     "withdrawn": false,
+     "kind": "predicted",
+     "p": 0.295,
+     "maxSim": 0.5,
+     "access": {
+      "generic": "no",
+      "whoEml": "no",
+      "trials": {
+       "count": 3,
+       "query": "https://clinicaltrials.gov/api/v2/studies?query.cond=pancreatic+cancer&query.intr=RIBOCICLIB&countTotal=true&pageSize=1",
+       "fetchedAt": "2026-10-13"
+      },
+      "boxedWarning": null
+     }
+    },
+    {
+     "chemblId": "CHEMBL1201224",
+     "name": "CEFMENOXIME",
+     "withdrawn": false,
+     "kind": "predicted",
+     "p": 0.279,
+     "maxSim": 0.315,
+     "access": {
+      "generic": "unknown",
+      "whoEml": "no",
+      "trials": {
+       "count": 0,
+       "query": "https://clinicaltrials.gov/api/v2/studies?query.cond=pancreatic+cancer&query.intr=CEFMENOXIME&countTotal=true&pageSize=1",
+       "fetchedAt": "2026-10-13"
+      },
+      "boxedWarning": null
+     }
+    },
+    {
+     "chemblId": "CHEMBL189963",
+     "name": "PALBOCICLIB",
+     "withdrawn": false,
+     "kind": "predicted",
+     "p": 0.261,
+     "maxSim": 0.307,
+     "access": {
+      "generic": "no",
+      "whoEml": "no",
+      "trials": {
+       "count": 10,
+       "query": "https://clinicaltrials.gov/api/v2/studies?query.cond=pancreatic+cancer&query.intr=PALBOCICLIB&countTotal=true&pageSize=1",
+       "fetchedAt": "2026-10-13"
+      },
+      "boxedWarning": null
+     }
+    },
+    {
+     "chemblId": "CHEMBL1430",
+     "name": "PENICILLAMINE",
+     "withdrawn": false,
+     "kind": "predicted",
+     "p": 0.26,
+     "maxSim": 0.318,
+     "access": {
+      "generic": "yes",
+      "whoEml": "yes",
+      "trials": {
+       "count": 0,
+       "query": "https://clinicaltrials.gov/api/v2/studies?query.cond=pancreatic+cancer&query.intr=PENICILLAMINE&countTotal=true&pageSize=1",
+       "fetchedAt": "2026-10-13"
+      },
+      "boxedWarning": "FDA boxed warning: physicians"
+     }
+    },
+    {
+     "chemblId": "CHEMBL507674",
+     "name": "CEFOPERAZONE",
+     "withdrawn": false,
+     "kind": "predicted",
+     "p": 0.26,
+     "maxSim": 0.336,
+     "access": {
+      "generic": "unknown",
+      "whoEml": "no",
+      "trials": {
+       "count": 0,
+       "query": "https://clinicaltrials.gov/api/v2/studies?query.cond=pancreatic+cancer&query.intr=CEFOPERAZONE&countTotal=true&pageSize=1",
+       "fetchedAt": "2026-10-13"
+      },
+      "boxedWarning": null
+     }
+    },
+    {
+     "chemblId": "CHEMBL2103872",
+     "name": "CEFTOLOZANE",
+     "withdrawn": false,
+     "kind": "predicted",
+     "p": 0.256,
+     "maxSim": 0.319,
+     "access": {
+      "generic": "unknown",
+      "whoEml": "no",
+      "trials": {
+       "count": 0,
+       "query": "https://clinicaltrials.gov/api/v2/studies?query.cond=pancreatic+cancer&query.intr=CEFTOLOZANE&countTotal=true&pageSize=1",
+       "fetchedAt": "2026-10-13"
+      },
+      "boxedWarning": null
+     }
+    }
+   ],
+   "counts": {
+    "measured": 2,
+    "predicted": 312,
+    "out-of-domain": 1883,
+    "measuredActive": 1
+   }
+  }
+ ],
+ "orangeBookFetched": "2026-10-13"
+}

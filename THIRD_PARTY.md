@@ -14,6 +14,7 @@
 | FFmpeg with libx264 | stitches captured frames into MP4 (build tool only, not shipped) | LGPL/GPL |
 | RDKit | fingerprints, scaffolds (build tool only) | BSD-3-Clause |
 | scikit-learn | random forest, metrics (build tool only) | BSD-3-Clause |
+| 3Dmol.js 2.4.2 | 3D pose viewer (vendored in public/vendor) | BSD-3-Clause |
 | NumPy | arrays (build tool only) | BSD-3-Clause |
 
 ## Data
@@ -21,6 +22,12 @@
 |---|---|---|
 | ChEMBL (EMBL-EBI) | bioactivity training data | CC BY-SA 3.0 (attribute in the app) |
 | ClinicalTrials.gov API v2 | trial counts | public domain (US government) |
+| tree26 (github.com/ezou1/tree26) | DiffDock results, receptor 9IAY, ligand list (`reference/`) | MIT, © 2026 Eric Zou |
+| RCSB PDB | protein structure 9IAY | CC0 |
+| PubChem (NCBI) | compound identity, SMILES | public domain (US government) |
+| FDA Orange Book data files | generic (ANDA) status | public domain (US government) |
+| openFDA (drug label, NDC) | boxed warnings, storage, OTC/generic products | public domain (CC0) |
+| WHO eEML | essential-medicines status | CC BY-NC-SA 3.0 IGO (attribute WHO) |
 
 ## Design reference
 | Source | Use | License |

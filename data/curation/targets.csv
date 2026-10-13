@@ -1,1 +1,2 @@
 id,gene,name,pdb_id,role,source_ids
+kras,KRAS,GTPase KRas (GDP-bound),9IAY,KRAS is mutated in over 90% of pancreatic cancers and drives tumor growth.,rcsb_9iay;tcga_pdac

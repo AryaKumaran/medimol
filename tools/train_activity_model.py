@@ -20,7 +20,10 @@ from rdkit import Chem, DataStructs, RDLogger
 from rdkit.Chem import rdFingerprintGenerator
 from rdkit.Chem.Scaffolds import MurckoScaffold
 from sklearn.ensemble import RandomForestClassifier
+from sklearn.linear_model import LogisticRegression
 from sklearn.metrics import average_precision_score, roc_auc_score
+from sklearn.model_selection import GroupKFold
+from sklearn.neighbors import KNeighborsClassifier
 
 RDLogger.DisableLog("rdApp.*")
 ROOT = Path(__file__).resolve().parent.parent
@@ -80,7 +83,31 @@ def scaffold_split(smiles: list, test_frac=0.2):
     return train, test
 
 
-def train_eval(labels: dict, seed=0):
+MODELS = {
+    "randomForest": lambda seed: RandomForestClassifier(n_estimators=300, class_weight="balanced", n_jobs=-1, random_state=seed),
+    "logisticRegression": lambda seed: LogisticRegression(C=0.1, class_weight="balanced", max_iter=3000),
+    "nearestNeighbors": lambda seed: KNeighborsClassifier(n_neighbors=5, metric="jaccard", weights="distance"),  # Tanimoto kNN baseline
+}
+
+
+def compare_models(X, y, smiles: list, folds=5, seed=0) -> dict:
+    """5-fold CV where each Murcko scaffold stays in one fold. Mean and SD of ROC-AUC per model,
+    so the chosen model is justified by numbers, not habit."""
+    groups = [MurckoScaffold.MurckoScaffoldSmiles(smiles=s) for s in smiles]
+    out = {}
+    for name, make in MODELS.items():
+        aucs = []
+        for tr, te in GroupKFold(n_splits=folds).split(X, y, groups):
+            if len(set(y[te])) < 2:
+                continue
+            m = make(seed).fit(X[tr] if name != "nearestNeighbors" else X[tr].astype(bool), y[tr])
+            p = m.predict_proba(X[te] if name != "nearestNeighbors" else X[te].astype(bool))[:, 1]
+            aucs.append(roc_auc_score(y[te], p))
+        out[name] = {"rocAucMean": round(float(np.mean(aucs)), 3), "rocAucSd": round(float(np.std(aucs)), 3), "folds": len(aucs)} if aucs else None
+    return out
+
+
+def train_eval(labels: dict, seed=0, cv=False):
     smiles = list(labels)
     fps = [fp(s) for s in smiles]
     X = np.array([list(f) for f in fps], dtype=np.uint8)
@@ -96,6 +123,8 @@ def train_eval(labels: dict, seed=0):
         "rocAuc": round(float(roc_auc_score(y[te], p)), 3) if len(set(y[te])) == 2 else None,
         "prAuc": round(float(average_precision_score(y[te], p)), 3) if len(set(y[te])) == 2 else None,
     }
+    if cv:
+        metrics["cv"] = compare_models(X, y, smiles, seed=seed)
     clf.fit(X, y)  # final model on all data once evaluated
     return clf, fps, metrics
 
@@ -125,7 +154,7 @@ def run(target_map: Path, refresh: bool) -> None:
     for t in tmap:
         acts = fetch_chembl(t["chembl_id"], refresh)
         labels = dedupe(acts)
-        res = train_eval(labels)
+        res = train_eval(labels, cv=True)
         fetched = json.loads((RAW / f"{t['chembl_id']}.json").read_text())["fetchedAt"]
         entry = {"targetId": t["target_id"], "chemblId": t["chembl_id"], "fetchedAt": fetched,
                  "model": "RandomForest(500), Morgan r2 2048-bit", "activeCutoffPchembl": ACTIVE_PCHEMBL,
@@ -155,8 +184,9 @@ def selftest() -> None:
     tr, te = scaffold_split(list(labels))
     scaf = lambda i: MurckoScaffold.MurckoScaffoldSmiles(smiles=list(labels)[i])
     assert not {scaf(i) for i in tr} & {scaf(i) for i in te}, "scaffold leak"
-    clf, fps, m = train_eval(labels)
+    clf, fps, m = train_eval(labels, cv=True)
     assert m["rocAuc"] is not None and m["rocAuc"] > 0.9, m
+    assert set(m["cv"]) == set(MODELS) and all(v and 0 <= v["rocAucMean"] <= 1 for v in m["cv"].values()), m["cv"]
     known = next(iter(labels))
     assert predict(clf, fps, labels, known)["inTraining"] is True
     far = predict(clf, fps, labels, "[Pt](Cl)(Cl)(N)N")  # cisplatin-like, nothing like training set

@@ -1,8 +1,8 @@
 {
-  "title": "PDAC drug-repurposing docking run",
-  "runDate": "2026-01-01",
-  "model": "DiffDock",
-  "modelVersion": "FILL IN (commit or release)",
-  "compute": "RunPod (FILL IN GPU type)",
-  "notes": "Single run. Docking confidence is a pose-ranking score, not a binding affinity."
+ "title": "PDAC drug repurposing: KRAS docking (tree26 run, re-curated)",
+ "runDate": "2026-02-14",
+ "model": "DiffDock",
+ "modelVersion": "RunPod serverless DiffDock worker, 10 samples per complex (version not recorded by tree26)",
+ "compute": "RunPod serverless GPU",
+ "notes": "Imported from github.com/ezou1/tree26 (MIT). KRAS/9IAY results only; the 2FMA results were docked against APP, not ERK2, and are excluded. Confidence is DiffDock's raw score: a pose-ranking score, not a binding affinity. Access facts re-fetched from primary sources on 2026-10-13; see data/curation/provenance.json."
 }

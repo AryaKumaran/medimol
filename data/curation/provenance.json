@@ -1,0 +1,1668 @@
+{
+ "kras": {
+  "chemblTarget": "CHEMBL2189121",
+  "url": "https://www.ebi.ac.uk/chembl/api/data/target.json?target_components__accession=P01116&target_type=SINGLE%20PROTEIN&organism=Homo%20sapiens",
+  "fetched": "2026-10-13"
+ },
+ "drugs": {
+  "cid137003167": {
+   "identity": {
+    "url": "https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/cid/137003167/property/Title,InChIKey,IsomericSMILES,CanonicalSMILES/JSON",
+    "fetched": "2026-10-13"
+   },
+   "chembl": {
+    "url": "https://www.ebi.ac.uk/chembl/api/data/molecule.json?molecule_structures__standard_inchi_key=ZRPZPNYZFSJUPA-UHFFFAOYSA-N",
+    "fetched": "2026-10-13",
+    "chemblId": "CHEMBL4214264"
+   },
+   "krasActivity": {
+    "url": "https://www.ebi.ac.uk/chembl/api/data/activity.json?target_chembl_id=CHEMBL2189121&molecule_chembl_id=CHEMBL4214264&pchembl_value__isnull=false&limit=1000",
+    "fetched": "2026-10-13",
+    "bestPchembl": 6.92
+   },
+   "generic": {
+    "rule": "approval=unknown: not a marketed medicine"
+   },
+   "whoEml": {
+    "rule": "approval=unknown: not a marketed medicine"
+   }
+  },
+  "cid134182831": {
+   "identity": {
+    "url": "https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/cid/134182831/property/Title,InChIKey,IsomericSMILES,CanonicalSMILES/JSON",
+    "fetched": "2026-10-13"
+   },
+   "chembl": {
+    "url": "https://www.ebi.ac.uk/chembl/api/data/molecule.json?molecule_structures__standard_inchi_key=HISJAYUQVHMWTA-BLLLJJGKSA-N",
+    "fetched": "2026-10-13",
+    "chemblId": "CHEMBL5314427"
+   },
+   "krasActivity": {
+    "url": "https://www.ebi.ac.uk/chembl/api/data/activity.json?target_chembl_id=CHEMBL2189121&molecule_chembl_id=CHEMBL5314427&pchembl_value__isnull=false&limit=1000",
+    "fetched": "2026-10-13",
+    "bestPchembl": null
+   },
+   "generic": {
+    "rule": "approval=investigational: not a marketed medicine"
+   },
+   "whoEml": {
+    "rule": "approval=investigational: not a marketed medicine"
+   }
+  },
+  "cid54671203": {
+   "identity": {
+    "url": "https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/cid/54671203/property/Title,InChIKey,IsomericSMILES,CanonicalSMILES/JSON",
+    "fetched": "2026-10-13"
+   },
+   "chembl": {
+    "url": "https://www.ebi.ac.uk/chembl/api/data/molecule.json?pref_name__iexact=Doxycycline",
+    "fetched": "2026-10-13",
+    "chemblId": "CHEMBL1200699"
+   },
+   "indications": {
+    "url": "https://www.ebi.ac.uk/chembl/api/data/drug_indication.json?molecule_chembl_id=CHEMBL1200699&max_phase_for_ind=4&limit=100",
+    "fetched": "2026-10-13"
+   },
+   "krasActivity": {
+    "url": "https://www.ebi.ac.uk/chembl/api/data/activity.json?target_chembl_id=CHEMBL2189121&molecule_chembl_id=CHEMBL1200699&pchembl_value__isnull=false&limit=1000",
+    "fetched": "2026-10-13",
+    "bestPchembl": null
+   },
+   "generic": {
+    "url": "https://www.fda.gov/media/76860/download",
+    "fetched": "2026-10-13",
+    "value": "yes"
+   },
+   "whoEml": {
+    "url": "https://list.essentialmeds.org/?query=DOXYCYCLINE",
+    "fetched": "2026-10-13",
+    "value": "yes",
+    "matched": "DOXYCYCLINE"
+   },
+   "label": {
+    "url": "https://api.fda.gov/drug/label.json?search=openfda.generic_name%3A%22DOXYCYCLINE%22&limit=20",
+    "fetched": "2026-10-13",
+    "setId": "00b2aa98-dea2-90c3-e063-6294a90a35d6"
+   }
+  },
+  "cid166625303": {
+   "identity": {
+    "url": "https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/cid/166625303/property/Title,InChIKey,IsomericSMILES,CanonicalSMILES/JSON",
+    "fetched": "2026-10-13"
+   },
+   "chembl": {
+    "url": "https://www.ebi.ac.uk/chembl/api/data/molecule.json?molecule_structures__standard_inchi_key=AJFBBMKGWRICFR-BGYRXZFFSA-N",
+    "fetched": "2026-10-13",
+    "chemblId": "CHEMBL5070295"
+   },
+   "krasActivity": {
+    "url": "https://www.ebi.ac.uk/chembl/api/data/activity.json?target_chembl_id=CHEMBL2189121&molecule_chembl_id=CHEMBL5070295&pchembl_value__isnull=false&limit=1000",
+    "fetched": "2026-10-13",
+    "bestPchembl": 7.01
+   },
+   "generic": {
+    "rule": "approval=unknown: not a marketed medicine"
+   },
+   "whoEml": {
+    "rule": "approval=unknown: not a marketed medicine"
+   }
+  },
+  "cid138611145": {
+   "identity": {
+    "url": "https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/cid/138611145/property/Title,InChIKey,IsomericSMILES,CanonicalSMILES/JSON",
+    "fetched": "2026-10-13"
+   },
+   "chembl": {
+    "url": "https://www.ebi.ac.uk/chembl/api/data/molecule.json?molecule_structures__standard_inchi_key=PEMUGDMSUDYLHU-ZEQRLZLVSA-N",
+    "fetched": "2026-10-13",
+    "chemblId": "CHEMBL4594350"
+   },
+   "indications": {
+    "url": "https://www.ebi.ac.uk/chembl/api/data/drug_indication.json?molecule_chembl_id=CHEMBL4594350&max_phase_for_ind=4&limit=100",
+    "fetched": "2026-10-13"
+   },
+   "krasActivity": {
+    "url": "https://www.ebi.ac.uk/chembl/api/data/activity.json?target_chembl_id=CHEMBL2189121&molecule_chembl_id=CHEMBL4594350&pchembl_value__isnull=false&limit=1000",
+    "fetched": "2026-10-13",
+    "bestPchembl": 8.3
+   },
+   "generic": {
+    "url": "https://www.fda.gov/media/76860/download",
+    "fetched": "2026-10-13",
+    "value": "no"
+   },
+   "whoEml": {
+    "url": "https://list.essentialmeds.org/?query=ADAGRASIB",
+    "fetched": "2026-10-13",
+    "value": "no",
+    "matched": null
+   },
+   "label": {
+    "url": "https://api.fda.gov/drug/label.json?search=openfda.generic_name%3A%22ADAGRASIB%22&limit=20",
+    "fetched": "2026-10-13",
+    "setId": "0b8bf078-34c2-4f45-9012-38a8ac082b01"
+   }
+  },
+  "cid2244": {
+   "identity": {
+    "url": "https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/cid/2244/property/Title,InChIKey,IsomericSMILES,CanonicalSMILES/JSON",
+    "fetched": "2026-10-13"
+   },
+   "chembl": {
+    "url": "https://www.ebi.ac.uk/chembl/api/data/molecule.json?molecule_structures__standard_inchi_key=BSYNRYMUTXBXSQ-UHFFFAOYSA-N",
+    "fetched": "2026-10-13",
+    "chemblId": "CHEMBL25"
+   },
+   "indications": {
+    "url": "https://www.ebi.ac.uk/chembl/api/data/drug_indication.json?molecule_chembl_id=CHEMBL25&max_phase_for_ind=4&limit=100",
+    "fetched": "2026-10-13"
+   },
+   "krasActivity": {
+    "url": "https://www.ebi.ac.uk/chembl/api/data/activity.json?target_chembl_id=CHEMBL2189121&molecule_chembl_id=CHEMBL25&pchembl_value__isnull=false&limit=1000",
+    "fetched": "2026-10-13",
+    "bestPchembl": null
+   },
+   "generic": {
+    "url": "https://api.fda.gov/drug/ndc.json?search=generic_name%3A%22ASPIRIN%22&limit=100",
+    "fetched": "2026-10-13",
+    "value": "yes",
+    "via": "openFDA NDC: ANDA or OTC monograph product"
+   },
+   "whoEml": {
+    "url": "https://list.essentialmeds.org/?query=Acetylsalicylic%20Acid",
+    "fetched": "2026-10-13",
+    "value": "yes",
+    "matched": "Acetylsalicylic Acid"
+   },
+   "label": {
+    "url": "https://api.fda.gov/drug/label.json?search=openfda.generic_name%3A%22ASPIRIN%22&limit=20",
+    "fetched": "2026-10-13",
+    "setId": "0058175f-3474-40c3-a046-6cfaec86d84b"
+   }
+  },
+  "cid151912677": {
+   "identity": {
+    "url": "https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/cid/151912677/property/Title,InChIKey,IsomericSMILES,CanonicalSMILES/JSON",
+    "fetched": "2026-10-13"
+   },
+   "chembl": {
+    "url": "https://www.ebi.ac.uk/chembl/api/data/molecule.json?molecule_structures__standard_inchi_key__startswith=SVCLDZLNZSMDKY&limit=50",
+    "fetched": "2026-10-13",
+    "chemblId": null
+   },
+   "krasActivity": {
+    "url": null,
+    "fetched": null,
+    "bestPchembl": null
+   },
+   "generic": {
+    "rule": "approval=unknown: not a marketed medicine"
+   },
+   "whoEml": {
+    "rule": "approval=unknown: not a marketed medicine"
+   }
+  },
+  "cid11707110": {
+   "identity": {
+    "url": "https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/cid/11707110/property/Title,InChIKey,IsomericSMILES,CanonicalSMILES/JSON",
+    "fetched": "2026-10-13"
+   },
+   "chembl": {
+    "url": "https://www.ebi.ac.uk/chembl/api/data/molecule.json?molecule_structures__standard_inchi_key=LIRYPHYGHXZJBZ-UHFFFAOYSA-N",
+    "fetched": "2026-10-13",
+    "chemblId": "CHEMBL2103875"
+   },
+   "indications": {
+    "url": "https://www.ebi.ac.uk/chembl/api/data/drug_indication.json?molecule_chembl_id=CHEMBL2103875&max_phase_for_ind=4&limit=100",
+    "fetched": "2026-10-13"
+   },
+   "krasActivity": {
+    "url": "https://www.ebi.ac.uk/chembl/api/data/activity.json?target_chembl_id=CHEMBL2189121&molecule_chembl_id=CHEMBL2103875&pchembl_value__isnull=false&limit=1000",
+    "fetched": "2026-10-13",
+    "bestPchembl": null
+   },
+   "generic": {
+    "url": "https://www.fda.gov/media/76860/download",
+    "fetched": "2026-10-13",
+    "value": "no"
+   },
+   "whoEml": {
+    "url": "https://list.essentialmeds.org/?query=TRAMETINIB",
+    "fetched": "2026-10-13",
+    "value": "no",
+    "matched": null
+   },
+   "label": {
+    "url": "https://api.fda.gov/drug/label.json?search=openfda.generic_name%3A%22TRAMETINIB%22&limit=20",
+    "fetched": "2026-10-13",
+    "setId": "0002ad27-779d-42ab-83b5-bc65453412a1"
+   }
+  },
+  "cid168982960": {
+   "identity": {
+    "url": "https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/cid/168982960/property/Title,InChIKey,IsomericSMILES,CanonicalSMILES/JSON",
+    "fetched": "2026-10-13"
+   },
+   "chembl": {
+    "url": "https://www.ebi.ac.uk/chembl/api/data/molecule.json?molecule_structures__standard_inchi_key__startswith=UNBQMQJVNBHLAP&limit=50",
+    "fetched": "2026-10-13",
+    "chemblId": null
+   },
+   "krasActivity": {
+    "url": null,
+    "fetched": null,
+    "bestPchembl": null
+   },
+   "generic": {
+    "rule": "approval=unknown: not a marketed medicine"
+   },
+   "whoEml": {
+    "rule": "approval=unknown: not a marketed medicine"
+   }
+  },
+  "cid55283": {
+   "identity": {
+    "url": "https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/cid/55283/property/Title,InChIKey,IsomericSMILES,CanonicalSMILES/JSON",
+    "fetched": "2026-10-13"
+   },
+   "chembl": {
+    "url": "https://www.ebi.ac.uk/chembl/api/data/molecule.json?molecule_structures__standard_inchi_key__startswith=VHVPQPYKVGDNFY&limit=50",
+    "fetched": "2026-10-13",
+    "chemblId": "CHEMBL64391"
+   },
+   "indications": {
+    "url": "https://www.ebi.ac.uk/chembl/api/data/drug_indication.json?molecule_chembl_id=CHEMBL64391&max_phase_for_ind=4&limit=100",
+    "fetched": "2026-10-13"
+   },
+   "krasActivity": {
+    "url": "https://www.ebi.ac.uk/chembl/api/data/activity.json?target_chembl_id=CHEMBL2189121&molecule_chembl_id=CHEMBL64391&pchembl_value__isnull=false&limit=1000",
+    "fetched": "2026-10-13",
+    "bestPchembl": null
+   },
+   "generic": {
+    "url": "https://www.fda.gov/media/76860/download",
+    "fetched": "2026-10-13",
+    "value": "yes"
+   },
+   "whoEml": {
+    "url": "https://list.essentialmeds.org/?query=ITRACONAZOLE",
+    "fetched": "2026-10-13",
+    "value": "yes",
+    "matched": "ITRACONAZOLE"
+   },
+   "label": {
+    "url": "https://api.fda.gov/drug/label.json?search=openfda.generic_name%3A%22ITRACONAZOLE%22&limit=20",
+    "fetched": "2026-10-13",
+    "setId": "2ab38a8a-3708-4b97-9f7f-8e554a15348d"
+   }
+  },
+  "cid163643580": {
+   "identity": {
+    "url": "https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/cid/163643580/property/Title,InChIKey,IsomericSMILES,CanonicalSMILES/JSON",
+    "fetched": "2026-10-13"
+   },
+   "chembl": {
+    "url": "https://www.ebi.ac.uk/chembl/api/data/molecule.json?molecule_structures__standard_inchi_key__startswith=IGJDNMPRTXWDST&limit=50",
+    "fetched": "2026-10-13",
+    "chemblId": null
+   },
+   "krasActivity": {
+    "url": null,
+    "fetched": null,
+    "bestPchembl": null
+   },
+   "generic": {
+    "rule": "approval=unknown: not a marketed medicine"
+   },
+   "whoEml": {
+    "rule": "approval=unknown: not a marketed medicine"
+   }
+  },
+  "cid156336173": {
+   "identity": {
+    "url": "https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/cid/156336173/property/Title,InChIKey,IsomericSMILES,CanonicalSMILES/JSON",
+    "fetched": "2026-10-13"
+   },
+   "chembl": {
+    "url": "https://www.ebi.ac.uk/chembl/api/data/molecule.json?molecule_structures__standard_inchi_key=PFVWEZACRVJUES-WYAXOCSVSA-N",
+    "fetched": "2026-10-13",
+    "chemblId": "CHEMBL5769966"
+   },
+   "krasActivity": {
+    "url": "https://www.ebi.ac.uk/chembl/api/data/activity.json?target_chembl_id=CHEMBL2189121&molecule_chembl_id=CHEMBL5769966&pchembl_value__isnull=false&limit=1000",
+    "fetched": "2026-10-13",
+    "bestPchembl": 6.26
+   },
+   "generic": {
+    "rule": "approval=unknown: not a marketed medicine"
+   },
+   "whoEml": {
+    "rule": "approval=unknown: not a marketed medicine"
+   }
+  },
+  "cid156336141": {
+   "identity": {
+    "url": "https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/cid/156336141/property/Title,InChIKey,IsomericSMILES,CanonicalSMILES/JSON",
+    "fetched": "2026-10-13"
+   },
+   "chembl": {
+    "url": "https://www.ebi.ac.uk/chembl/api/data/molecule.json?molecule_structures__standard_inchi_key=XKXJQRDEAJFSGF-XYDPOOMGSA-N",
+    "fetched": "2026-10-13",
+    "chemblId": "CHEMBL5903855"
+   },
+   "krasActivity": {
+    "url": "https://www.ebi.ac.uk/chembl/api/data/activity.json?target_chembl_id=CHEMBL2189121&molecule_chembl_id=CHEMBL5903855&pchembl_value__isnull=false&limit=1000",
+    "fetched": "2026-10-13",
+    "bestPchembl": 5.26
+   },
+   "generic": {
+    "rule": "approval=unknown: not a marketed medicine"
+   },
+   "whoEml": {
+    "rule": "approval=unknown: not a marketed medicine"
+   }
+  },
+  "cid156336431": {
+   "identity": {
+    "url": "https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/cid/156336431/property/Title,InChIKey,IsomericSMILES,CanonicalSMILES/JSON",
+    "fetched": "2026-10-13"
+   },
+   "chembl": {
+    "url": "https://www.ebi.ac.uk/chembl/api/data/molecule.json?molecule_structures__standard_inchi_key=FNEBYYDNJKCLRD-JWZSAVIXSA-N",
+    "fetched": "2026-10-13",
+    "chemblId": "CHEMBL5825653"
+   },
+   "krasActivity": {
+    "url": "https://www.ebi.ac.uk/chembl/api/data/activity.json?target_chembl_id=CHEMBL2189121&molecule_chembl_id=CHEMBL5825653&pchembl_value__isnull=false&limit=1000",
+    "fetched": "2026-10-13",
+    "bestPchembl": 5.26
+   },
+   "generic": {
+    "rule": "approval=unknown: not a marketed medicine"
+   },
+   "whoEml": {
+    "rule": "approval=unknown: not a marketed medicine"
+   }
+  },
+  "cid137297923": {
+   "identity": {
+    "url": "https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/cid/137297923/property/Title,InChIKey,IsomericSMILES,CanonicalSMILES/JSON",
+    "fetched": "2026-10-13"
+   },
+   "chembl": {
+    "url": "https://www.ebi.ac.uk/chembl/api/data/molecule.json?molecule_structures__standard_inchi_key=XBAGEJJGCQFWRR-UHFFFAOYSA-N",
+    "fetched": "2026-10-13",
+    "chemblId": "CHEMBL4466063"
+   },
+   "krasActivity": {
+    "url": "https://www.ebi.ac.uk/chembl/api/data/activity.json?target_chembl_id=CHEMBL2189121&molecule_chembl_id=CHEMBL4466063&pchembl_value__isnull=false&limit=1000",
+    "fetched": "2026-10-13",
+    "bestPchembl": 5.09
+   },
+   "generic": {
+    "rule": "approval=unknown: not a marketed medicine"
+   },
+   "whoEml": {
+    "rule": "approval=unknown: not a marketed medicine"
+   }
+  },
+  "cid160923886": {
+   "identity": {
+    "url": "https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/cid/160923886/property/Title,InChIKey,IsomericSMILES,CanonicalSMILES/JSON",
+    "fetched": "2026-10-13"
+   },
+   "chembl": {
+    "url": "https://www.ebi.ac.uk/chembl/api/data/molecule.json?molecule_structures__standard_inchi_key=WOCBNTLNOBRBQG-HHASUQKESA-N",
+    "fetched": "2026-10-13",
+    "chemblId": "CHEMBL6062102"
+   },
+   "krasActivity": {
+    "url": "https://www.ebi.ac.uk/chembl/api/data/activity.json?target_chembl_id=CHEMBL2189121&molecule_chembl_id=CHEMBL6062102&pchembl_value__isnull=false&limit=1000",
+    "fetched": "2026-10-13",
+    "bestPchembl": 7.26
+   },
+   "generic": {
+    "rule": "approval=unknown: not a marketed medicine"
+   },
+   "whoEml": {
+    "rule": "approval=unknown: not a marketed medicine"
+   }
+  },
+  "cid164726623": {
+   "identity": {
+    "url": "https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/cid/164726623/property/Title,InChIKey,IsomericSMILES,CanonicalSMILES/JSON",
+    "fetched": "2026-10-13"
+   },
+   "chembl": {
+    "url": "https://www.ebi.ac.uk/chembl/api/data/molecule.json?molecule_structures__standard_inchi_key__startswith=NBLZKEHVVJSAAY&limit=50",
+    "fetched": "2026-10-13",
+    "chemblId": "CHEMBL6165954"
+   },
+   "krasActivity": {
+    "url": "https://www.ebi.ac.uk/chembl/api/data/activity.json?target_chembl_id=CHEMBL2189121&molecule_chembl_id=CHEMBL6165954&pchembl_value__isnull=false&limit=1000",
+    "fetched": "2026-10-13",
+    "bestPchembl": null
+   },
+   "generic": {
+    "rule": "approval=unknown: not a marketed medicine"
+   },
+   "whoEml": {
+    "rule": "approval=unknown: not a marketed medicine"
+   }
+  },
+  "cid137278711": {
+   "identity": {
+    "url": "https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/cid/137278711/property/Title,InChIKey,IsomericSMILES,CanonicalSMILES/JSON",
+    "fetched": "2026-10-13"
+   },
+   "chembl": {
+    "url": "https://www.ebi.ac.uk/chembl/api/data/molecule.json?molecule_structures__standard_inchi_key=NXQKSXLFSAEQCZ-SFHVURJKSA-N",
+    "fetched": "2026-10-13",
+    "chemblId": "CHEMBL4535757"
+   },
+   "indications": {
+    "url": "https://www.ebi.ac.uk/chembl/api/data/drug_indication.json?molecule_chembl_id=CHEMBL4535757&max_phase_for_ind=4&limit=100",
+    "fetched": "2026-10-13"
+   },
+   "krasActivity": {
+    "url": "https://www.ebi.ac.uk/chembl/api/data/activity.json?target_chembl_id=CHEMBL2189121&molecule_chembl_id=CHEMBL4535757&pchembl_value__isnull=false&limit=1000",
+    "fetched": "2026-10-13",
+    "bestPchembl": 8.02
+   },
+   "generic": {
+    "url": "https://www.fda.gov/media/76860/download",
+    "fetched": "2026-10-13",
+    "value": "no"
+   },
+   "whoEml": {
+    "url": "https://list.essentialmeds.org/?query=SOTORASIB",
+    "fetched": "2026-10-13",
+    "value": "no",
+    "matched": null
+   },
+   "label": {
+    "url": "https://api.fda.gov/drug/label.json?search=openfda.generic_name%3A%22SOTORASIB%22&limit=20",
+    "fetched": "2026-10-13",
+    "setId": "c80a362c-7ac3-4894-a076-0691e68ef8c1"
+   }
+  },
+  "cid4091": {
+   "identity": {
+    "url": "https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/cid/4091/property/Title,InChIKey,IsomericSMILES,CanonicalSMILES/JSON",
+    "fetched": "2026-10-13"
+   },
+   "chembl": {
+    "url": "https://www.ebi.ac.uk/chembl/api/data/molecule.json?molecule_structures__standard_inchi_key=XZWYZXLIPXDOLR-UHFFFAOYSA-N",
+    "fetched": "2026-10-13",
+    "chemblId": "CHEMBL1431"
+   },
+   "indications": {
+    "url": "https://www.ebi.ac.uk/chembl/api/data/drug_indication.json?molecule_chembl_id=CHEMBL1431&max_phase_for_ind=4&limit=100",
+    "fetched": "2026-10-13"
+   },
+   "krasActivity": {
+    "url": "https://www.ebi.ac.uk/chembl/api/data/activity.json?target_chembl_id=CHEMBL2189121&molecule_chembl_id=CHEMBL1431&pchembl_value__isnull=false&limit=1000",
+    "fetched": "2026-10-13",
+    "bestPchembl": null
+   },
+   "generic": {
+    "url": "https://www.fda.gov/media/76860/download",
+    "fetched": "2026-10-13",
+    "value": "yes"
+   },
+   "whoEml": {
+    "url": "https://list.essentialmeds.org/?query=METFORMIN",
+    "fetched": "2026-10-13",
+    "value": "yes",
+    "matched": "METFORMIN"
+   },
+   "label": {
+    "url": "https://api.fda.gov/drug/label.json?search=openfda.generic_name%3A%22METFORMIN%22&limit=20",
+    "fetched": "2026-10-13",
+    "setId": "0178b9dd-bafa-9e81-e063-6294a90a88b0"
+   }
+  },
+  "cid156336193": {
+   "identity": {
+    "url": "https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/cid/156336193/property/Title,InChIKey,IsomericSMILES,CanonicalSMILES/JSON",
+    "fetched": "2026-10-13"
+   },
+   "chembl": {
+    "url": "https://www.ebi.ac.uk/chembl/api/data/molecule.json?molecule_structures__standard_inchi_key=SWMOOQORXIWDSL-QCIXSTHBSA-N",
+    "fetched": "2026-10-13",
+    "chemblId": "CHEMBL5874323"
+   },
+   "krasActivity": {
+    "url": "https://www.ebi.ac.uk/chembl/api/data/activity.json?target_chembl_id=CHEMBL2189121&molecule_chembl_id=CHEMBL5874323&pchembl_value__isnull=false&limit=1000",
+    "fetched": "2026-10-13",
+    "bestPchembl": 7.26
+   },
+   "generic": {
+    "rule": "approval=unknown: not a marketed medicine"
+   },
+   "whoEml": {
+    "rule": "approval=unknown: not a marketed medicine"
+   }
+  },
+  "cid156336144": {
+   "identity": {
+    "url": "https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/cid/156336144/property/Title,InChIKey,IsomericSMILES,CanonicalSMILES/JSON",
+    "fetched": "2026-10-13"
+   },
+   "chembl": {
+    "url": "https://www.ebi.ac.uk/chembl/api/data/molecule.json?molecule_structures__standard_inchi_key=JXNUPIOZDVKQHB-YTGXXOEXSA-N",
+    "fetched": "2026-10-13",
+    "chemblId": "CHEMBL6004959"
+   },
+   "krasActivity": {
+    "url": "https://www.ebi.ac.uk/chembl/api/data/activity.json?target_chembl_id=CHEMBL2189121&molecule_chembl_id=CHEMBL6004959&pchembl_value__isnull=false&limit=1000",
+    "fetched": "2026-10-13",
+    "bestPchembl": 5.26
+   },
+   "generic": {
+    "rule": "approval=unknown: not a marketed medicine"
+   },
+   "whoEml": {
+    "rule": "approval=unknown: not a marketed medicine"
+   }
+  },
+  "cid156336215": {
+   "identity": {
+    "url": "https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/cid/156336215/property/Title,InChIKey,IsomericSMILES,CanonicalSMILES/JSON",
+    "fetched": "2026-10-13"
+   },
+   "chembl": {
+    "url": "https://www.ebi.ac.uk/chembl/api/data/molecule.json?molecule_structures__standard_inchi_key=AHEVKKOSRJOUOY-JKTSIDOOSA-N",
+    "fetched": "2026-10-13",
+    "chemblId": "CHEMBL5788620"
+   },
+   "krasActivity": {
+    "url": "https://www.ebi.ac.uk/chembl/api/data/activity.json?target_chembl_id=CHEMBL2189121&molecule_chembl_id=CHEMBL5788620&pchembl_value__isnull=false&limit=1000",
+    "fetched": "2026-10-13",
+    "bestPchembl": 7.26
+   },
+   "generic": {
+    "rule": "approval=unknown: not a marketed medicine"
+   },
+   "whoEml": {
+    "rule": "approval=unknown: not a marketed medicine"
+   }
+  },
+  "cid156336422": {
+   "identity": {
+    "url": "https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/cid/156336422/property/Title,InChIKey,IsomericSMILES,CanonicalSMILES/JSON",
+    "fetched": "2026-10-13"
+   },
+   "chembl": {
+    "url": "https://www.ebi.ac.uk/chembl/api/data/molecule.json?molecule_structures__standard_inchi_key=MSKHRRKVNZYNAO-NUICXQQBSA-N",
+    "fetched": "2026-10-13",
+    "chemblId": "CHEMBL5999059"
+   },
+   "krasActivity": {
+    "url": "https://www.ebi.ac.uk/chembl/api/data/activity.json?target_chembl_id=CHEMBL2189121&molecule_chembl_id=CHEMBL5999059&pchembl_value__isnull=false&limit=1000",
+    "fetched": "2026-10-13",
+    "bestPchembl": 7.26
+   },
+   "generic": {
+    "rule": "approval=unknown: not a marketed medicine"
+   },
+   "whoEml": {
+    "rule": "approval=unknown: not a marketed medicine"
+   }
+  },
+  "cid156336229": {
+   "identity": {
+    "url": "https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/cid/156336229/property/Title,InChIKey,IsomericSMILES,CanonicalSMILES/JSON",
+    "fetched": "2026-10-13"
+   },
+   "chembl": {
+    "url": "https://www.ebi.ac.uk/chembl/api/data/molecule.json?molecule_structures__standard_inchi_key=HQPKIZMRHSNOFZ-MUZNYELJSA-N",
+    "fetched": "2026-10-13",
+    "chemblId": "CHEMBL5890420"
+   },
+   "krasActivity": {
+    "url": "https://www.ebi.ac.uk/chembl/api/data/activity.json?target_chembl_id=CHEMBL2189121&molecule_chembl_id=CHEMBL5890420&pchembl_value__isnull=false&limit=1000",
+    "fetched": "2026-10-13",
+    "bestPchembl": 5.26
+   },
+   "generic": {
+    "rule": "approval=unknown: not a marketed medicine"
+   },
+   "whoEml": {
+    "rule": "approval=unknown: not a marketed medicine"
+   }
+  },
+  "cid156336270": {
+   "identity": {
+    "url": "https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/cid/156336270/property/Title,InChIKey,IsomericSMILES,CanonicalSMILES/JSON",
+    "fetched": "2026-10-13"
+   },
+   "chembl": {
+    "url": "https://www.ebi.ac.uk/chembl/api/data/molecule.json?molecule_structures__standard_inchi_key=SEOWWNMOOIVQMP-NEIGFUHISA-N",
+    "fetched": "2026-10-13",
+    "chemblId": "CHEMBL6055402"
+   },
+   "krasActivity": {
+    "url": "https://www.ebi.ac.uk/chembl/api/data/activity.json?target_chembl_id=CHEMBL2189121&molecule_chembl_id=CHEMBL6055402&pchembl_value__isnull=false&limit=1000",
+    "fetched": "2026-10-13",
+    "bestPchembl": 6.26
+   },
+   "generic": {
+    "rule": "approval=unknown: not a marketed medicine"
+   },
+   "whoEml": {
+    "rule": "approval=unknown: not a marketed medicine"
+   }
+  },
+  "cid156336221": {
+   "identity": {
+    "url": "https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/cid/156336221/property/Title,InChIKey,IsomericSMILES,CanonicalSMILES/JSON",
+    "fetched": "2026-10-13"
+   },
+   "chembl": {
+    "url": "https://www.ebi.ac.uk/chembl/api/data/molecule.json?molecule_structures__standard_inchi_key=FUYCNSZSLMHCOD-IINVVPOJSA-N",
+    "fetched": "2026-10-13",
+    "chemblId": "CHEMBL5841071"
+   },
+   "krasActivity": {
+    "url": "https://www.ebi.ac.uk/chembl/api/data/activity.json?target_chembl_id=CHEMBL2189121&molecule_chembl_id=CHEMBL5841071&pchembl_value__isnull=false&limit=1000",
+    "fetched": "2026-10-13",
+    "bestPchembl": 7.26
+   },
+   "generic": {
+    "rule": "approval=unknown: not a marketed medicine"
+   },
+   "whoEml": {
+    "rule": "approval=unknown: not a marketed medicine"
+   }
+  },
+  "cid156336370": {
+   "identity": {
+    "url": "https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/cid/156336370/property/Title,InChIKey,IsomericSMILES,CanonicalSMILES/JSON",
+    "fetched": "2026-10-13"
+   },
+   "chembl": {
+    "url": "https://www.ebi.ac.uk/chembl/api/data/molecule.json?molecule_structures__standard_inchi_key=UXHKIJKUFREBHS-PJXHJFOASA-N",
+    "fetched": "2026-10-13",
+    "chemblId": "CHEMBL5870169"
+   },
+   "krasActivity": {
+    "url": "https://www.ebi.ac.uk/chembl/api/data/activity.json?target_chembl_id=CHEMBL2189121&molecule_chembl_id=CHEMBL5870169&pchembl_value__isnull=false&limit=1000",
+    "fetched": "2026-10-13",
+    "bestPchembl": 7.26
+   },
+   "generic": {
+    "rule": "approval=unknown: not a marketed medicine"
+   },
+   "whoEml": {
+    "rule": "approval=unknown: not a marketed medicine"
+   }
+  },
+  "cid156336418": {
+   "identity": {
+    "url": "https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/cid/156336418/property/Title,InChIKey,IsomericSMILES,CanonicalSMILES/JSON",
+    "fetched": "2026-10-13"
+   },
+   "chembl": {
+    "url": "https://www.ebi.ac.uk/chembl/api/data/molecule.json?molecule_structures__standard_inchi_key=KSKLCYYDAIMMIS-IYRXFVGMSA-N",
+    "fetched": "2026-10-13",
+    "chemblId": "CHEMBL5855214"
+   },
+   "krasActivity": {
+    "url": "https://www.ebi.ac.uk/chembl/api/data/activity.json?target_chembl_id=CHEMBL2189121&molecule_chembl_id=CHEMBL5855214&pchembl_value__isnull=false&limit=1000",
+    "fetched": "2026-10-13",
+    "bestPchembl": 5.26
+   },
+   "generic": {
+    "rule": "approval=unknown: not a marketed medicine"
+   },
+   "whoEml": {
+    "rule": "approval=unknown: not a marketed medicine"
+   }
+  },
+  "cid156336209": {
+   "identity": {
+    "url": "https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/cid/156336209/property/Title,InChIKey,IsomericSMILES,CanonicalSMILES/JSON",
+    "fetched": "2026-10-13"
+   },
+   "chembl": {
+    "url": "https://www.ebi.ac.uk/chembl/api/data/molecule.json?molecule_structures__standard_inchi_key=SFRAKDBCUBXMCE-UNYBUGMRSA-N",
+    "fetched": "2026-10-13",
+    "chemblId": "CHEMBL5741403"
+   },
+   "krasActivity": {
+    "url": "https://www.ebi.ac.uk/chembl/api/data/activity.json?target_chembl_id=CHEMBL2189121&molecule_chembl_id=CHEMBL5741403&pchembl_value__isnull=false&limit=1000",
+    "fetched": "2026-10-13",
+    "bestPchembl": 6.26
+   },
+   "generic": {
+    "rule": "approval=unknown: not a marketed medicine"
+   },
+   "whoEml": {
+    "rule": "approval=unknown: not a marketed medicine"
+   }
+  },
+  "cid156336211": {
+   "identity": {
+    "url": "https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/cid/156336211/property/Title,InChIKey,IsomericSMILES,CanonicalSMILES/JSON",
+    "fetched": "2026-10-13"
+   },
+   "chembl": {
+    "url": "https://www.ebi.ac.uk/chembl/api/data/molecule.json?molecule_structures__standard_inchi_key=UIUPZMLDGVVOEI-JHSBFDBZSA-N",
+    "fetched": "2026-10-13",
+    "chemblId": "CHEMBL5781423"
+   },
+   "krasActivity": {
+    "url": "https://www.ebi.ac.uk/chembl/api/data/activity.json?target_chembl_id=CHEMBL2189121&molecule_chembl_id=CHEMBL5781423&pchembl_value__isnull=false&limit=1000",
+    "fetched": "2026-10-13",
+    "bestPchembl": 6.26
+   },
+   "generic": {
+    "rule": "approval=unknown: not a marketed medicine"
+   },
+   "whoEml": {
+    "rule": "approval=unknown: not a marketed medicine"
+   }
+  },
+  "cid54454": {
+   "identity": {
+    "url": "https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/cid/54454/property/Title,InChIKey,IsomericSMILES,CanonicalSMILES/JSON",
+    "fetched": "2026-10-13"
+   },
+   "chembl": {
+    "url": "https://www.ebi.ac.uk/chembl/api/data/molecule.json?molecule_structures__standard_inchi_key=RYMZZMVNJRMUDD-HGQWONQESA-N",
+    "fetched": "2026-10-13",
+    "chemblId": "CHEMBL1064"
+   },
+   "indications": {
+    "url": "https://www.ebi.ac.uk/chembl/api/data/drug_indication.json?molecule_chembl_id=CHEMBL1064&max_phase_for_ind=4&limit=100",
+    "fetched": "2026-10-13"
+   },
+   "krasActivity": {
+    "url": "https://www.ebi.ac.uk/chembl/api/data/activity.json?target_chembl_id=CHEMBL2189121&molecule_chembl_id=CHEMBL1064&pchembl_value__isnull=false&limit=1000",
+    "fetched": "2026-10-13",
+    "bestPchembl": null
+   },
+   "generic": {
+    "url": "https://www.fda.gov/media/76860/download",
+    "fetched": "2026-10-13",
+    "value": "yes"
+   },
+   "whoEml": {
+    "url": "https://list.essentialmeds.org/?query=SIMVASTATIN",
+    "fetched": "2026-10-13",
+    "value": "yes",
+    "matched": "SIMVASTATIN"
+   },
+   "label": {
+    "url": "https://api.fda.gov/drug/label.json?search=openfda.generic_name%3A%22SIMVASTATIN%22&limit=20",
+    "fetched": "2026-10-13",
+    "setId": "00896fff-081d-4553-be8c-1999a8a73dda"
+   }
+  },
+  "cid156336271": {
+   "identity": {
+    "url": "https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/cid/156336271/property/Title,InChIKey,IsomericSMILES,CanonicalSMILES/JSON",
+    "fetched": "2026-10-13"
+   },
+   "chembl": {
+    "url": "https://www.ebi.ac.uk/chembl/api/data/molecule.json?molecule_structures__standard_inchi_key=YBWAJYPFTSXLLA-OPQWHQOSSA-N",
+    "fetched": "2026-10-13",
+    "chemblId": "CHEMBL5966733"
+   },
+   "krasActivity": {
+    "url": "https://www.ebi.ac.uk/chembl/api/data/activity.json?target_chembl_id=CHEMBL2189121&molecule_chembl_id=CHEMBL5966733&pchembl_value__isnull=false&limit=1000",
+    "fetched": "2026-10-13",
+    "bestPchembl": 6.26
+   },
+   "generic": {
+    "rule": "approval=unknown: not a marketed medicine"
+   },
+   "whoEml": {
+    "rule": "approval=unknown: not a marketed medicine"
+   }
+  },
+  "cid156336399": {
+   "identity": {
+    "url": "https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/cid/156336399/property/Title,InChIKey,IsomericSMILES,CanonicalSMILES/JSON",
+    "fetched": "2026-10-13"
+   },
+   "chembl": {
+    "url": "https://www.ebi.ac.uk/chembl/api/data/molecule.json?molecule_structures__standard_inchi_key=LVFAPIMJBOIYPY-XENWXVCBSA-N",
+    "fetched": "2026-10-13",
+    "chemblId": "CHEMBL5836855"
+   },
+   "krasActivity": {
+    "url": "https://www.ebi.ac.uk/chembl/api/data/activity.json?target_chembl_id=CHEMBL2189121&molecule_chembl_id=CHEMBL5836855&pchembl_value__isnull=false&limit=1000",
+    "fetched": "2026-10-13",
+    "bestPchembl": 5.26
+   },
+   "generic": {
+    "rule": "approval=unknown: not a marketed medicine"
+   },
+   "whoEml": {
+    "rule": "approval=unknown: not a marketed medicine"
+   }
+  },
+  "cid156336348": {
+   "identity": {
+    "url": "https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/cid/156336348/property/Title,InChIKey,IsomericSMILES,CanonicalSMILES/JSON",
+    "fetched": "2026-10-13"
+   },
+   "chembl": {
+    "url": "https://www.ebi.ac.uk/chembl/api/data/molecule.json?molecule_structures__standard_inchi_key=QHKHKMZPHAOKKP-WNVHEODKSA-N",
+    "fetched": "2026-10-13",
+    "chemblId": "CHEMBL6019904"
+   },
+   "krasActivity": {
+    "url": "https://www.ebi.ac.uk/chembl/api/data/activity.json?target_chembl_id=CHEMBL2189121&molecule_chembl_id=CHEMBL6019904&pchembl_value__isnull=false&limit=1000",
+    "fetched": "2026-10-13",
+    "bestPchembl": 6.26
+   },
+   "generic": {
+    "rule": "approval=unknown: not a marketed medicine"
+   },
+   "whoEml": {
+    "rule": "approval=unknown: not a marketed medicine"
+   }
+  },
+  "cid156336167": {
+   "identity": {
+    "url": "https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/cid/156336167/property/Title,InChIKey,IsomericSMILES,CanonicalSMILES/JSON",
+    "fetched": "2026-10-13"
+   },
+   "chembl": {
+    "url": "https://www.ebi.ac.uk/chembl/api/data/molecule.json?molecule_structures__standard_inchi_key=HRGSIWVDYJIKGL-NIDBHBOBSA-N",
+    "fetched": "2026-10-13",
+    "chemblId": "CHEMBL5800896"
+   },
+   "krasActivity": {
+    "url": "https://www.ebi.ac.uk/chembl/api/data/activity.json?target_chembl_id=CHEMBL2189121&molecule_chembl_id=CHEMBL5800896&pchembl_value__isnull=false&limit=1000",
+    "fetched": "2026-10-13",
+    "bestPchembl": 5.26
+   },
+   "generic": {
+    "rule": "approval=unknown: not a marketed medicine"
+   },
+   "whoEml": {
+    "rule": "approval=unknown: not a marketed medicine"
+   }
+  },
+  "cid156336213": {
+   "identity": {
+    "url": "https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/cid/156336213/property/Title,InChIKey,IsomericSMILES,CanonicalSMILES/JSON",
+    "fetched": "2026-10-13"
+   },
+   "chembl": {
+    "url": "https://www.ebi.ac.uk/chembl/api/data/molecule.json?molecule_structures__standard_inchi_key=DXDQGANOKLGNEK-NNSKBSSFSA-N",
+    "fetched": "2026-10-13",
+    "chemblId": "CHEMBL5806963"
+   },
+   "krasActivity": {
+    "url": "https://www.ebi.ac.uk/chembl/api/data/activity.json?target_chembl_id=CHEMBL2189121&molecule_chembl_id=CHEMBL5806963&pchembl_value__isnull=false&limit=1000",
+    "fetched": "2026-10-13",
+    "bestPchembl": 7.26
+   },
+   "generic": {
+    "rule": "approval=unknown: not a marketed medicine"
+   },
+   "whoEml": {
+    "rule": "approval=unknown: not a marketed medicine"
+   }
+  },
+  "cid156336383": {
+   "identity": {
+    "url": "https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/cid/156336383/property/Title,InChIKey,IsomericSMILES,CanonicalSMILES/JSON",
+    "fetched": "2026-10-13"
+   },
+   "chembl": {
+    "url": "https://www.ebi.ac.uk/chembl/api/data/molecule.json?molecule_structures__standard_inchi_key=KTVLMXQNLSWQNX-PVNAEWOASA-N",
+    "fetched": "2026-10-13",
+    "chemblId": "CHEMBL5966197"
+   },
+   "krasActivity": {
+    "url": "https://www.ebi.ac.uk/chembl/api/data/activity.json?target_chembl_id=CHEMBL2189121&molecule_chembl_id=CHEMBL5966197&pchembl_value__isnull=false&limit=1000",
+    "fetched": "2026-10-13",
+    "bestPchembl": 7.26
+   },
+   "generic": {
+    "rule": "approval=unknown: not a marketed medicine"
+   },
+   "whoEml": {
+    "rule": "approval=unknown: not a marketed medicine"
+   }
+  },
+  "cid156336260": {
+   "identity": {
+    "url": "https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/cid/156336260/property/Title,InChIKey,IsomericSMILES,CanonicalSMILES/JSON",
+    "fetched": "2026-10-13"
+   },
+   "chembl": {
+    "url": "https://www.ebi.ac.uk/chembl/api/data/molecule.json?molecule_structures__standard_inchi_key=PENBQRHJZIGABK-SMHRORRCSA-N",
+    "fetched": "2026-10-13",
+    "chemblId": "CHEMBL6031944"
+   },
+   "krasActivity": {
+    "url": "https://www.ebi.ac.uk/chembl/api/data/activity.json?target_chembl_id=CHEMBL2189121&molecule_chembl_id=CHEMBL6031944&pchembl_value__isnull=false&limit=1000",
+    "fetched": "2026-10-13",
+    "bestPchembl": 6.26
+   },
+   "generic": {
+    "rule": "approval=unknown: not a marketed medicine"
+   },
+   "whoEml": {
+    "rule": "approval=unknown: not a marketed medicine"
+   }
+  },
+  "cid156336413": {
+   "identity": {
+    "url": "https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/cid/156336413/property/Title,InChIKey,IsomericSMILES,CanonicalSMILES/JSON",
+    "fetched": "2026-10-13"
+   },
+   "chembl": {
+    "url": "https://www.ebi.ac.uk/chembl/api/data/molecule.json?molecule_structures__standard_inchi_key=PDKAMTNKKXZVKN-ZPMVVEFESA-N",
+    "fetched": "2026-10-13",
+    "chemblId": "CHEMBL5913201"
+   },
+   "krasActivity": {
+    "url": "https://www.ebi.ac.uk/chembl/api/data/activity.json?target_chembl_id=CHEMBL2189121&molecule_chembl_id=CHEMBL5913201&pchembl_value__isnull=false&limit=1000",
+    "fetched": "2026-10-13",
+    "bestPchembl": 7.26
+   },
+   "generic": {
+    "rule": "approval=unknown: not a marketed medicine"
+   },
+   "whoEml": {
+    "rule": "approval=unknown: not a marketed medicine"
+   }
+  },
+  "cid169705696": {
+   "identity": {
+    "url": "https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/cid/169705696/property/Title,InChIKey,IsomericSMILES,CanonicalSMILES/JSON",
+    "fetched": "2026-10-13"
+   },
+   "chembl": {
+    "url": "https://www.ebi.ac.uk/chembl/api/data/molecule.json?molecule_structures__standard_inchi_key__startswith=OPLNKAWSZBOMLM&limit=50",
+    "fetched": "2026-10-13",
+    "chemblId": null
+   },
+   "krasActivity": {
+    "url": null,
+    "fetched": null,
+    "bestPchembl": null
+   },
+   "generic": {
+    "rule": "approval=unknown: not a marketed medicine"
+   },
+   "whoEml": {
+    "rule": "approval=unknown: not a marketed medicine"
+   }
+  },
+  "cid156336288": {
+   "identity": {
+    "url": "https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/cid/156336288/property/Title,InChIKey,IsomericSMILES,CanonicalSMILES/JSON",
+    "fetched": "2026-10-13"
+   },
+   "chembl": {
+    "url": "https://www.ebi.ac.uk/chembl/api/data/molecule.json?molecule_structures__standard_inchi_key=SZZURVXRGSJAET-KVJKKWQYSA-N",
+    "fetched": "2026-10-13",
+    "chemblId": "CHEMBL5884258"
+   },
+   "krasActivity": {
+    "url": "https://www.ebi.ac.uk/chembl/api/data/activity.json?target_chembl_id=CHEMBL2189121&molecule_chembl_id=CHEMBL5884258&pchembl_value__isnull=false&limit=1000",
+    "fetched": "2026-10-13",
+    "bestPchembl": 7.26
+   },
+   "generic": {
+    "rule": "approval=unknown: not a marketed medicine"
+   },
+   "whoEml": {
+    "rule": "approval=unknown: not a marketed medicine"
+   }
+  },
+  "cid156336128": {
+   "identity": {
+    "url": "https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/cid/156336128/property/Title,InChIKey,IsomericSMILES,CanonicalSMILES/JSON",
+    "fetched": "2026-10-13"
+   },
+   "chembl": {
+    "url": "https://www.ebi.ac.uk/chembl/api/data/molecule.json?molecule_structures__standard_inchi_key=TTXRUDDGAXSKFH-MSVIFUPYSA-N",
+    "fetched": "2026-10-13",
+    "chemblId": "CHEMBL5876654"
+   },
+   "krasActivity": {
+    "url": "https://www.ebi.ac.uk/chembl/api/data/activity.json?target_chembl_id=CHEMBL2189121&molecule_chembl_id=CHEMBL5876654&pchembl_value__isnull=false&limit=1000",
+    "fetched": "2026-10-13",
+    "bestPchembl": 6.26
+   },
+   "generic": {
+    "rule": "approval=unknown: not a marketed medicine"
+   },
+   "whoEml": {
+    "rule": "approval=unknown: not a marketed medicine"
+   }
+  },
+  "cid156336347": {
+   "identity": {
+    "url": "https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/cid/156336347/property/Title,InChIKey,IsomericSMILES,CanonicalSMILES/JSON",
+    "fetched": "2026-10-13"
+   },
+   "chembl": {
+    "url": "https://www.ebi.ac.uk/chembl/api/data/molecule.json?molecule_structures__standard_inchi_key=BLSAENNBQUBBSF-ANGPLFKDSA-N",
+    "fetched": "2026-10-13",
+    "chemblId": "CHEMBL5773347"
+   },
+   "krasActivity": {
+    "url": "https://www.ebi.ac.uk/chembl/api/data/activity.json?target_chembl_id=CHEMBL2189121&molecule_chembl_id=CHEMBL5773347&pchembl_value__isnull=false&limit=1000",
+    "fetched": "2026-10-13",
+    "bestPchembl": 5.26
+   },
+   "generic": {
+    "rule": "approval=unknown: not a marketed medicine"
+   },
+   "whoEml": {
+    "rule": "approval=unknown: not a marketed medicine"
+   }
+  },
+  "cid156336429": {
+   "identity": {
+    "url": "https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/cid/156336429/property/Title,InChIKey,IsomericSMILES,CanonicalSMILES/JSON",
+    "fetched": "2026-10-13"
+   },
+   "chembl": {
+    "url": "https://www.ebi.ac.uk/chembl/api/data/molecule.json?molecule_structures__standard_inchi_key=XNKKCYYYIBBAMA-BIDKOCPDSA-N",
+    "fetched": "2026-10-13",
+    "chemblId": "CHEMBL6015958"
+   },
+   "krasActivity": {
+    "url": "https://www.ebi.ac.uk/chembl/api/data/activity.json?target_chembl_id=CHEMBL2189121&molecule_chembl_id=CHEMBL6015958&pchembl_value__isnull=false&limit=1000",
+    "fetched": "2026-10-13",
+    "bestPchembl": 7.26
+   },
+   "generic": {
+    "rule": "approval=unknown: not a marketed medicine"
+   },
+   "whoEml": {
+    "rule": "approval=unknown: not a marketed medicine"
+   }
+  },
+  "cid161022070": {
+   "identity": {
+    "url": "https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/cid/161022070/property/Title,InChIKey,IsomericSMILES,CanonicalSMILES/JSON",
+    "fetched": "2026-10-13"
+   },
+   "chembl": {
+    "url": "https://www.ebi.ac.uk/chembl/api/data/molecule.json?molecule_structures__standard_inchi_key=HMCLCXDNQBSDSN-SLTDXVACSA-N",
+    "fetched": "2026-10-13",
+    "chemblId": "CHEMBL5789876"
+   },
+   "krasActivity": {
+    "url": "https://www.ebi.ac.uk/chembl/api/data/activity.json?target_chembl_id=CHEMBL2189121&molecule_chembl_id=CHEMBL5789876&pchembl_value__isnull=false&limit=1000",
+    "fetched": "2026-10-13",
+    "bestPchembl": 7.26
+   },
+   "generic": {
+    "rule": "approval=unknown: not a marketed medicine"
+   },
+   "whoEml": {
+    "rule": "approval=unknown: not a marketed medicine"
+   }
+  },
+  "cid164726578": {
+   "identity": {
+    "url": "https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/cid/164726578/property/Title,InChIKey,IsomericSMILES,CanonicalSMILES/JSON",
+    "fetched": "2026-10-13"
+   },
+   "chembl": {
+    "url": "https://www.ebi.ac.uk/chembl/api/data/molecule.json?molecule_structures__standard_inchi_key=FVICRBSEYSHKFY-JYQNNKODSA-N",
+    "fetched": "2026-10-13",
+    "chemblId": "CHEMBL6168538"
+   },
+   "krasActivity": {
+    "url": "https://www.ebi.ac.uk/chembl/api/data/activity.json?target_chembl_id=CHEMBL2189121&molecule_chembl_id=CHEMBL6168538&pchembl_value__isnull=false&limit=1000",
+    "fetched": "2026-10-13",
+    "bestPchembl": 6.88
+   },
+   "generic": {
+    "rule": "approval=unknown: not a marketed medicine"
+   },
+   "whoEml": {
+    "rule": "approval=unknown: not a marketed medicine"
+   }
+  },
+  "cid156336421": {
+   "identity": {
+    "url": "https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/cid/156336421/property/Title,InChIKey,IsomericSMILES,CanonicalSMILES/JSON",
+    "fetched": "2026-10-13"
+   },
+   "chembl": {
+    "url": "https://www.ebi.ac.uk/chembl/api/data/molecule.json?molecule_structures__standard_inchi_key=SXWSJKOAGAMOQT-CYAKSSALSA-N",
+    "fetched": "2026-10-13",
+    "chemblId": "CHEMBL5988259"
+   },
+   "krasActivity": {
+    "url": "https://www.ebi.ac.uk/chembl/api/data/activity.json?target_chembl_id=CHEMBL2189121&molecule_chembl_id=CHEMBL5988259&pchembl_value__isnull=false&limit=1000",
+    "fetched": "2026-10-13",
+    "bestPchembl": 6.26
+   },
+   "generic": {
+    "rule": "approval=unknown: not a marketed medicine"
+   },
+   "whoEml": {
+    "rule": "approval=unknown: not a marketed medicine"
+   }
+  },
+  "cid3117": {
+   "identity": {
+    "url": "https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/cid/3117/property/Title,InChIKey,IsomericSMILES,CanonicalSMILES/JSON",
+    "fetched": "2026-10-13"
+   },
+   "chembl": {
+    "url": "https://www.ebi.ac.uk/chembl/api/data/molecule.json?molecule_structures__standard_inchi_key=AUZONCFQVSMFAP-UHFFFAOYSA-N",
+    "fetched": "2026-10-13",
+    "chemblId": "CHEMBL964"
+   },
+   "indications": {
+    "url": "https://www.ebi.ac.uk/chembl/api/data/drug_indication.json?molecule_chembl_id=CHEMBL964&max_phase_for_ind=4&limit=100",
+    "fetched": "2026-10-13"
+   },
+   "krasActivity": {
+    "url": "https://www.ebi.ac.uk/chembl/api/data/activity.json?target_chembl_id=CHEMBL2189121&molecule_chembl_id=CHEMBL964&pchembl_value__isnull=false&limit=1000",
+    "fetched": "2026-10-13",
+    "bestPchembl": null
+   },
+   "generic": {
+    "url": "https://www.fda.gov/media/76860/download",
+    "fetched": "2026-10-13",
+    "value": "yes"
+   },
+   "whoEml": {
+    "url": "https://list.essentialmeds.org/?query=DISULFIRAM",
+    "fetched": "2026-10-13",
+    "value": "no",
+    "matched": null
+   },
+   "label": {
+    "url": "https://api.fda.gov/drug/label.json?search=openfda.generic_name%3A%22DISULFIRAM%22&limit=20",
+    "fetched": "2026-10-13",
+    "setId": "07abe950-3565-418c-8086-b804406a8c87"
+   }
+  },
+  "cid156336191": {
+   "identity": {
+    "url": "https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/cid/156336191/property/Title,InChIKey,IsomericSMILES,CanonicalSMILES/JSON",
+    "fetched": "2026-10-13"
+   },
+   "chembl": {
+    "url": "https://www.ebi.ac.uk/chembl/api/data/molecule.json?molecule_structures__standard_inchi_key=TZUWIDWDTKSTOF-LWFLJPBESA-N",
+    "fetched": "2026-10-13",
+    "chemblId": "CHEMBL6046849"
+   },
+   "krasActivity": {
+    "url": "https://www.ebi.ac.uk/chembl/api/data/activity.json?target_chembl_id=CHEMBL2189121&molecule_chembl_id=CHEMBL6046849&pchembl_value__isnull=false&limit=1000",
+    "fetched": "2026-10-13",
+    "bestPchembl": 5.26
+   },
+   "generic": {
+    "rule": "approval=unknown: not a marketed medicine"
+   },
+   "whoEml": {
+    "rule": "approval=unknown: not a marketed medicine"
+   }
+  },
+  "cid156336410": {
+   "identity": {
+    "url": "https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/cid/156336410/property/Title,InChIKey,IsomericSMILES,CanonicalSMILES/JSON",
+    "fetched": "2026-10-13"
+   },
+   "chembl": {
+    "url": "https://www.ebi.ac.uk/chembl/api/data/molecule.json?molecule_structures__standard_inchi_key=QSFSNLGMWZFHQO-ZOWQQJHHSA-N",
+    "fetched": "2026-10-13",
+    "chemblId": "CHEMBL5925441"
+   },
+   "krasActivity": {
+    "url": "https://www.ebi.ac.uk/chembl/api/data/activity.json?target_chembl_id=CHEMBL2189121&molecule_chembl_id=CHEMBL5925441&pchembl_value__isnull=false&limit=1000",
+    "fetched": "2026-10-13",
+    "bestPchembl": 6.26
+   },
+   "generic": {
+    "rule": "approval=unknown: not a marketed medicine"
+   },
+   "whoEml": {
+    "rule": "approval=unknown: not a marketed medicine"
+   }
+  },
+  "cid156336182": {
+   "identity": {
+    "url": "https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/cid/156336182/property/Title,InChIKey,IsomericSMILES,CanonicalSMILES/JSON",
+    "fetched": "2026-10-13"
+   },
+   "chembl": {
+    "url": "https://www.ebi.ac.uk/chembl/api/data/molecule.json?molecule_structures__standard_inchi_key=ASYXCSUWQVPQDX-VBDDZALSSA-N",
+    "fetched": "2026-10-13",
+    "chemblId": "CHEMBL6057884"
+   },
+   "krasActivity": {
+    "url": "https://www.ebi.ac.uk/chembl/api/data/activity.json?target_chembl_id=CHEMBL2189121&molecule_chembl_id=CHEMBL6057884&pchembl_value__isnull=false&limit=1000",
+    "fetched": "2026-10-13",
+    "bestPchembl": 7.26
+   },
+   "generic": {
+    "rule": "approval=unknown: not a marketed medicine"
+   },
+   "whoEml": {
+    "rule": "approval=unknown: not a marketed medicine"
+   }
+  },
+  "cid157155620": {
+   "identity": {
+    "url": "https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/cid/157155620/property/Title,InChIKey,IsomericSMILES,CanonicalSMILES/JSON",
+    "fetched": "2026-10-13"
+   },
+   "chembl": {
+    "url": "https://www.ebi.ac.uk/chembl/api/data/molecule.json?molecule_structures__standard_inchi_key=XJEDTTRFMUSSKB-BJZXTERBSA-N",
+    "fetched": "2026-10-13",
+    "chemblId": "CHEMBL5828567"
+   },
+   "krasActivity": {
+    "url": "https://www.ebi.ac.uk/chembl/api/data/activity.json?target_chembl_id=CHEMBL2189121&molecule_chembl_id=CHEMBL5828567&pchembl_value__isnull=false&limit=1000",
+    "fetched": "2026-10-13",
+    "bestPchembl": 6.26
+   },
+   "generic": {
+    "rule": "approval=unknown: not a marketed medicine"
+   },
+   "whoEml": {
+    "rule": "approval=unknown: not a marketed medicine"
+   }
+  },
+  "cid164626535": {
+   "identity": {
+    "url": "https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/cid/164626535/property/Title,InChIKey,IsomericSMILES,CanonicalSMILES/JSON",
+    "fetched": "2026-10-13"
+   },
+   "chembl": {
+    "url": "https://www.ebi.ac.uk/chembl/api/data/molecule.json?molecule_structures__standard_inchi_key=JMHILDAQYOLBRH-VBRUPBHWSA-N",
+    "fetched": "2026-10-13",
+    "chemblId": "CHEMBL4876249"
+   },
+   "krasActivity": {
+    "url": "https://www.ebi.ac.uk/chembl/api/data/activity.json?target_chembl_id=CHEMBL2189121&molecule_chembl_id=CHEMBL4876249&pchembl_value__isnull=false&limit=1000",
+    "fetched": "2026-10-13",
+    "bestPchembl": 6.16
+   },
+   "generic": {
+    "rule": "approval=unknown: not a marketed medicine"
+   },
+   "whoEml": {
+    "rule": "approval=unknown: not a marketed medicine"
+   }
+  },
+  "cid156336177": {
+   "identity": {
+    "url": "https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/cid/156336177/property/Title,InChIKey,IsomericSMILES,CanonicalSMILES/JSON",
+    "fetched": "2026-10-13"
+   },
+   "chembl": {
+    "url": "https://www.ebi.ac.uk/chembl/api/data/molecule.json?molecule_structures__standard_inchi_key=QJQRFGCIIVEZAN-YIZDDCBXSA-N",
+    "fetched": "2026-10-13",
+    "chemblId": "CHEMBL6031665"
+   },
+   "krasActivity": {
+    "url": "https://www.ebi.ac.uk/chembl/api/data/activity.json?target_chembl_id=CHEMBL2189121&molecule_chembl_id=CHEMBL6031665&pchembl_value__isnull=false&limit=1000",
+    "fetched": "2026-10-13",
+    "bestPchembl": 7.26
+   },
+   "generic": {
+    "rule": "approval=unknown: not a marketed medicine"
+   },
+   "whoEml": {
+    "rule": "approval=unknown: not a marketed medicine"
+   }
+  },
+  "cid165085337": {
+   "identity": {
+    "url": "https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/cid/165085337/property/Title,InChIKey,IsomericSMILES,CanonicalSMILES/JSON",
+    "fetched": "2026-10-13"
+   },
+   "chembl": {
+    "url": "https://www.ebi.ac.uk/chembl/api/data/molecule.json?molecule_structures__standard_inchi_key__startswith=VUSPGHNHGLJZOK&limit=50",
+    "fetched": "2026-10-13",
+    "chemblId": null
+   },
+   "krasActivity": {
+    "url": null,
+    "fetched": null,
+    "bestPchembl": null
+   },
+   "generic": {
+    "rule": "approval=unknown: not a marketed medicine"
+   },
+   "whoEml": {
+    "rule": "approval=unknown: not a marketed medicine"
+   }
+  },
+  "cid156336255": {
+   "identity": {
+    "url": "https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/cid/156336255/property/Title,InChIKey,IsomericSMILES,CanonicalSMILES/JSON",
+    "fetched": "2026-10-13"
+   },
+   "chembl": {
+    "url": "https://www.ebi.ac.uk/chembl/api/data/molecule.json?molecule_structures__standard_inchi_key=FJTMPAAQSGOJMF-QUHBGYJFSA-N",
+    "fetched": "2026-10-13",
+    "chemblId": "CHEMBL5944601"
+   },
+   "krasActivity": {
+    "url": "https://www.ebi.ac.uk/chembl/api/data/activity.json?target_chembl_id=CHEMBL2189121&molecule_chembl_id=CHEMBL5944601&pchembl_value__isnull=false&limit=1000",
+    "fetched": "2026-10-13",
+    "bestPchembl": 7.26
+   },
+   "generic": {
+    "rule": "approval=unknown: not a marketed medicine"
+   },
+   "whoEml": {
+    "rule": "approval=unknown: not a marketed medicine"
+   }
+  },
+  "cid156336398": {
+   "identity": {
+    "url": "https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/cid/156336398/property/Title,InChIKey,IsomericSMILES,CanonicalSMILES/JSON",
+    "fetched": "2026-10-13"
+   },
+   "chembl": {
+    "url": "https://www.ebi.ac.uk/chembl/api/data/molecule.json?molecule_structures__standard_inchi_key=RLHTUJWRFPNYIR-IRYGICAMSA-N",
+    "fetched": "2026-10-13",
+    "chemblId": "CHEMBL5905147"
+   },
+   "krasActivity": {
+    "url": "https://www.ebi.ac.uk/chembl/api/data/activity.json?target_chembl_id=CHEMBL2189121&molecule_chembl_id=CHEMBL5905147&pchembl_value__isnull=false&limit=1000",
+    "fetched": "2026-10-13",
+    "bestPchembl": 6.26
+   },
+   "generic": {
+    "rule": "approval=unknown: not a marketed medicine"
+   },
+   "whoEml": {
+    "rule": "approval=unknown: not a marketed medicine"
+   }
+  },
+  "cid156336140": {
+   "identity": {
+    "url": "https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/cid/156336140/property/Title,InChIKey,IsomericSMILES,CanonicalSMILES/JSON",
+    "fetched": "2026-10-13"
+   },
+   "chembl": {
+    "url": "https://www.ebi.ac.uk/chembl/api/data/molecule.json?molecule_structures__standard_inchi_key=UCAHTEITWCOOLI-JMERFPSGSA-N",
+    "fetched": "2026-10-13",
+    "chemblId": "CHEMBL5901195"
+   },
+   "krasActivity": {
+    "url": "https://www.ebi.ac.uk/chembl/api/data/activity.json?target_chembl_id=CHEMBL2189121&molecule_chembl_id=CHEMBL5901195&pchembl_value__isnull=false&limit=1000",
+    "fetched": "2026-10-13",
+    "bestPchembl": 6.26
+   },
+   "generic": {
+    "rule": "approval=unknown: not a marketed medicine"
+   },
+   "whoEml": {
+    "rule": "approval=unknown: not a marketed medicine"
+   }
+  },
+  "cid169706505": {
+   "identity": {
+    "url": "https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/cid/169706505/property/Title,InChIKey,IsomericSMILES,CanonicalSMILES/JSON",
+    "fetched": "2026-10-13"
+   },
+   "chembl": {
+    "url": "https://www.ebi.ac.uk/chembl/api/data/molecule.json?molecule_structures__standard_inchi_key__startswith=LBTORUCNSCQSER&limit=50",
+    "fetched": "2026-10-13",
+    "chemblId": null
+   },
+   "krasActivity": {
+    "url": null,
+    "fetched": null,
+    "bestPchembl": null
+   },
+   "generic": {
+    "rule": "approval=unknown: not a marketed medicine"
+   },
+   "whoEml": {
+    "rule": "approval=unknown: not a marketed medicine"
+   }
+  },
+  "cid156336217": {
+   "identity": {
+    "url": "https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/cid/156336217/property/Title,InChIKey,IsomericSMILES,CanonicalSMILES/JSON",
+    "fetched": "2026-10-13"
+   },
+   "chembl": {
+    "url": "https://www.ebi.ac.uk/chembl/api/data/molecule.json?molecule_structures__standard_inchi_key=MTIZKJFMLDYTNE-YDDDOAIDSA-N",
+    "fetched": "2026-10-13",
+    "chemblId": "CHEMBL5863589"
+   },
+   "krasActivity": {
+    "url": "https://www.ebi.ac.uk/chembl/api/data/activity.json?target_chembl_id=CHEMBL2189121&molecule_chembl_id=CHEMBL5863589&pchembl_value__isnull=false&limit=1000",
+    "fetched": "2026-10-13",
+    "bestPchembl": 6.26
+   },
+   "generic": {
+    "rule": "approval=unknown: not a marketed medicine"
+   },
+   "whoEml": {
+    "rule": "approval=unknown: not a marketed medicine"
+   }
+  },
+  "cid156336232": {
+   "identity": {
+    "url": "https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/cid/156336232/property/Title,InChIKey,IsomericSMILES,CanonicalSMILES/JSON",
+    "fetched": "2026-10-13"
+   },
+   "chembl": {
+    "url": "https://www.ebi.ac.uk/chembl/api/data/molecule.json?molecule_structures__standard_inchi_key=LZCYKELIPUOUEI-OCKIDNGDSA-N",
+    "fetched": "2026-10-13",
+    "chemblId": "CHEMBL5753374"
+   },
+   "krasActivity": {
+    "url": "https://www.ebi.ac.uk/chembl/api/data/activity.json?target_chembl_id=CHEMBL2189121&molecule_chembl_id=CHEMBL5753374&pchembl_value__isnull=false&limit=1000",
+    "fetched": "2026-10-13",
+    "bestPchembl": 5.26
+   },
+   "generic": {
+    "rule": "approval=unknown: not a marketed medicine"
+   },
+   "whoEml": {
+    "rule": "approval=unknown: not a marketed medicine"
+   }
+  },
+  "cid2756": {
+   "identity": {
+    "url": "https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/cid/2756/property/Title,InChIKey,IsomericSMILES,CanonicalSMILES/JSON",
+    "fetched": "2026-10-13"
+   },
+   "chembl": {
+    "url": "https://www.ebi.ac.uk/chembl/api/data/molecule.json?molecule_structures__standard_inchi_key=AQIXAKUUQRKLND-UHFFFAOYSA-N",
+    "fetched": "2026-10-13",
+    "chemblId": "CHEMBL30"
+   },
+   "indications": {
+    "url": "https://www.ebi.ac.uk/chembl/api/data/drug_indication.json?molecule_chembl_id=CHEMBL30&max_phase_for_ind=4&limit=100",
+    "fetched": "2026-10-13"
+   },
+   "krasActivity": {
+    "url": "https://www.ebi.ac.uk/chembl/api/data/activity.json?target_chembl_id=CHEMBL2189121&molecule_chembl_id=CHEMBL30&pchembl_value__isnull=false&limit=1000",
+    "fetched": "2026-10-13",
+    "bestPchembl": null
+   },
+   "generic": {
+    "url": "https://www.fda.gov/media/76860/download",
+    "fetched": "2026-10-13",
+    "value": "yes"
+   },
+   "whoEml": {
+    "url": "https://list.essentialmeds.org/?query=CIMETIDINE",
+    "fetched": "2026-10-13",
+    "value": "no",
+    "matched": null
+   },
+   "label": {
+    "url": "https://api.fda.gov/drug/label.json?search=openfda.generic_name%3A%22CIMETIDINE%22&limit=20",
+    "fetched": "2026-10-13",
+    "setId": "01997826-7ca1-473e-bfc9-075b14b58a35"
+   }
+  },
+  "cid156336150": {
+   "identity": {
+    "url": "https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/cid/156336150/property/Title,InChIKey,IsomericSMILES,CanonicalSMILES/JSON",
+    "fetched": "2026-10-13"
+   },
+   "chembl": {
+    "url": "https://www.ebi.ac.uk/chembl/api/data/molecule.json?molecule_structures__standard_inchi_key=INYYTAXEFHCLED-DERPSJHNSA-N",
+    "fetched": "2026-10-13",
+    "chemblId": "CHEMBL6004226"
+   },
+   "krasActivity": {
+    "url": "https://www.ebi.ac.uk/chembl/api/data/activity.json?target_chembl_id=CHEMBL2189121&molecule_chembl_id=CHEMBL6004226&pchembl_value__isnull=false&limit=1000",
+    "fetched": "2026-10-13",
+    "bestPchembl": 7.26
+   },
+   "generic": {
+    "rule": "approval=unknown: not a marketed medicine"
+   },
+   "whoEml": {
+    "rule": "approval=unknown: not a marketed medicine"
+   }
+  },
+  "cid156336219": {
+   "identity": {
+    "url": "https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/cid/156336219/property/Title,InChIKey,IsomericSMILES,CanonicalSMILES/JSON",
+    "fetched": "2026-10-13"
+   },
+   "chembl": {
+    "url": "https://www.ebi.ac.uk/chembl/api/data/molecule.json?molecule_structures__standard_inchi_key=KSLONQPGUGPWEL-HMKLQTHKSA-N",
+    "fetched": "2026-10-13",
+    "chemblId": "CHEMBL5768564"
+   },
+   "krasActivity": {
+    "url": "https://www.ebi.ac.uk/chembl/api/data/activity.json?target_chembl_id=CHEMBL2189121&molecule_chembl_id=CHEMBL5768564&pchembl_value__isnull=false&limit=1000",
+    "fetched": "2026-10-13",
+    "bestPchembl": null
+   },
+   "generic": {
+    "rule": "approval=unknown: not a marketed medicine"
+   },
+   "whoEml": {
+    "rule": "approval=unknown: not a marketed medicine"
+   }
+  },
+  "cid138911318": {
+   "identity": {
+    "url": "https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/cid/138911318/property/Title,InChIKey,IsomericSMILES,CanonicalSMILES/JSON",
+    "fetched": "2026-10-13"
+   },
+   "chembl": {
+    "url": "https://www.ebi.ac.uk/chembl/api/data/molecule.json?molecule_structures__standard_inchi_key=XVFDNRYZXDHTHT-PXAZEXFGSA-N",
+    "fetched": "2026-10-13",
+    "chemblId": "CHEMBL4519023"
+   },
+   "krasActivity": {
+    "url": "https://www.ebi.ac.uk/chembl/api/data/activity.json?target_chembl_id=CHEMBL2189121&molecule_chembl_id=CHEMBL4519023&pchembl_value__isnull=false&limit=1000",
+    "fetched": "2026-10-13",
+    "bestPchembl": null
+   },
+   "generic": {
+    "rule": "approval=unknown: not a marketed medicine"
+   },
+   "whoEml": {
+    "rule": "approval=unknown: not a marketed medicine"
+   }
+  },
+  "cid156124857": {
+   "identity": {
+    "url": "https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/cid/156124857/property/Title,InChIKey,IsomericSMILES,CanonicalSMILES/JSON",
+    "fetched": "2026-10-13"
+   },
+   "chembl": {
+    "url": "https://www.ebi.ac.uk/chembl/api/data/molecule.json?molecule_structures__standard_inchi_key=SCLLZBIBSFTLIN-IFMUVJFISA-N",
+    "fetched": "2026-10-13",
+    "chemblId": "CHEMBL4858364"
+   },
+   "krasActivity": {
+    "url": "https://www.ebi.ac.uk/chembl/api/data/activity.json?target_chembl_id=CHEMBL2189121&molecule_chembl_id=CHEMBL4858364&pchembl_value__isnull=false&limit=1000",
+    "fetched": "2026-10-13",
+    "bestPchembl": 9.4
+   },
+   "generic": {
+    "rule": "approval=investigational: not a marketed medicine"
+   },
+   "whoEml": {
+    "rule": "approval=investigational: not a marketed medicine"
+   }
+  },
+  "cid163360077": {
+   "identity": {
+    "url": "https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/cid/163360077/property/Title,InChIKey,IsomericSMILES,CanonicalSMILES/JSON",
+    "fetched": "2026-10-13"
+   },
+   "chembl": {
+    "url": "https://www.ebi.ac.uk/chembl/api/data/molecule.json?molecule_structures__standard_inchi_key__startswith=KIWVGCSJQTTZJO&limit=50",
+    "fetched": "2026-10-13",
+    "chemblId": null
+   },
+   "krasActivity": {
+    "url": null,
+    "fetched": null,
+    "bestPchembl": null
+   },
+   "generic": {
+    "rule": "approval=unknown: not a marketed medicine"
+   },
+   "whoEml": {
+    "rule": "approval=unknown: not a marketed medicine"
+   }
+  },
+  "cid146624881": {
+   "identity": {
+    "url": "https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/cid/146624881/property/Title,InChIKey,IsomericSMILES,CanonicalSMILES/JSON",
+    "fetched": "2026-10-13"
+   },
+   "chembl": {
+    "url": "https://www.ebi.ac.uk/chembl/api/data/molecule.json?molecule_structures__standard_inchi_key=ZRBPIAWWRPFDPY-IRXDYDNUSA-N",
+    "fetched": "2026-10-13",
+    "chemblId": "CHEMBL5095236"
+   },
+   "krasActivity": {
+    "url": "https://www.ebi.ac.uk/chembl/api/data/activity.json?target_chembl_id=CHEMBL2189121&molecule_chembl_id=CHEMBL5095236&pchembl_value__isnull=false&limit=1000",
+    "fetched": "2026-10-13",
+    "bestPchembl": 6.22
+   },
+   "generic": {
+    "rule": "approval=investigational: not a marketed medicine"
+   },
+   "whoEml": {
+    "rule": "approval=investigational: not a marketed medicine"
+   }
+  },
+  "cid168201327": {
+   "identity": {
+    "url": "https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/cid/168201327/property/Title,InChIKey,IsomericSMILES,CanonicalSMILES/JSON",
+    "fetched": "2026-10-13"
+   },
+   "chembl": {
+    "url": "https://www.ebi.ac.uk/chembl/api/data/molecule.json?molecule_structures__standard_inchi_key__startswith=VKNNQJWNUPSOEK&limit=50",
+    "fetched": "2026-10-13",
+    "chemblId": null
+   },
+   "krasActivity": {
+    "url": null,
+    "fetched": null,
+    "bestPchembl": null
+   },
+   "generic": {
+    "rule": "approval=unknown: not a marketed medicine"
+   },
+   "whoEml": {
+    "rule": "approval=unknown: not a marketed medicine"
+   }
+  }
+ }
+}

@@ -5,3 +5,4 @@ data/raw
 node_modules
 dist
 captures
+__pycache__/

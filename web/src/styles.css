@@ -350,3 +350,9 @@ pre.footnote { white-space: pre-wrap; overflow-wrap: anywhere; }
 .lift { filter: var(--lift); }
 .card-clip { box-shadow: none; }
 .pose-unseen { visibility: hidden; }
+
+/* 3D pose viewer. Canvas and status message share one grid cell, so the message sits on top of the canvas. */
+.pose { display: grid; grid-template-columns: minmax(0, 1fr); gap: 0.5rem; margin-block: 1rem; }
+.pose-canvas, .pose-empty { grid-area: 1 / 1; }
+.pose-canvas { position: relative; aspect-ratio: 4 / 3; border-radius: var(--radius-s); background: var(--surface-2); box-shadow: inset 0 0 0 0.5px var(--hairline); overflow: hidden; touch-action: none; }
+.pose-empty { align-self: center; margin: 0; padding: 0 1rem; text-align: center; }

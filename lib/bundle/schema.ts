@@ -16,6 +16,7 @@ export const Target = z.object({
   name: z.string().min(1),
   pdbId: z.string().regex(/^[0-9][A-Za-z0-9]{3}$/, "PDB IDs are 4 chars starting with a digit"),
   role: z.string(), // why this protein matters in the cancer, plain language
+  pdbFile: z.string().nullable().default(null), // receptor structure shipped with the bundle, relative path; null = not shipped
   sourceIds: z.array(z.string()).min(1),
 });
 
@@ -73,10 +74,46 @@ export const ActivityModel = z.object({
       positiveRate: z.number(),
       rocAuc: z.number().nullable(),
       prAuc: z.number().nullable(),
+      // 5-fold scaffold CV, one entry per model type compared (tools/train_activity_model.py)
+      cv: z.record(z.string(), z.object({ rocAucMean: z.number(), rocAucSd: z.number(), folds: z.number().int() }).nullable()).optional(),
     })
     .nullable(), // null = not enough data to train; predictions will be empty
   predictions: z.record(z.string(), Prediction),
 });
+
+// Ligand-based screen of every approved drug in ChEMBL against KRAS-pathway targets (tools/screen_approved.py).
+// Independent of docking. Out-of-domain drugs are only counted, never ranked.
+const Tri3 = z.enum(["yes", "no", "unknown"]);
+export const ScreenHit = z.discriminatedUnion("kind", [
+  z.object({ kind: z.literal("measured"), chemblId: z.string(), name: z.string(), withdrawn: z.boolean(), pchembl: z.number() }),
+  z.object({ kind: z.literal("predicted"), chemblId: z.string(), name: z.string(), withdrawn: z.boolean(), p: z.number().min(0).max(1), maxSim: z.number() }),
+]).and(z.object({
+  access: z.object({
+    generic: Tri3,
+    whoEml: Tri3,
+    trials: z.object({ count: z.number().int().nonnegative(), query: z.string(), fetchedAt: z.string() }).nullable(),
+    boxedWarning: z.string().nullable(),
+  }),
+}));
+export const Screen = z.object({
+  generatedAt: z.string().date(),
+  approvedDrugs: z.number().int().positive(),
+  activeCutoffPchembl: z.number(),
+  adMinSim: z.number(),
+  orangeBookFetched: z.string().optional(),
+  targets: z.array(z.object({
+    targetId: z.string(),
+    gene: z.string(),
+    uniprot: z.string(),
+    chemblId: z.string().regex(/^CHEMBL\d+$/),
+    role: z.string(),
+    nCompounds: z.number().int().nonnegative(),
+    metrics: ActivityModel.shape.metrics,
+    counts: z.record(z.string(), z.number().int()),
+    hits: z.array(ScreenHit),
+  })),
+});
+export type Screen = z.infer<typeof Screen>;
 
 export const RunBundle = z
   .object({
@@ -97,6 +134,7 @@ export const RunBundle = z
     drugs: z.array(Drug).min(1),
     poses: z.array(Pose),
     models: z.array(ActivityModel).default([]),
+    screen: Screen.nullable().default(null),
   })
   .superRefine((b, ctx) => {
     const src = new Set(b.sources.map((s) => s.id));

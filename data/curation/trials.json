@@ -1,0 +1,307 @@
+{
+ "cid137003167": {
+  "count": 0,
+  "query": "https://clinicaltrials.gov/api/v2/studies?query.cond=pancreatic+cancer&query.intr=Ars-1620&countTotal=true&pageSize=1",
+  "fetchedAt": "2026-10-13"
+ },
+ "cid134182831": {
+  "count": 0,
+  "query": "https://clinicaltrials.gov/api/v2/studies?query.cond=pancreatic+cancer&query.intr=VOCIPROTAFIB&countTotal=true&pageSize=1",
+  "fetchedAt": "2026-10-13"
+ },
+ "cid54671203": {
+  "count": 2,
+  "query": "https://clinicaltrials.gov/api/v2/studies?query.cond=pancreatic+cancer&query.intr=DOXYCYCLINE&countTotal=true&pageSize=1",
+  "fetchedAt": "2026-10-13"
+ },
+ "cid138611145": {
+  "count": 7,
+  "query": "https://clinicaltrials.gov/api/v2/studies?query.cond=pancreatic+cancer&query.intr=ADAGRASIB&countTotal=true&pageSize=1",
+  "fetchedAt": "2026-10-13"
+ },
+ "cid2244": {
+  "count": 4,
+  "query": "https://clinicaltrials.gov/api/v2/studies?query.cond=pancreatic+cancer&query.intr=ASPIRIN&countTotal=true&pageSize=1",
+  "fetchedAt": "2026-10-13"
+ },
+ "cid151912677": {
+  "count": 0,
+  "query": "https://clinicaltrials.gov/api/v2/studies?query.cond=pancreatic+cancer&query.intr=US12065430%2C+Example+97&countTotal=true&pageSize=1",
+  "fetchedAt": "2026-10-13"
+ },
+ "cid11707110": {
+  "count": 17,
+  "query": "https://clinicaltrials.gov/api/v2/studies?query.cond=pancreatic+cancer&query.intr=TRAMETINIB&countTotal=true&pageSize=1",
+  "fetchedAt": "2026-10-13"
+ },
+ "cid168982960": {
+  "count": 0,
+  "query": "https://clinicaltrials.gov/api/v2/studies?query.cond=pancreatic+cancer&query.intr=Envometinib&countTotal=true&pageSize=1",
+  "fetchedAt": "2026-10-13"
+ },
+ "cid55283": {
+  "count": 2,
+  "query": "https://clinicaltrials.gov/api/v2/studies?query.cond=pancreatic+cancer&query.intr=ITRACONAZOLE&countTotal=true&pageSize=1",
+  "fetchedAt": "2026-10-13"
+ },
+ "cid156336173": {
+  "count": 0,
+  "query": "https://clinicaltrials.gov/api/v2/studies?query.cond=pancreatic+cancer&query.intr=US11566007%2C+Example+A42&countTotal=true&pageSize=1",
+  "fetchedAt": "2026-10-13"
+ },
+ "cid156336141": {
+  "count": 0,
+  "query": "https://clinicaltrials.gov/api/v2/studies?query.cond=pancreatic+cancer&query.intr=US11566007%2C+Example+A211&countTotal=true&pageSize=1",
+  "fetchedAt": "2026-10-13"
+ },
+ "cid156336431": {
+  "count": 0,
+  "query": "https://clinicaltrials.gov/api/v2/studies?query.cond=pancreatic+cancer&query.intr=US11566007%2C+Example+A705&countTotal=true&pageSize=1",
+  "fetchedAt": "2026-10-13"
+ },
+ "cid160923886": {
+  "count": 0,
+  "query": "https://clinicaltrials.gov/api/v2/studies?query.cond=pancreatic+cancer&query.intr=US11566007%2C+Example+A560&countTotal=true&pageSize=1",
+  "fetchedAt": "2026-10-13"
+ },
+ "cid164726623": {
+  "count": 0,
+  "query": "https://clinicaltrials.gov/api/v2/studies?query.cond=pancreatic+cancer&query.intr=RMC-7977&countTotal=true&pageSize=1",
+  "fetchedAt": "2026-10-13"
+ },
+ "cid137278711": {
+  "count": 2,
+  "query": "https://clinicaltrials.gov/api/v2/studies?query.cond=pancreatic+cancer&query.intr=SOTORASIB&countTotal=true&pageSize=1",
+  "fetchedAt": "2026-10-13"
+ },
+ "cid4091": {
+  "count": 26,
+  "query": "https://clinicaltrials.gov/api/v2/studies?query.cond=pancreatic+cancer&query.intr=METFORMIN&countTotal=true&pageSize=1",
+  "fetchedAt": "2026-10-13"
+ },
+ "cid156336193": {
+  "count": 0,
+  "query": "https://clinicaltrials.gov/api/v2/studies?query.cond=pancreatic+cancer&query.intr=US11566007%2C+Example+A252&countTotal=true&pageSize=1",
+  "fetchedAt": "2026-10-13"
+ },
+ "cid156336144": {
+  "count": 0,
+  "query": "https://clinicaltrials.gov/api/v2/studies?query.cond=pancreatic+cancer&query.intr=US11566007%2C+Example+A218&countTotal=true&pageSize=1",
+  "fetchedAt": "2026-10-13"
+ },
+ "cid156336215": {
+  "count": 0,
+  "query": "https://clinicaltrials.gov/api/v2/studies?query.cond=pancreatic+cancer&query.intr=US11566007%2C+Example+A71&countTotal=true&pageSize=1",
+  "fetchedAt": "2026-10-13"
+ },
+ "cid156336422": {
+  "count": 0,
+  "query": "https://clinicaltrials.gov/api/v2/studies?query.cond=pancreatic+cancer&query.intr=US11566007%2C+Example+A634&countTotal=true&pageSize=1",
+  "fetchedAt": "2026-10-13"
+ },
+ "cid156336229": {
+  "count": 0,
+  "query": "https://clinicaltrials.gov/api/v2/studies?query.cond=pancreatic+cancer&query.intr=US11566007%2C+Example+A328&countTotal=true&pageSize=1",
+  "fetchedAt": "2026-10-13"
+ },
+ "cid156336270": {
+  "count": 0,
+  "query": "https://clinicaltrials.gov/api/v2/studies?query.cond=pancreatic+cancer&query.intr=US11566007%2C+Example+A415&countTotal=true&pageSize=1",
+  "fetchedAt": "2026-10-13"
+ },
+ "cid156336221": {
+  "count": 0,
+  "query": "https://clinicaltrials.gov/api/v2/studies?query.cond=pancreatic+cancer&query.intr=US11566007%2C+Example+A305&countTotal=true&pageSize=1",
+  "fetchedAt": "2026-10-13"
+ },
+ "cid156336370": {
+  "count": 0,
+  "query": "https://clinicaltrials.gov/api/v2/studies?query.cond=pancreatic+cancer&query.intr=US11566007%2C+Example+A517&countTotal=true&pageSize=1",
+  "fetchedAt": "2026-10-13"
+ },
+ "cid156336418": {
+  "count": 0,
+  "query": "https://clinicaltrials.gov/api/v2/studies?query.cond=pancreatic+cancer&query.intr=US11566007%2C+Example+A626&countTotal=true&pageSize=1",
+  "fetchedAt": "2026-10-13"
+ },
+ "cid156336209": {
+  "count": 0,
+  "query": "https://clinicaltrials.gov/api/v2/studies?query.cond=pancreatic+cancer&query.intr=US11566007%2C+Example+A364&countTotal=true&pageSize=1",
+  "fetchedAt": "2026-10-13"
+ },
+ "cid156336211": {
+  "count": 0,
+  "query": "https://clinicaltrials.gov/api/v2/studies?query.cond=pancreatic+cancer&query.intr=US11566007%2C+Example+A145&countTotal=true&pageSize=1",
+  "fetchedAt": "2026-10-13"
+ },
+ "cid54454": {
+  "count": 4,
+  "query": "https://clinicaltrials.gov/api/v2/studies?query.cond=pancreatic+cancer&query.intr=SIMVASTATIN&countTotal=true&pageSize=1",
+  "fetchedAt": "2026-10-13"
+ },
+ "cid156336271": {
+  "count": 0,
+  "query": "https://clinicaltrials.gov/api/v2/studies?query.cond=pancreatic+cancer&query.intr=US11566007%2C+Example+A494&countTotal=true&pageSize=1",
+  "fetchedAt": "2026-10-13"
+ },
+ "cid156336399": {
+  "count": 0,
+  "query": "https://clinicaltrials.gov/api/v2/studies?query.cond=pancreatic+cancer&query.intr=US11566007%2C+Example+A638&countTotal=true&pageSize=1",
+  "fetchedAt": "2026-10-13"
+ },
+ "cid156336348": {
+  "count": 0,
+  "query": "https://clinicaltrials.gov/api/v2/studies?query.cond=pancreatic+cancer&query.intr=US11566007%2C+Example+A471&countTotal=true&pageSize=1",
+  "fetchedAt": "2026-10-13"
+ },
+ "cid156336167": {
+  "count": 0,
+  "query": "https://clinicaltrials.gov/api/v2/studies?query.cond=pancreatic+cancer&query.intr=US11566007%2C+Example+A214&countTotal=true&pageSize=1",
+  "fetchedAt": "2026-10-13"
+ },
+ "cid156336213": {
+  "count": 0,
+  "query": "https://clinicaltrials.gov/api/v2/studies?query.cond=pancreatic+cancer&query.intr=US11566007%2C+Example+A332&countTotal=true&pageSize=1",
+  "fetchedAt": "2026-10-13"
+ },
+ "cid156336383": {
+  "count": 0,
+  "query": "https://clinicaltrials.gov/api/v2/studies?query.cond=pancreatic+cancer&query.intr=US11566007%2C+Example+A669&countTotal=true&pageSize=1",
+  "fetchedAt": "2026-10-13"
+ },
+ "cid156336260": {
+  "count": 0,
+  "query": "https://clinicaltrials.gov/api/v2/studies?query.cond=pancreatic+cancer&query.intr=US11566007%2C+Example+A412&countTotal=true&pageSize=1",
+  "fetchedAt": "2026-10-13"
+ },
+ "cid156336413": {
+  "count": 0,
+  "query": "https://clinicaltrials.gov/api/v2/studies?query.cond=pancreatic+cancer&query.intr=US11566007%2C+Example+A686&countTotal=true&pageSize=1",
+  "fetchedAt": "2026-10-13"
+ },
+ "cid156336288": {
+  "count": 0,
+  "query": "https://clinicaltrials.gov/api/v2/studies?query.cond=pancreatic+cancer&query.intr=US11566007%2C+Example+A454&countTotal=true&pageSize=1",
+  "fetchedAt": "2026-10-13"
+ },
+ "cid156336128": {
+  "count": 0,
+  "query": "https://clinicaltrials.gov/api/v2/studies?query.cond=pancreatic+cancer&query.intr=US11566007%2C+Example+A373&countTotal=true&pageSize=1",
+  "fetchedAt": "2026-10-13"
+ },
+ "cid156336347": {
+  "count": 0,
+  "query": "https://clinicaltrials.gov/api/v2/studies?query.cond=pancreatic+cancer&query.intr=US11566007%2C+Example+A496&countTotal=true&pageSize=1",
+  "fetchedAt": "2026-10-13"
+ },
+ "cid156336429": {
+  "count": 0,
+  "query": "https://clinicaltrials.gov/api/v2/studies?query.cond=pancreatic+cancer&query.intr=US11566007%2C+Example+A674&countTotal=true&pageSize=1",
+  "fetchedAt": "2026-10-13"
+ },
+ "cid161022070": {
+  "count": 0,
+  "query": "https://clinicaltrials.gov/api/v2/studies?query.cond=pancreatic+cancer&query.intr=US11566007%2C+Example+A79&countTotal=true&pageSize=1",
+  "fetchedAt": "2026-10-13"
+ },
+ "cid164726578": {
+  "count": 9,
+  "query": "https://clinicaltrials.gov/api/v2/studies?query.cond=pancreatic+cancer&query.intr=Daraxonrasib&countTotal=true&pageSize=1",
+  "fetchedAt": "2026-10-13"
+ },
+ "cid156336421": {
+  "count": 0,
+  "query": "https://clinicaltrials.gov/api/v2/studies?query.cond=pancreatic+cancer&query.intr=US11566007%2C+Example+A680&countTotal=true&pageSize=1",
+  "fetchedAt": "2026-10-13"
+ },
+ "cid3117": {
+  "count": 3,
+  "query": "https://clinicaltrials.gov/api/v2/studies?query.cond=pancreatic+cancer&query.intr=DISULFIRAM&countTotal=true&pageSize=1",
+  "fetchedAt": "2026-10-13"
+ },
+ "cid156336191": {
+  "count": 0,
+  "query": "https://clinicaltrials.gov/api/v2/studies?query.cond=pancreatic+cancer&query.intr=US11566007%2C+Example+A324&countTotal=true&pageSize=1",
+  "fetchedAt": "2026-10-13"
+ },
+ "cid156336410": {
+  "count": 0,
+  "query": "https://clinicaltrials.gov/api/v2/studies?query.cond=pancreatic+cancer&query.intr=US11566007%2C+Example+A619&countTotal=true&pageSize=1",
+  "fetchedAt": "2026-10-13"
+ },
+ "cid156336182": {
+  "count": 0,
+  "query": "https://clinicaltrials.gov/api/v2/studies?query.cond=pancreatic+cancer&query.intr=US11566007%2C+Example+A256&countTotal=true&pageSize=1",
+  "fetchedAt": "2026-10-13"
+ },
+ "cid157155620": {
+  "count": 0,
+  "query": "https://clinicaltrials.gov/api/v2/studies?query.cond=pancreatic+cancer&query.intr=US11566007%2C+Example+A407&countTotal=true&pageSize=1",
+  "fetchedAt": "2026-10-13"
+ },
+ "cid156336177": {
+  "count": 0,
+  "query": "https://clinicaltrials.gov/api/v2/studies?query.cond=pancreatic+cancer&query.intr=US11566007%2C+Example+A251&countTotal=true&pageSize=1",
+  "fetchedAt": "2026-10-13"
+ },
+ "cid156336255": {
+  "count": 0,
+  "query": "https://clinicaltrials.gov/api/v2/studies?query.cond=pancreatic+cancer&query.intr=US11566007%2C+Example+A396&countTotal=true&pageSize=1",
+  "fetchedAt": "2026-10-13"
+ },
+ "cid156336398": {
+  "count": 0,
+  "query": "https://clinicaltrials.gov/api/v2/studies?query.cond=pancreatic+cancer&query.intr=US11566007%2C+Example+A593&countTotal=true&pageSize=1",
+  "fetchedAt": "2026-10-13"
+ },
+ "cid156336140": {
+  "count": 0,
+  "query": "https://clinicaltrials.gov/api/v2/studies?query.cond=pancreatic+cancer&query.intr=US11566007%2C+Example+A245&countTotal=true&pageSize=1",
+  "fetchedAt": "2026-10-13"
+ },
+ "cid156336217": {
+  "count": 0,
+  "query": "https://clinicaltrials.gov/api/v2/studies?query.cond=pancreatic+cancer&query.intr=US11566007%2C+Example+A75&countTotal=true&pageSize=1",
+  "fetchedAt": "2026-10-13"
+ },
+ "cid156336232": {
+  "count": 0,
+  "query": "https://clinicaltrials.gov/api/v2/studies?query.cond=pancreatic+cancer&query.intr=US11566007%2C+Example+A290&countTotal=true&pageSize=1",
+  "fetchedAt": "2026-10-13"
+ },
+ "cid2756": {
+  "count": 0,
+  "query": "https://clinicaltrials.gov/api/v2/studies?query.cond=pancreatic+cancer&query.intr=CIMETIDINE&countTotal=true&pageSize=1",
+  "fetchedAt": "2026-10-13"
+ },
+ "cid156336150": {
+  "count": 0,
+  "query": "https://clinicaltrials.gov/api/v2/studies?query.cond=pancreatic+cancer&query.intr=US11566007%2C+Example+A238&countTotal=true&pageSize=1",
+  "fetchedAt": "2026-10-13"
+ },
+ "cid156336219": {
+  "count": 0,
+  "query": "https://clinicaltrials.gov/api/v2/studies?query.cond=pancreatic+cancer&query.intr=US11566007%2C+Example+A663&countTotal=true&pageSize=1",
+  "fetchedAt": "2026-10-13"
+ },
+ "cid138911318": {
+  "count": 0,
+  "query": "https://clinicaltrials.gov/api/v2/studies?query.cond=pancreatic+cancer&query.intr=BI-3406&countTotal=true&pageSize=1",
+  "fetchedAt": "2026-10-13"
+ },
+ "cid156124857": {
+  "count": 1,
+  "query": "https://clinicaltrials.gov/api/v2/studies?query.cond=pancreatic+cancer&query.intr=MRTX-1133&countTotal=true&pageSize=1",
+  "fetchedAt": "2026-10-13"
+ },
+ "cid146624881": {
+  "count": 0,
+  "query": "https://clinicaltrials.gov/api/v2/studies?query.cond=pancreatic+cancer&query.intr=DIVARASIB&countTotal=true&pageSize=1",
+  "fetchedAt": "2026-10-13"
+ },
+ "cid168201327": {
+  "count": 2,
+  "query": "https://clinicaltrials.gov/api/v2/studies?query.cond=pancreatic+cancer&query.intr=Zoldonrasib&countTotal=true&pageSize=1",
+  "fetchedAt": "2026-10-13"
+ }
+}
