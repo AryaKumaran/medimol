@@ -1,0 +1,8 @@
+{
+  "title": "PDAC drug-repurposing docking run",
+  "runDate": "2026-01-01",
+  "model": "DiffDock",
+  "modelVersion": "FILL IN (commit or release)",
+  "compute": "RunPod (FILL IN GPU type)",
+  "notes": "Single run. Docking confidence is a pose-ranking score, not a binding affinity."
+}
