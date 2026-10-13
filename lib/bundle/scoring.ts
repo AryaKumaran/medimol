@@ -3,14 +3,15 @@ import type { Drug, RunBundle } from "./schema";
 // Coarse, documented weights. Unknown counts as 0 and is surfaced, never hidden.
 export const ACCESS_WEIGHTS = { approved: 0.3, generic: 0.3, whoEml: 0.2, trials: 0.2 } as const;
 
-export function accessScore(d: Drug): { score: number; unknowns: string[] } {
+export type AccessWeights = Record<keyof typeof ACCESS_WEIGHTS, number>;
+
+export function accessScore(d: Drug, w: AccessWeights = ACCESS_WEIGHTS): { score: number; unknowns: string[] } {
   const a = d.access;
   const unknowns: string[] = [];
   if (d.approval === "unknown") unknowns.push("approval");
   if (a.generic === "unknown") unknowns.push("generic");
   if (a.whoEml === "unknown") unknowns.push("whoEml");
   if (a.trials === null) unknowns.push("trials");
-  const w = ACCESS_WEIGHTS;
   const score =
     (d.approval === "approved" ? w.approved : 0) +
     (a.generic === "yes" ? w.generic : 0) +
@@ -29,13 +30,19 @@ export type Row = {
   combined: number; // docking × access
 };
 
-export function leaderboard(b: RunBundle, opts: { includeControls?: boolean } = {}): Row[] {
+// Best rank-1 pose per drug across all targets.
+export function bestPoses(b: RunBundle): Map<string, { conf: number; targetId: string }> {
   const best = new Map<string, { conf: number; targetId: string }>();
   for (const p of b.poses) {
     if (p.rank !== 1) continue;
     const cur = best.get(p.drugId);
     if (!cur || p.confidence > cur.conf) best.set(p.drugId, { conf: p.confidence, targetId: p.targetId });
   }
+  return best;
+}
+
+export function leaderboard(b: RunBundle, opts: { includeControls?: boolean } = {}): Row[] {
+  const best = bestPoses(b);
   const confs = [...best.values()].map((v) => v.conf);
   const lo = Math.min(...confs), hi = Math.max(...confs);
   const norm = (c: number) => (hi === lo ? 1 : (c - lo) / (hi - lo));

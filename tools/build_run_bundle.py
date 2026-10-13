@@ -157,6 +157,8 @@ def build(bundle_id: str, diffdock: Path, refresh_trials: bool) -> Path:
             for d in drugs
         ],
         "poses": poses,
+        # Optional activity models from tools/train_activity_model.py
+        "models": json.loads((CUR / "ml.json").read_text()) if (CUR / "ml.json").exists() else [],
     }
     out = OUT / f"{bundle_id}.json"
     out.write_text(json.dumps(bundle, indent=1) + "\n")

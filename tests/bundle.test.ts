@@ -1,5 +1,5 @@
 import { describe, expect, it, vi } from "vitest";
-import { readdirSync, readFileSync } from "node:fs";
+import { existsSync, readdirSync, readFileSync } from "node:fs";
 import { execFileSync } from "node:child_process";
 import { RunBundle } from "../lib/bundle/schema";
 import { accessScore, affordableLeads, leaderboard } from "../lib/bundle/scoring";
@@ -80,4 +80,10 @@ describe("replay", () => {
     expect(seen[0]).toBe("stage");
     vi.useRealTimers();
   });
+});
+
+describe("ml tool", () => {
+  it.skipIf(!existsSync(".venv/bin/python"))("train_activity_model selftest (scaffold split, domain, leakage flags)", () => {
+    expect(execFileSync(".venv/bin/python", ["tools/train_activity_model.py", "--selftest"]).toString()).toContain("ok");
+  }, 60_000);
 });

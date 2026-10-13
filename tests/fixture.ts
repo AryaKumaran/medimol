@@ -20,6 +20,17 @@ export const fixture = (): RunBundle => ({
     pose("c", 1, -3.0),
     pose("ctrl", 1, 1.0),
   ],
+  models: [
+    {
+      targetId: "t1", chemblId: "CHEMBL0", fetchedAt: "2026-01-01", model: "synthetic", activeCutoffPchembl: 6, nCompounds: 100,
+      metrics: { split: "scaffold", nTrain: 80, nTest: 20, positiveRate: 0.3, rocAuc: 0.8, prAuc: 0.5 },
+      predictions: {
+        a: { p: 0.7, maxSim: 0.5, inDomain: true, inTraining: false, measuredPchembl: null },
+        b: { p: 0.9, maxSim: 0.1, inDomain: false, inTraining: false, measuredPchembl: null },
+        ctrl: { p: 0.95, maxSim: 1, inDomain: true, inTraining: true, measuredPchembl: 7.2 },
+      },
+    },
+  ],
 });
 
 function drug(id: string, o: { approval: RunBundle["drugs"][0]["approval"]; generic: "yes" | "no" | "unknown"; whoEml: "yes" | "no" | "unknown"; trials: number | null }) {

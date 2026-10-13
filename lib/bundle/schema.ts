@@ -50,6 +50,34 @@ export const Pose = z.object({
   sdf: z.string().nullable(), // path relative to the bundle, or null if not exported
 });
 
+// Per-target activity model trained on ChEMBL (tools/train_activity_model.py). A second, independent signal.
+export const Prediction = z.object({
+  p: z.number().min(0).max(1).nullable(), // P(active, pChEMBL >= cutoff); null = SMILES unparseable
+  maxSim: z.number().min(0).max(1).nullable(), // nearest training molecule, Tanimoto
+  inDomain: z.boolean(),
+  inTraining: z.boolean(), // already measured: show measuredPchembl, the model only memorized it
+  measuredPchembl: z.number().nullable(),
+});
+export const ActivityModel = z.object({
+  targetId: z.string(),
+  chemblId: z.string().regex(/^CHEMBL\d+$/),
+  fetchedAt: z.string().date(),
+  model: z.string(),
+  activeCutoffPchembl: z.number(),
+  nCompounds: z.number().int().nonnegative(),
+  metrics: z
+    .object({
+      split: z.string(),
+      nTrain: z.number().int(),
+      nTest: z.number().int(),
+      positiveRate: z.number(),
+      rocAuc: z.number().nullable(),
+      prAuc: z.number().nullable(),
+    })
+    .nullable(), // null = not enough data to train; predictions will be empty
+  predictions: z.record(z.string(), Prediction),
+});
+
 export const RunBundle = z
   .object({
     schemaVersion: z.literal(1),
@@ -68,6 +96,7 @@ export const RunBundle = z
     targets: z.array(Target).min(1),
     drugs: z.array(Drug).min(1),
     poses: z.array(Pose),
+    models: z.array(ActivityModel).default([]),
   })
   .superRefine((b, ctx) => {
     const src = new Set(b.sources.map((s) => s.id));
@@ -75,6 +104,11 @@ export const RunBundle = z
     const targets = new Set(b.targets.map((t) => t.id));
     const refs = [...b.targets.flatMap((t) => t.sourceIds), ...b.drugs.flatMap((d) => d.access.sourceIds)];
     for (const id of refs) if (!src.has(id)) ctx.addIssue({ code: "custom", message: `unknown source id: ${id}` });
+    for (const m of b.models) {
+      if (!targets.has(m.targetId)) ctx.addIssue({ code: "custom", message: `model for unknown target: ${m.targetId}` });
+      for (const id of Object.keys(m.predictions))
+        if (!drugs.has(id)) ctx.addIssue({ code: "custom", message: `prediction for unknown drug: ${id}` });
+    }
     for (const p of b.poses) {
       if (!drugs.has(p.drugId)) ctx.addIssue({ code: "custom", message: `pose for unknown drug: ${p.drugId}` });
       if (!targets.has(p.targetId)) ctx.addIssue({ code: "custom", message: `pose for unknown target: ${p.targetId}` });
@@ -85,6 +119,7 @@ export type RunBundle = z.infer<typeof RunBundle>;
 export type Drug = z.infer<typeof Drug>;
 export type Target = z.infer<typeof Target>;
 export type Pose = z.infer<typeof Pose>;
+export type ActivityModel = z.infer<typeof ActivityModel>;
 
 export async function loadBundle(url: string): Promise<RunBundle> {
   const res = await fetch(url);
