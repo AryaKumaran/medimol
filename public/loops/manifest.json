@@ -1,0 +1,11 @@
+{
+  "synthetic": true,
+  "bundleId": "synthetic-demo",
+  "fps": 60,
+  "scenes": [
+    "leads",
+    "replay",
+    "brief",
+    "stability"
+  ]
+}
