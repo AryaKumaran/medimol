@@ -7,6 +7,7 @@ Congressional App Challenge entry, submitted by Oct 23, 2026. Ranks approved, af
 - Python tools: `.venv/bin/python` (setup: `python3 -m venv .venv && .venv/bin/pip install -r tools/requirements.txt`)
 - Build bundle: `python3 tools/build_run_bundle.py --id pdac-v1 --diffdock data/raw/diffdock [--fetch-trials]`
 - Train ML: `.venv/bin/python tools/train_activity_model.py --target-map data/curation/chembl_targets.csv`
+- Web app: `npx pnpm@9.12.1 dev` · build: `npx pnpm@9.12.1 build` · re-record landing loops: `npx pnpm@9.12.1 loops`
 
 ## Layout
 - `lib/bundle/`: zod RunBundle schema (the one data contract), Access Score + leaderboard, positive controls, replay
@@ -14,6 +15,7 @@ Congressional App Challenge entry, submitted by Oct 23, 2026. Ranks approved, af
 - `lib/brief/`, `lib/voice/`: EN/ES plain-language brief, read-aloud + voice command grammar
 - `lib/device/`: Bench Companion NDJSON contract, Web Serial, virtual device. Firmware is team-written; don't write it.
 - `lib/export/`: CSV · `tools/`: offline Python build tools · `data/curation/`: hand-curated inputs · `data/raw/`: gitignored downloads
+- `web/`: React + Vite app over `lib/` (Vite root is `web/`, `public/` stays at the repo root) · `web/src/motion/`: spring engine · `tools/capture.ts`: loop recorder → `public/loops/`
 
 ## Rules
 - Never invent data: drugs, costs, docking scores, trial counts, PDB IDs. Unknown → `unknown`. Synthetic data only in `tests/fixture.ts`, labelled.
@@ -22,3 +24,5 @@ Congressional App Challenge entry, submitted by Oct 23, 2026. Ranks approved, af
 - Every module: tests (edge cases + property-style), a section in `docs/DESIGN_NOTES.md`, and a `docs/DEV_LOG.md` entry marked "(AI-assisted)". New deps go in `THIRD_PARTY.md` with license.
 - 2FMA is APP, not ERK2. FDA status uses exact-token matching (`"not approved"` ≠ approved).
 - Keep the ML out of the combined score; show it side by side. Out-of-domain predictions never show a number.
+- Web motion is springs only (`web/src/motion`). No CSS transitions, keyframes, easing curves, WAAPI or animation libraries: `tests/no-css-motion.test.ts` fails on them. Write only transform/opacity/filter/clip-path, straight to the element.
+- No real bundle → the app shows `demoFixture()` under a permanent synthetic banner. Never put real drug names on synthetic numbers. After changing UI or data, re-run `loops` so the landing videos match.

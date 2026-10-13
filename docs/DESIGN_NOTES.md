@@ -40,3 +40,33 @@ Drafted with AI assistance. The team should rewrite these in their own words.
 - **Bootstrap 95% CI on AUC (seeded):** with only a few controls the uncertainty is large, and the app should show that rather than a single falsely precise number.
 - **Ties go against the actives:** a tied score never makes the method look better than it is.
 - **Background is not decoys:** the other drugs aren't confirmed non-binders, so these numbers are a conservative lower bound. Say so on screen. Adding property-matched decoys (DUD-E style) would be the upgrade.
+
+## Web app (`web/`)
+- **React + Vite, nothing else at runtime.** The backend stays plain TypeScript in `lib/`; the app only imports it. No router (the hash is enough for six sections), no state library, no component kit, no animation library.
+- **Sections are named for what is in them:** Leads, Replay, Stability, Validation, Bench, About. A reader should be able to guess what each one holds before opening it.
+- **A real bundle wins; without one the app says it is a demo.** `web/src/data.ts` loads the newest `public/bundles/*.json` through the same zod schema as everything else. If there is none it falls back to `demoFixture()` in `tests/fixture.ts` and sets `synthetic`, which drives a banner the UI cannot hide. Adding a real bundle and rebuilding is the whole switch; no code changes.
+- **Unknown is drawn, not dropped.** An unconfirmed access fact is a "?" pip and a line in the drug panel, and it still counts as 0 in the score.
+- **The lab-data signal sits beside the score.** It has its own column and is never multiplied in. A prediction outside the model's domain shows "Too different", never a number.
+- **Design reference:** Apple's interface principles as collected in the `apple-design` notes (response, direct manipulation, interruptibility, materials, size-specific type). Where those notes allow a CSS transition for small things, this project is stricter (next section).
+
+## Motion (`web/src/motion/`)
+- **Everything that moves is a spring. CSS transitions, keyframes, easing curves and the Web Animations API are banned** and `tests/no-css-motion.test.ts` fails the build if one appears. Two reasons: a spring can be grabbed and reversed mid-flight without a jump, because it always starts from the current value and velocity; and a spring driven by our own clock can be stepped one frame at a time, which the loop recorder needs.
+- **Exact solution, not numerical integration** (`spring.ts`). A damped spring has a closed-form answer, so one 16 ms step and sixteen 1 ms steps give the same position. Frame rate cannot change the path, and a slow frame cannot make it explode.
+- **Two parameters, the ones Apple uses:** damping ratio and response. 1.0 damping (no overshoot) is the default everywhere. 0.8 (a little bounce) is used only after a gesture that carried momentum, the thrown drug panel.
+- **Gestures (`sheet.tsx`):** the panel follows the pointer 1:1 from where it was grabbed, resists past its open edge (rubber-band), decides open or closed from where the release velocity would carry it (Apple's projection formula) instead of where the finger let go, and hands that velocity to the spring so there is no seam.
+- **Only transform, opacity, filter and clip-path are written,** straight to the element and never through React state, so a frame costs no layout and no re-render. List reorder is FLIP: the row keeps its on-screen place and springs to the new one. A card that changes height holds its layout and moves a clip instead.
+- **Feedback is on pointer-down.** Buttons answer the press, not the release. Keyboard actions do not animate.
+- **Reduced motion** swaps slides for short opacity fades. Reduced transparency and increased contrast replace the translucent materials with solid ones.
+
+## Loop recorder (`tools/capture.ts`)
+- **Why:** the landing page shows the real app in motion. A screen recording drops frames and is different every time; these loops are rebuilt from the code with one command.
+- **How:** Playwright opens the built app with `?capture`. In that mode the motion clock never runs by itself. The recorder steps it by exactly 1/60 s, takes one PNG, and repeats; ffmpeg stitches the PNGs into H.264. The pointer is real mouse input, moved along the same spring maths.
+- **Seamless by check, not by eye:** each scene must end in the state it began in. The recorder compares the frame after the last one with the first and refuses to write a loop that would jump.
+- **A guard against cheating:** every frame it asks the browser whether any CSS or Web Animations animation is running and fails if so.
+- **Colour:** frames are converted to BT.709 and tagged, so the video matches what the app drew.
+- **The loops carry the banner.** They are recorded from whatever data the app has. With no real bundle that is the synthetic demo, the banner is in every frame, and `public/loops/manifest.json` records it so the landing page captions them.
+
+## Synthetic demo bundle (`tests/fixture.ts`, `demoFixture`)
+- **Why it exists:** the UI and its recorded loops need something to show before the real run is curated and docked.
+- **Why it cannot be mistaken for a finding:** names are "Compound A" to "Compound N" and "Control X/Y", targets are "SYN1" to "SYN3" with PDB IDs starting with 0 (the PDB never assigns those), and every number comes from a seeded generator. Real drug names with made-up scores were ruled out: that would read as a result.
+- **It lives with the test fixture** because that is the one place synthetic data is allowed.
