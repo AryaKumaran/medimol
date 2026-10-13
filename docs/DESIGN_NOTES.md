@@ -30,3 +30,13 @@ Drafted with AI assistance. The team should rewrite these in their own words.
 - **Read-aloud** uses the browser's `speechSynthesis`, which needs no key and runs on offline OS voices. It's an accessibility feature for low-vision users and readers with lower literacy.
 - **Voice commands** are a small fixed grammar, not an LLM: they're predictable, testable and free. Chrome sends the audio to Google for transcription, so commands are opt-in and that has to be disclosed.
 - Commands are matched as whole phrases, so "nextdoor" doesn't trigger "next". Opening a drug needs a verb ("open X"), so a stray drug name doesn't navigate anywhere.
+
+## Enrichment validation (`lib/analysis/enrichment.ts`)
+- **Why:** "the control ranked #3" is one anecdote. Virtual-screening papers report enrichment: how much better than random the method puts known binders at the top. That's the number a reviewer looks for.
+- **Metrics:**
+  - ROC-AUC (Mann–Whitney: the chance a known binder outscores a random other drug).
+  - EF at 1/5/10%, shown next to the best EF possible for that list size, so small lists aren't over-read.
+  - BEDROC with α=20 (Truchon & Bayly, J Chem Inf Model 2007), which focuses on the very top of the list, where researchers actually look.
+- **Bootstrap 95% CI on AUC (seeded):** with only a few controls the uncertainty is large, and the app should show that rather than a single falsely precise number.
+- **Ties go against the actives:** a tied score never makes the method look better than it is.
+- **Background is not decoys:** the other drugs aren't confirmed non-binders, so these numbers are a conservative lower bound. Say so on screen. Adding property-matched decoys (DUD-E style) would be the upgrade.
