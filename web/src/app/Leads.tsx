@@ -89,7 +89,7 @@ function LeadRow({ r, place, gene, signal, selected, onSelect, motion }: {
   const facts = accessFacts(d);
   return (
     <Pressable motion={motion} depth={0.985} className="row" aria-pressed={selected} onClick={onSelect}>
-      <span className="rank">{place}</span>
+      <span className="rank">{place?.toString().padStart(2, "0")}</span>
       <span className="name"><span>{d.name}</span><ApprovalChip approval={d.approval} /></span>
       <span className="callout muted">{gene}</span>
       <span className="meter">

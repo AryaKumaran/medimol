@@ -22,7 +22,7 @@ export const Icon = {
   mark: () => (
     <svg className="brand-mark" viewBox="0 0 22 22" aria-hidden="true">
       <rect width="22" height="22" rx="6" fill="var(--accent)" />
-      <path d="M6 15.5V7.2l5 5.3 5-5.3v8.3" fill="none" stroke="#fff" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+      <path d="M6 15.5V7.2l5 5.3 5-5.3v8.3" fill="none" stroke="var(--on-accent)" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
     </svg>
   ),
 };

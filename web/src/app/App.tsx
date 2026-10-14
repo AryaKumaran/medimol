@@ -172,6 +172,11 @@ function Loaded({ data, tab }: { data: Data; tab: Tab }) {
         </div>
       )}
 
+      <div className="micro-bar micro" aria-hidden="true">
+        <span>§{String(TABS.findIndex((t) => t.value === tab) + 1).padStart(2, "0")} / {tab}</span>
+        <span className="ruler" />
+        <span>{bundle.id} · {synthetic ? "synthetic" : "real"} bundle · {rows.length} drugs · {bundle.targets.length} targets</span>
+      </div>
       <main>
         <Reveal key={tab}>
           {tab === "leads" && <Leads data={data} rows={rows} leads={leads} filter={filter} setFilter={setFilter} selected={selected} select={setSelected} />}

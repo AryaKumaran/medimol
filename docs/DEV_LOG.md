@@ -8,3 +8,4 @@
 - 2026-10-12: Web app (`web/`): landing page and six sections (Leads, Replay, Stability, Validation, Bench, About) on React + Vite, reading bundles through the existing schema; labelled synthetic fallback `demoFixture()`. (AI-assisted)
 - 2026-10-12: Spring motion engine (`web/src/motion/`): exact damped-spring solver, velocity handoff, momentum projection, rubber-banding, FLIP reorder; CSS-driven motion banned by `tests/no-css-motion.test.ts`. (AI-assisted)
 - 2026-10-12: Loop recorder (`tools/capture.ts`): frame-exact Playwright capture stitched by ffmpeg into seamless MP4 loops in `public/loops/`. (AI-assisted)
+- 2026-10-13: Monochrome redesign of the web app: black and grey in both appearances, status as mark plus word, bundled display fonts (Special Gothic, Redaction cuts, Instrument Serif, DM Mono), typographic-brutalist landing page and micrographics; fixed chart marks overflowing the page and a chip overlapping the docking column on phones. (AI-assisted)
